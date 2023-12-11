@@ -12,26 +12,34 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.example.pizzeria.R
 import com.example.pizzeria.classes.viewmodels.ProductViewModel
-import com.example.pizzeria.classes.data.getProductInfo
 import com.example.pizzeria.components.products.meal.MyMealCard
+import com.example.pizzeria.components.products.pizza.MyPizzaCard
 import com.example.pizzeria.ui.theme.Palette_1_4
 
 @Composable
-fun MealMenu(navController: NavController, viewModel: ProductViewModel) {
+fun MealMenu(navController: NavController, productViewModel: ProductViewModel) {
     Column(
         modifier = Modifier
             .fillMaxSize()
             .background(Palette_1_4)
     ) {
         LazyColumn(modifier = Modifier.padding(10.dp)) {
-            items(getProductInfo()) {
-                if (it.type == "MEAL") {
-                    Spacer(modifier = Modifier.height(10.dp))
-                    MyMealCard(it, viewModel)
-                    Spacer(modifier = Modifier.weight(0.10f))
-                }
+            items(productViewModel.productList) { product ->
+                Spacer(modifier = Modifier.height(10.dp))
+                if (product.type == "MEAL") {
+                    when(product.name) {
+                        "Margarita" -> MyPizzaCard(product, productViewModel, R.drawable.pizza1)
+                        "Proscuito" -> MyPizzaCard(product, productViewModel, R.drawable.pizza2)
+                        "Regina" -> MyPizzaCard(product, productViewModel, R.drawable.pizza3)
+                        "Provinciale" -> MyPizzaCard(product, productViewModel, R.drawable.pizza4)
+                        "Carbonara" -> MyPizzaCard(product, productViewModel, R.drawable.pizza5)
+                        "Calzone" -> MyPizzaCard(product, productViewModel, R.drawable.pizza7)
+                    }
 
+                }
+                Spacer(modifier = Modifier.weight(0.10f))
             }
         }
     }

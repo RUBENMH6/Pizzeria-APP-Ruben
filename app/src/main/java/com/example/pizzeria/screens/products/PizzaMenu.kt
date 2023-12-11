@@ -25,7 +25,6 @@ import coil.compose.rememberImagePainter
 import com.example.pizzeria.R
 import com.example.pizzeria.classes.data.ProductInfo
 import com.example.pizzeria.classes.viewmodels.ProductViewModel
-import com.example.pizzeria.classes.data.getProductInfo
 import com.example.pizzeria.components.products.pizza.MyPizzaCard
 import com.example.pizzeria.ui.theme.*
 import com.google.firebase.Firebase

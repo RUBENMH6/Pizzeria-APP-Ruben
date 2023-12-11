@@ -1,25 +1,31 @@
 package com.example.pizzeria.classes.data
 
+import android.content.Context
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import android.net.Uri
+import android.os.AsyncTask
 import android.util.Log
+import android.widget.ImageView
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import com.google.firebase.Firebase
+import com.google.firebase.FirebaseApp
+import com.google.firebase.FirebaseOptions
 import com.google.firebase.firestore.firestore
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
 import com.google.firebase.storage.storage
+import java.io.File
+import java.io.FileInputStream
+import java.io.InputStream
+import java.net.HttpURLConnection
+import java.net.URL
 
 
 data class ProductInfo( val name: String, val price: Double, val ingredients: List<String> = listOf(), val type: String)
 
-fun getProductInfo(): MutableList<ProductInfo> {
-    return mutableListOf(
-        ProductInfo("Margarita", 10.0, listOf("Tomate", "Mozzarella", "Orégano"), "PIZZA"),
-        ProductInfo("Proscuito", 10.0, listOf("Tomate", "Mozzarella", "Jamón York"), "PIZZA"),
-        ProductInfo("Regina", 10.0, listOf("Tomate", "Mozzarella", "Jamón York", "Champiñones"),"PIZZA"),
-        ProductInfo("Provinciale", 10.0, listOf("Tomate", "Mozzarella", "Bacon", "Cebolla"), "PIZZA"),
-        ProductInfo("Carbonara", 10.0, listOf("Tomate", "Mozzarella", "Bacon", "Champiñones", "Salsa carbonara"), "PIZZA"),
-        ProductInfo("Calzone", 10.0, listOf("Tomate", "Mozzarella", "Jamón Yor", "Huevo cocido", "Ajo"),"PIZZA"),
-    )
-}
+
 
 
 
@@ -80,3 +86,9 @@ fun getProductsFromFirestore(onSuccess: (SnapshotStateList<ProductInfo>) -> Unit
             Log.e("Firestore", "Failed to retrieve products", e)
         }
 }
+
+
+
+
+
+
