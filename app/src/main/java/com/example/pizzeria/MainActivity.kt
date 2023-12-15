@@ -70,7 +70,7 @@ class MainActivity : ComponentActivity() {
                 val context = LocalContext.current
                 val drawerState = rememberDrawerState(DrawerValue.Closed)
                 val scope = rememberCoroutineScope()
-                val orientation = LocalConfiguration.current
+                val configuration = LocalConfiguration.current
 
 
 
@@ -124,8 +124,8 @@ class MainActivity : ComponentActivity() {
                                     drawerState,
                                     navController,
                                     currentRoute,
-                                    userViewModel
-                                )
+                                    userViewModel,
+                                    configuration)
                             }
                         ) {
 

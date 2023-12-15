@@ -50,23 +50,26 @@ fun MyModalDrawerSheet(
         drawerContainerColor = Palette_1_4,
         drawerTonalElevation = 2.dp,
         modifier = Modifier
-            .fillMaxWidth(0.5f)
-            .padding(end = if(configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) 70.dp else 0.dp),
+            .fillMaxWidth(if(configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) 0.5f else 0.1f)
+            .padding(end = if(configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) 0.dp else 70.dp),
     ) {
         Column(
             modifier = Modifier.fillMaxSize()
                 .verticalScroll(rememberScrollState())
         ) {
-            Column(
-                modifier = Modifier.weight(0.4f),
-                verticalArrangement = Arrangement.Center
-            ) {
-                Spacer(modifier = Modifier.height(20.dp))
-                Image(
-                    painter = painterResource(R.drawable.pizzalogo),
-                    contentDescription = "Logo"
-                )
+            if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) {
+                Column(
+                    modifier = Modifier.weight(0.4f),
+                    verticalArrangement = Arrangement.Center
+                ) {
+                    Spacer(modifier = Modifier.height(20.dp))
+                    Image(
+                        painter = painterResource(R.drawable.pizzalogo),
+                        contentDescription = "Logo"
+                    )
+                }
             }
+
             Column(
                 modifier = Modifier.weight(0.8f)
             ) {
@@ -75,15 +78,20 @@ fun MyModalDrawerSheet(
                         label = {
                             Text(
                                 text =
-                                if (item.name == "Login") {
-                                    if(userViewModel.auth.currentUser == null) {
-                                        "Sign In"
+                                if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) {
+                                    if (item.name == "Login") {
+                                        if(userViewModel.auth.currentUser == null) {
+                                            "Sign In"
+                                        } else {
+                                            "Sign Out"
+                                        }
                                     } else {
-                                        "Sign Out"
+                                        item.name
                                     }
                                 } else {
-                                    item.name
-                                },
+                                       ""
+                                }
+                                ,
                                 fontFamily = FontCWGSans
                             )
                         },
