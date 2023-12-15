@@ -1,0 +1,136 @@
+{
+  "products": [
+    {
+      "imageId": "R.drawable.pizza1",
+      "name": "Margarita",
+      "price": 10.0,
+      "ingredients": ["Tomate", "Mozzarella", "Orégano"],
+      "type": "PIZZA"
+    },
+    {
+      "imageId": "R.drawable.pizza2",
+      "name": "Proscuito",
+      "price": 10.0,
+      "ingredients": ["Tomate", "Mozzarella", "Jamón York"],
+      "type": "PIZZA"
+    },
+    {
+      "imageId": "R.drawable.pizza3",
+      "name": "Regina",
+      "price": 10.0,
+      "ingredients": ["Tomate", "Mozzarella", "Jamón York", "Champiñones"],
+      "type": "PIZZA"
+    },
+    {
+      "imageId": "R.drawable.pizza4",
+      "name": "Provinciale",
+      "price": 10.0,
+      "ingredients": ["Tomate", "Mozzarella", "Bacon", "Cebolla"],
+      "type": "PIZZA"
+    },
+    {
+      "imageId": "R.drawable.pizza5",
+      "name": "Carbonara",
+      "price": 10.0,
+      "ingredients": ["Tomate", "Mozzarella", "Bacon", "Champiñones", "Salsa carbonara"],
+      "type": "PIZZA"
+    },
+    {
+      "imageId": "R.drawable.pizza7",
+      "name": "Calzone",
+      "price": 10.0,
+      "ingredients": ["Tomate", "Mozzarella", "Jamón Yor", "Huevo cocido", "Ajo"],
+      "type": "PIZZA"
+    },
+    {
+      "imageId": "R.drawable.pizza8",
+      "name": "Margarita",
+      "price": 10.0,
+      "ingredients": ["Tomate", "Mozzarella", "Orégano"],
+      "type": "PIZZA"
+    },
+    {
+      "imageId": "R.drawable.pizza9",
+      "name": "Margarita",
+      "price": 10.0,
+      "ingredients": ["Tomate", "Mozzarella", "Orégano"],
+      "type": "PIZZA"
+    },
+    {
+      "imageId": "R.drawable.pizza10",
+      "name": "Margarita",
+      "price": 10.0,
+      "ingredients": ["Tomate", "Mozzarella", "Orégano"],
+      "type": "PIZZA"
+    },
+    {
+      "imageId": "R.drawable.pizza11",
+      "name": "Margarita",
+      "price": 10.0,
+      "ingredients": ["Tomate", "Mozzarella", "Orégano"],
+      "type": "PIZZA"
+    },
+    {
+      "imageId": "R.drawable.pizza12",
+      "name": "Margarita",
+      "price": 10.0,
+      "ingredients": ["Tomate", "Mozzarella", "Orégano"],
+      "type": "PIZZA"
+    },
+    {
+      "imageId": "R.drawable.pizza13",
+      "name": "Margarita",
+      "price": 10.0,
+      "ingredients": ["Tomate", "Mozzarella", "Orégano"],
+      "type": "PIZZA"
+    },
+    {
+      "imageId": "R.drawable.pizza14",
+      "name": "Margarita",
+      "price": 10.0,
+      "ingredients": ["Tomate", "Mozzarella", "Orégano"],
+      "type": "PIZZA"
+    },
+    {
+      "imageId": "R.drawable.pizza15",
+      "name": "Margarita",
+      "price": 10.0,
+      "ingredients": ["Tomate", "Mozzarella", "Orégano"],
+      "type": "PIZZA"
+    },
+    {
+      "imageId": "R.drawable.pizza16",
+      "name": "Margarita",
+      "price": 10.0,
+      "ingredients": ["Tomate", "Mozzarella", "Orégano"],
+      "type": "PIZZA"
+    },
+    {
+      "imageId": "R.drawable.pizza17",
+      "name": "Margarita",
+      "price": 10.0,
+      "ingredients": ["Tomate", "Mozzarella", "Orégano"],
+      "type": "PIZZA"
+    },
+    {
+      "imageId": "R.drawable.pizza20",
+      "name": "Margarita",
+      "price": 10.0,
+      "ingredients": ["Tomate", "Mozzarella", "Orégano"],
+      "type": "PIZZA"
+    },
+    {
+      "imageId": "R.drawable.pizza21",
+      "name": "Margarita",
+      "price": 10.0,
+      "ingredients": ["Tomate", "Mozzarella", "Orégano"],
+      "type": "PIZZA"
+    },
+    {
+      "imageId": "R.drawable.cocacola",
+      "name": "Coca-cola",
+      "price": 2.20,
+      "type": "DRINK"
+    }
+  ]
+}
