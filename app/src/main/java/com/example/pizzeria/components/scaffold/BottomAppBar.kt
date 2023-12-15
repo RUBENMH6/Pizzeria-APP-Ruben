@@ -30,6 +30,7 @@ import com.example.pizzeria.classes.viewmodels.ProductViewModel
 import com.example.pizzeria.classes.viewmodels.UserViewModel
 import com.example.pizzeria.ui.theme.Palette_1_11
 import com.example.pizzeria.ui.theme.Palette_1_8
+import com.example.pizzeria.ui.theme.scaffold
 
 @Composable
 fun MyBottomAppBar(
@@ -41,7 +42,7 @@ fun MyBottomAppBar(
     userViewModel: UserViewModel
     ) {
     BottomAppBar(
-        containerColor = Palette_1_11,
+        containerColor = scaffold,
         modifier = Modifier.height(60.dp)
     ) {
         Row(
