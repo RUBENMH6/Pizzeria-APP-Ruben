@@ -88,7 +88,7 @@ fun AnimatedSplashOrderConfirmed() {
                 .scale(-1f, 1f)
                 .graphicsLayer(translationX = translationState * -500)
         )
-        Spacer(modifier = Modifier.height(300.dp))
+        Spacer(modifier = Modifier.height(20.dp))
         Row(
             modifier = Modifier.fillMaxWidth().height(40.dp).background(Palette_1_11),
             horizontalArrangement = Arrangement.Center,
