@@ -11,14 +11,19 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.calculateStartPadding
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FabPosition
+import androidx.compose.material3.Icon
 import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.LayoutDirection
@@ -35,6 +40,7 @@ import com.example.pizzeria.classes.viewmodels.LocalViewModel
 import com.example.pizzeria.classes.viewmodels.UserViewModel
 import com.example.pizzeria.components.local.MyLocal
 import com.example.pizzeria.components.scaffold.MyBottomAppBar
+import com.example.pizzeria.components.scaffold.MyFABtoBack
 import com.example.pizzeria.components.scaffold.MyModalDrawerSheet
 import com.example.pizzeria.components.scaffold.MyTopAppBar
 import com.example.pizzeria.screens.log.CreateUser
@@ -94,18 +100,32 @@ class MainActivity : ComponentActivity() {
                         }
                     },
                     bottomBar = {
-                        if (currentRoute != Routes.SplashScreen.route && currentRoute != Routes.SplashScreenOrderConfirmed.route) {
-                            MyBottomAppBar(
-                                currentRoute,
+                        if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) {
+                            if (currentRoute != Routes.SplashScreen.route && currentRoute != Routes.SplashScreenOrderConfirmed.route) {
+                                MyBottomAppBar(
+                                    currentRoute,
+                                    navController,
+                                    productViewModel,
+                                    dialogViewModel,
+                                    context,
+                                    userViewModel
+                                )
+                            }
+                        }
+
+
+                    },
+                    floatingActionButton = {
+                        if (configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+                            MyFABtoBack(
                                 navController,
+                                currentRoute!!,
                                 productViewModel,
-                                dialogViewModel,
-                                context,
                                 userViewModel
                             )
                         }
-
-                    }
+                    },
+                    floatingActionButtonPosition = FabPosition.End
                 ) {
                     Box(
                         modifier = Modifier
