@@ -17,8 +17,10 @@ import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
@@ -30,6 +32,7 @@ import com.example.pizzeria.classes.viewmodels.ProductViewModel
 import com.example.pizzeria.classes.viewmodels.UserViewModel
 import com.example.pizzeria.ui.theme.Palette_1_11
 import com.example.pizzeria.ui.theme.Palette_1_8
+import com.example.pizzeria.ui.theme.button
 import com.example.pizzeria.ui.theme.scaffold
 
 @Composable
@@ -48,7 +51,10 @@ fun MyBottomAppBar(
         Row(
             modifier = Modifier.weight(0.2f)
         ) {
-            IconButton(onClick = {
+            IconButton(
+                modifier = Modifier.clip(RoundedCornerShape(16.dp)),
+                colors = IconButtonDefaults.iconButtonColors(button),
+                onClick = {
                 when (currentRoute) {
                     Routes.OrderProduct.route -> navController.navigate(Routes.PizzaMenu.route)
                     Routes.OrderProcess.route -> {
@@ -89,7 +95,9 @@ fun MyBottomAppBar(
         }
 
         Row(
-            modifier = Modifier.weight(0.3f).padding(end = 15.dp),
+            modifier = Modifier
+                .weight(0.3f)
+                .padding(end = 15.dp),
             horizontalArrangement = Arrangement.End
         ) {
             when (currentRoute) {

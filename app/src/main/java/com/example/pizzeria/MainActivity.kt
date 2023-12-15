@@ -117,15 +117,17 @@ class MainActivity : ComponentActivity() {
                     },
                     floatingActionButton = {
                         if (configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-                            MyFABtoBack(
-                                navController,
-                                currentRoute!!,
-                                productViewModel,
-                                userViewModel
-                            )
+                            if (currentRoute != Routes.SplashScreen.route && currentRoute != Routes.SplashScreenOrderConfirmed.route) {
+                                    MyFABtoBack(
+                                        navController,
+                                        currentRoute,
+                                        productViewModel,
+                                        userViewModel
+                                    )
+                                }
+
                         }
-                    },
-                    floatingActionButtonPosition = FabPosition.End
+                    }
                 ) {
                     Box(
                         modifier = Modifier

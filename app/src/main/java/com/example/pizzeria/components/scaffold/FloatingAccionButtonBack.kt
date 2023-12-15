@@ -17,7 +17,7 @@ import com.example.pizzeria.ui.theme.scaffold
 @Composable
 fun MyFABtoBack(
     navController: NavController,
-    currentRoute: String,
+    currentRoute: String?,
     productViewModel: ProductViewModel,
     userViewModel: UserViewModel
 ) {

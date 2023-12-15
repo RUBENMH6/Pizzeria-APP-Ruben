@@ -4,6 +4,7 @@ import android.content.res.Configuration
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -20,6 +21,7 @@ import androidx.compose.material3.NavigationDrawerItem
 import androidx.compose.material3.NavigationDrawerItemDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
@@ -32,6 +34,8 @@ import com.example.pizzeria.ui.theme.FontCWGSans
 import com.example.pizzeria.ui.theme.Palette_1_1
 import com.example.pizzeria.ui.theme.Palette_1_4
 import com.example.pizzeria.ui.theme.Palette_1_8
+import com.example.pizzeria.ui.theme.button
+import com.example.pizzeria.ui.theme.scaffold
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
@@ -50,12 +54,13 @@ fun MyModalDrawerSheet(
         drawerContainerColor = Palette_1_4,
         drawerTonalElevation = 2.dp,
         modifier = Modifier
-            .fillMaxWidth(if(configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) 0.5f else 0.1f)
+            .fillMaxWidth(if(configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) 0.5f else 0.25f)
             .padding(end = if(configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) 0.dp else 70.dp),
     ) {
         Column(
             modifier = Modifier.fillMaxSize()
-                .verticalScroll(rememberScrollState())
+                .verticalScroll(rememberScrollState()),
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
             if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) {
                 Column(
@@ -70,57 +75,99 @@ fun MyModalDrawerSheet(
                 }
             }
 
-            Column(
-                modifier = Modifier.weight(0.8f)
-            ) {
+
                 items.forEach { item ->
-                    NavigationDrawerItem(
-                        label = {
-                            Text(
-                                text =
-                                if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) {
-                                    if (item.name == "Login") {
-                                        if(userViewModel.auth.currentUser == null) {
-                                            "Sign In"
+                    if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) {
+                        NavigationDrawerItem(
+                            label = {
+                                Text(
+                                    text =
+                                    if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) {
+                                        if (item.name == "Login") {
+                                            if(userViewModel.auth.currentUser == null) {
+                                                "Sign In"
+                                            } else {
+                                                "Sign Out"
+                                            }
                                         } else {
-                                            "Sign Out"
+                                            item.name
                                         }
                                     } else {
-                                        item.name
+                                        ""
                                     }
-                                } else {
-                                       ""
-                                }
-                                ,
-                                fontFamily = FontCWGSans
-                            )
-                        },
-                        icon = {
-                            Icon(
-                                painter = painterResource(item.icon),
-                                contentDescription = item.name,
-                                modifier = Modifier.size(30.dp)
-                            )
-                        },
-                        selected = item.url == currentRoute,
-                        onClick = {
-                            if (item.name == "Login") {
-                                if(userViewModel.auth.currentUser != null) {
-                                    userViewModel.auth.signOut()
-                                }
-                            }
-                            scope.launch { drawerState.apply { drawerState.close() } }
-                            navController.navigate(item.url)
-                        },
-                        colors = NavigationDrawerItemDefaults.colors(
-                            unselectedContainerColor = Color.Transparent,
-                            selectedTextColor = Palette_1_1,
-                            selectedIconColor = Palette_1_1,
-                            selectedContainerColor = Palette_1_8
-                        )
+                                    ,
+                                    fontFamily = FontCWGSans
+                                )
+                            },
+                            icon = {
 
-                    )
-                }
+                                Icon(
+                                    painter = painterResource(item.icon),
+                                    contentDescription = item.name,
+                                    modifier = Modifier.size(30.dp),
+                                    tint = scaffold
+                                )
+                            },
+                            selected = item.url == currentRoute,
+                            onClick = {
+                                if (item.name == "Login") {
+                                    if(userViewModel.auth.currentUser != null) {
+                                        userViewModel.auth.signOut()
+                                    }
+                                }
+                                scope.launch { drawerState.apply { drawerState.close() } }
+                                navController.navigate(item.url)
+                            },
+                            colors = NavigationDrawerItemDefaults.colors(
+                                unselectedContainerColor = Color.Transparent,
+                                selectedTextColor = Palette_1_1,
+                                selectedIconColor = Palette_1_1,
+                                selectedContainerColor = button
+                            )
+
+                        )
+                    } else {
+                        if (item.name != "Menu") {
+                            NavigationDrawerItem(
+                                label = {
+                                    Text(text = "")
+                                },
+                                icon = {
+                                    Row(
+                                        modifier = Modifier.fillMaxWidth(),
+                                        horizontalArrangement = Arrangement.Center
+                                    ) {
+                                        Icon(
+                                            painter = painterResource(item.icon),
+                                            contentDescription = item.name,
+                                            modifier = Modifier.size(30.dp),
+                                            tint = scaffold
+                                        )
+                                    }
+                                },
+                                selected = item.url == currentRoute,
+                                onClick = {
+                                    if (item.name == "Login") {
+                                        if(userViewModel.auth.currentUser != null) {
+                                            userViewModel.auth.signOut()
+                                        }
+                                    }
+                                    scope.launch { drawerState.apply { drawerState.close() } }
+                                    navController.navigate(item.url)
+                                },
+                                colors = NavigationDrawerItemDefaults.colors(
+                                    unselectedContainerColor = Color.Transparent,
+                                    selectedTextColor = Palette_1_1,
+                                    selectedIconColor = Palette_1_1,
+                                    selectedContainerColor = Palette_1_8
+                                )
+
+                            )
+                        }
+
+                    }
+
+
         }
 
         }
