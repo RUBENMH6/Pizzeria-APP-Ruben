@@ -18,11 +18,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.example.pizzeria.R
+import com.example.pizzeria.ui.theme.Palette_1_11
 
 @Composable
 fun MyRatingBar(ratingValue: Float, onRatingChanged: (Float) -> Unit) {
     var estadoRating = 0f
-    var maxRating = 5
+    val maxRating = 5
     Row(modifier = Modifier.fillMaxWidth()) {
         Spacer(modifier = Modifier.height(10.dp))
         Row(
@@ -43,7 +44,7 @@ fun MyRatingBar(ratingValue: Float, onRatingChanged: (Float) -> Unit) {
                         },
                     tint =
                     if (rating <= estadoRating || rating <= ratingValue) {
-                        Color.Black
+                        Palette_1_11
                     } else {
                         Color.White
                     }

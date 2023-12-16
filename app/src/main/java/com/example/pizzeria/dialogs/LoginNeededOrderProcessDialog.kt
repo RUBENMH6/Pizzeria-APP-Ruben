@@ -26,8 +26,8 @@ fun LoginNeededOrderPizzaDialog(navController: NavController, productViewModel: 
         onDismissRequest = { dialogViewModel.dialogLoginNeededOrderPizza.value = false },
         title = { Text(text = "Please. Sign in!") },
         text = {
-            Divider(color = Palette_1_8)
-            Text("\nYou need to be logged in to place orders.", color = Palette_1_10) },
+            Divider(color = Palette_1_11)
+            Text("\nYou need to be logged in to place orders.", color = Palette_1_11) },
         confirmButton = {
             Button(
                 onClick = {
@@ -35,7 +35,7 @@ fun LoginNeededOrderPizzaDialog(navController: NavController, productViewModel: 
                     dialogViewModel.dialogLoginNeededOrderPizza.value = false
                     navController.navigate(Routes.Login.route)
                           },
-                colors = ButtonDefaults.buttonColors(Palette_1_8),
+                colors = ButtonDefaults.buttonColors(Palette_1_11),
                 modifier = Modifier.padding(end = 10.dp)) {
                 Text("Sign in")
             }
@@ -45,12 +45,12 @@ fun LoginNeededOrderPizzaDialog(navController: NavController, productViewModel: 
                 onClick = {
                     dialogViewModel.dialogLoginNeededOrderPizza.value = false
                           },
-                colors = ButtonDefaults.buttonColors(Palette_1_8),
+                colors = ButtonDefaults.buttonColors(Palette_1_11),
                 modifier = Modifier.padding(end = 40.dp)) {
                 Text("Dismiss")
             }
         },
-        containerColor = Palette_1_2,
+        containerColor = tostadito,
         titleContentColor = Palette_1_11,
         shape = RoundedCornerShape(24.dp),
         modifier = Modifier.border(1.dp, Palette_1_11, RoundedCornerShape(24.dp))

@@ -28,14 +28,16 @@ import com.example.pizzeria.classes.Routes
 import com.example.pizzeria.classes.data.LocalInfo
 import com.example.pizzeria.classes.viewmodels.LocalViewModel
 import com.example.pizzeria.components.MyRatingBar
+import com.example.pizzeria.ui.theme.Palette_1_11
 import com.example.pizzeria.ui.theme.Palette_1_5
+import com.example.pizzeria.ui.theme.tostadito
 
 
 @Composable
 fun MyLocal(localInfo: LocalInfo ,navController: NavController, localViewModel: LocalViewModel) {
     var rating by remember { mutableFloatStateOf(0f) }
     Card(
-        colors = CardDefaults.cardColors(Palette_1_5),
+        colors = CardDefaults.cardColors(tostadito),
         elevation = CardDefaults.cardElevation(6.dp),
         modifier = Modifier.clickable {
             localViewModel.selectLocal(localInfo)
@@ -55,7 +57,7 @@ fun MyLocal(localInfo: LocalInfo ,navController: NavController, localViewModel: 
         Text(
             text = localInfo.address,
             fontSize = 20.sp,
-            color = Color.Black,
+            color = Palette_1_11,
             modifier = Modifier.padding(start = 12.dp)
         )
         Spacer(modifier = Modifier.height(10.dp))

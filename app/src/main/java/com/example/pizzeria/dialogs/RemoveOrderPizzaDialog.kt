@@ -27,8 +27,8 @@ fun RemoveOrderPizzaDialog(productViewModel: ProductViewModel, dialogViewModel: 
         },
         text =
         {
-            Divider(color = Palette_1_8)
-            Text(text = "\nAre you sure you want to delete the pizza list? This action cannot be undone.", textAlign = TextAlign.Justify, color = Palette_1_10, ) }
+            Divider(color = Palette_1_11)
+            Text(text = "\nAre you sure you want to delete the pizza list? This action cannot be undone.", textAlign = TextAlign.Justify, color = Palette_1_11, ) }
         ,
         confirmButton = {
             Button(
@@ -36,7 +36,7 @@ fun RemoveOrderPizzaDialog(productViewModel: ProductViewModel, dialogViewModel: 
                     productViewModel.safeDeleteOrderMap()
                     dialogViewModel.dialogRemoveOrderPizza.value = false
                 },
-                colors = ButtonDefaults.buttonColors(Palette_1_8),
+                colors = ButtonDefaults.buttonColors(Palette_1_11),
                 modifier = Modifier.padding(end = 10.dp)) {
                 Text("Confirm")
             }
@@ -47,12 +47,12 @@ fun RemoveOrderPizzaDialog(productViewModel: ProductViewModel, dialogViewModel: 
                 onClick = {
                     dialogViewModel.dialogRemoveOrderPizza.value = false
                 },
-                colors = ButtonDefaults.buttonColors(Palette_1_8),
+                colors = ButtonDefaults.buttonColors(Palette_1_11),
                 modifier = Modifier.padding(end = 40.dp)) {
                 Text("Dismiss")
             }
         },
-        containerColor = Palette_1_2,
+        containerColor = tostadito,
         titleContentColor = Palette_1_11,
         shape = RoundedCornerShape(24.dp),
         modifier = Modifier.border(1.dp, Palette_1_11, RoundedCornerShape(24.dp))

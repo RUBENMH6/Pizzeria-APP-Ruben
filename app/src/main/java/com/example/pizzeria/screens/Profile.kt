@@ -1,6 +1,7 @@
 package com.example.pizzeria.screens
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -30,6 +31,7 @@ import com.example.pizzeria.R
 import com.example.pizzeria.classes.Routes
 import com.example.pizzeria.classes.viewmodels.UserViewModel
 import com.example.pizzeria.ui.theme.Palette_1_11
+import com.example.pizzeria.ui.theme.tostadito
 import com.google.firebase.Firebase
 import com.google.firebase.auth.auth
 
@@ -38,7 +40,7 @@ fun Profile() {
     val user = Firebase.auth.currentUser!!
 
     Column(
-        modifier = Modifier.fillMaxSize()
+        modifier = Modifier.fillMaxSize().background(tostadito)
     ){
         Row(
             modifier = Modifier
