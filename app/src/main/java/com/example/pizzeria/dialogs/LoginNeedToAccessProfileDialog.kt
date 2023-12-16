@@ -1,8 +1,6 @@
 package com.example.pizzeria.dialogs
 
 
-import android.content.Context
-import android.util.Log
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -15,14 +13,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.example.pizzeria.classes.viewmodels.DialogViewModel
-import com.example.pizzeria.classes.viewmodels.ProductViewModel
 import com.example.pizzeria.classes.Routes
-import com.example.pizzeria.ui.theme.*
+import com.example.pizzeria.classes.viewmodels.DialogViewModel
+import com.example.pizzeria.ui.theme.Palette_1_11
+import com.example.pizzeria.ui.theme.tostadito
 
 
 @Composable
-fun LoginNeededToAccessProfileDialog(navController: NavController, productViewModel: ProductViewModel, dialogViewModel: DialogViewModel, context: Context) {
+fun LoginNeededToAccessProfileDialog(navController: NavController, dialogViewModel: DialogViewModel) {
     AlertDialog(
         onDismissRequest = { dialogViewModel.dialogLoginToAccessProfile.value = false },
         title = { Text(text = "Please. Sign in!") },

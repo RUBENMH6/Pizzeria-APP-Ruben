@@ -7,20 +7,14 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.animation.AnimatedContentTransitionScope
 import androidx.compose.animation.core.tween
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.calculateStartPadding
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FabPosition
-import androidx.compose.material3.Icon
 import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.rememberDrawerState
@@ -28,42 +22,38 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.example.pizzeria.classes.viewmodels.DialogViewModel
-import com.example.pizzeria.classes.viewmodels.ProductViewModel
 import com.example.pizzeria.classes.Routes
+import com.example.pizzeria.classes.viewmodels.DialogViewModel
 import com.example.pizzeria.classes.viewmodels.LocalViewModel
+import com.example.pizzeria.classes.viewmodels.ProductViewModel
 import com.example.pizzeria.classes.viewmodels.UserViewModel
-import com.example.pizzeria.components.local.MyLocal
 import com.example.pizzeria.components.scaffold.MyBottomAppBar
 import com.example.pizzeria.components.scaffold.MyFABtoBack
 import com.example.pizzeria.components.scaffold.MyFABtoBuy
 import com.example.pizzeria.components.scaffold.MyModalDrawerSheet
 import com.example.pizzeria.components.scaffold.MyTopAppBar
-import com.example.pizzeria.screens.log.CreateUser
-import com.example.pizzeria.screens.log.Login
-import com.example.pizzeria.screens.products.DrinkMenu
 import com.example.pizzeria.screens.MainMenu
 import com.example.pizzeria.screens.PizzaLocal
 import com.example.pizzeria.screens.Profile
-import com.example.pizzeria.screens.products.MealMenu
+import com.example.pizzeria.screens.log.CreateUser
+import com.example.pizzeria.screens.log.Login
 import com.example.pizzeria.screens.order.OrderPizza
 import com.example.pizzeria.screens.order.OrderProcess
+import com.example.pizzeria.screens.products.DrinkMenu
+import com.example.pizzeria.screens.products.MealMenu
 import com.example.pizzeria.screens.products.PastaMenu
 import com.example.pizzeria.screens.products.PizzaMenu
 import com.example.pizzeria.splash.SplashOrderConfirmed
 import com.example.pizzeria.splash.SplashScreen
 import com.example.pizzeria.ui.theme.*
-import com.example.pizzeria.ui.theme.PizzeriaTheme
 
 class MainActivity : ComponentActivity() {
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -226,7 +216,6 @@ class MainActivity : ComponentActivity() {
                                         context,
                                         navController,
                                         userViewModel,
-                                        productViewModel,
                                         dialogViewModel
                                     )
                                 }
@@ -249,7 +238,6 @@ class MainActivity : ComponentActivity() {
                                         context,
                                         navController,
                                         userViewModel,
-                                        productViewModel,
                                         dialogViewModel
                                     )
                                 }
@@ -287,10 +275,7 @@ class MainActivity : ComponentActivity() {
                                 ) {
                                     MainMenu(
                                         navController,
-                                        userViewModel,
                                         dialogViewModel,
-                                        productViewModel,
-                                        context,
                                         configuration
                                     )
                                 }
@@ -309,13 +294,7 @@ class MainActivity : ComponentActivity() {
                                         )
                                     }
                                 ) {
-                                    PizzaMenu(
-                                        navController,
-                                        productViewModel,
-                                        dialogViewModel,
-                                        context,
-                                        configuration
-                                    )
+                                    PizzaMenu(navController, productViewModel, dialogViewModel, configuration)
                                 }
                                 composable(
                                     route = Routes.PastaMenu.route,
@@ -332,13 +311,7 @@ class MainActivity : ComponentActivity() {
                                         )
                                     }
                                 ) {
-                                    PastaMenu(
-                                        navController,
-                                        productViewModel,
-                                        dialogViewModel,
-                                        context,
-                                        configuration
-                                    )
+                                    PastaMenu(navController, productViewModel, dialogViewModel, configuration)
                                 }
                                 composable(
                                     route = Routes.DrinkMenu.route,
@@ -355,13 +328,7 @@ class MainActivity : ComponentActivity() {
                                         )
                                     }
                                 ) {
-                                    DrinkMenu(
-                                        navController,
-                                        productViewModel,
-                                        dialogViewModel,
-                                        context,
-                                        configuration
-                                    )
+                                    DrinkMenu(navController, productViewModel, dialogViewModel, configuration)
                                 }
                                 composable(
                                     route = Routes.MealMenu.route,
@@ -378,13 +345,7 @@ class MainActivity : ComponentActivity() {
                                         )
                                     }
                                 ) {
-                                    MealMenu(
-                                        navController,
-                                        productViewModel,
-                                        dialogViewModel,
-                                        context,
-                                        configuration
-                                    )
+                                    MealMenu(navController, productViewModel, dialogViewModel, configuration)
                                 }
                                 composable(
                                     route = Routes.OrderProduct.route,
@@ -401,13 +362,7 @@ class MainActivity : ComponentActivity() {
                                         )
                                     }
                                 ) {
-                                    OrderPizza(
-                                        navController,
-                                        productViewModel,
-                                        dialogViewModel,
-                                        context,
-                                        configuration
-                                    )
+                                    OrderPizza(navController, productViewModel, dialogViewModel, configuration)
                                 }
                                 composable(
                                     route = Routes.OrderProcess.route,
@@ -424,13 +379,7 @@ class MainActivity : ComponentActivity() {
                                         )
                                     }
                                 ) {
-                                    OrderProcess(
-                                        navController,
-                                        productViewModel,
-                                        dialogViewModel,
-                                        context,
-                                        userViewModel
-                                    )
+                                    OrderProcess(navController, productViewModel, dialogViewModel, userViewModel)
                                 }
                                 composable(
                                     route = Routes.Local.route,
@@ -447,13 +396,7 @@ class MainActivity : ComponentActivity() {
                                         )
                                     }
                                 ) {
-                                    PizzaLocal(
-                                        navController,
-                                        localViewModel,
-                                        dialogViewModel,
-                                        productViewModel,
-                                        context
-                                    )
+                                    PizzaLocal(navController, localViewModel, dialogViewModel)
                                 }
 
                             }

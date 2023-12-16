@@ -28,7 +28,7 @@ fun RemoveOrderPizzaDialog(productViewModel: ProductViewModel, dialogViewModel: 
         text =
         {
             Divider(color = Palette_1_11)
-            Text(text = "\nAre you sure you want to delete the pizza list? This action cannot be undone.", textAlign = TextAlign.Justify, color = Palette_1_11, ) }
+            Text(text = "\nAre you sure you want to delete the pizza list? This action cannot be undone.", textAlign = TextAlign.Justify, color = Palette_1_11 ) }
         ,
         confirmButton = {
             Button(

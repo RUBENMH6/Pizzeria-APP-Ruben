@@ -1,6 +1,5 @@
 package com.example.pizzeria.screens
 
-import android.content.Context
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -18,14 +17,12 @@ import androidx.navigation.NavController
 import com.example.pizzeria.classes.data.getPizzaLocal
 import com.example.pizzeria.classes.viewmodels.DialogViewModel
 import com.example.pizzeria.classes.viewmodels.LocalViewModel
-import com.example.pizzeria.classes.viewmodels.ProductViewModel
 import com.example.pizzeria.components.local.MyLocal
-import com.example.pizzeria.dialogs.LoginNeededOrderPizzaDialog
 import com.example.pizzeria.dialogs.LoginNeededToAccessProfileDialog
 import com.example.pizzeria.ui.theme.tostadito
 
 @Composable
-fun PizzaLocal(navController: NavController, localViewModel: LocalViewModel, dialogViewModel: DialogViewModel, productViewModel: ProductViewModel, context: Context) {
+fun PizzaLocal(navController: NavController, localViewModel: LocalViewModel, dialogViewModel: DialogViewModel) {
     val locals = getPizzaLocal()
     Column(
         modifier = Modifier.fillMaxWidth().background(tostadito)
@@ -44,7 +41,7 @@ fun PizzaLocal(navController: NavController, localViewModel: LocalViewModel, dia
             modifier = Modifier.fillMaxSize(),
             contentAlignment = Alignment.Center
         ) {
-            LoginNeededToAccessProfileDialog(navController, productViewModel, dialogViewModel, context)
+            LoginNeededToAccessProfileDialog(navController,  dialogViewModel)
         }
     }
 }

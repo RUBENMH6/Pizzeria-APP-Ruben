@@ -17,10 +17,8 @@ import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
@@ -32,8 +30,6 @@ import com.example.pizzeria.classes.viewmodels.ProductViewModel
 import com.example.pizzeria.classes.viewmodels.UserViewModel
 import com.example.pizzeria.ui.theme.Palette_1_11
 import com.example.pizzeria.ui.theme.Palette_1_8
-import com.example.pizzeria.ui.theme.button
-import com.example.pizzeria.ui.theme.scaffold
 
 @Composable
 fun MyBottomAppBar(

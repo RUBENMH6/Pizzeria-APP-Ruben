@@ -1,7 +1,6 @@
 package com.example.pizzeria.screens.log
 
 import android.content.Context
-import android.util.Log
 import android.widget.Toast
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
@@ -24,7 +23,6 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.ShapeDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -49,24 +47,15 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.pizzeria.R
-import com.example.pizzeria.classes.viewmodels.DialogViewModel
-import com.example.pizzeria.classes.viewmodels.ProductViewModel
 import com.example.pizzeria.classes.Routes
-import com.example.pizzeria.classes.data.UserInfo
+import com.example.pizzeria.classes.viewmodels.DialogViewModel
 import com.example.pizzeria.classes.viewmodels.UserViewModel
-import com.example.pizzeria.dialogs.LoginNeededOrderPizzaDialog
 import com.example.pizzeria.dialogs.LoginNeededToAccessProfileDialog
-import com.example.pizzeria.ui.theme.Palette_1_1
-import com.example.pizzeria.ui.theme.Palette_1_10
 import com.example.pizzeria.ui.theme.Palette_1_11
-import com.example.pizzeria.ui.theme.Palette_1_3
-import com.example.pizzeria.ui.theme.Palette_1_5
 import com.example.pizzeria.ui.theme.Palette_1_9
 import com.example.pizzeria.ui.theme.tostadito
-import com.example.pizzeria.ui.theme.tostadito2
 import com.google.firebase.Firebase
 import com.google.firebase.auth.auth
-import com.google.firebase.firestore.auth.User
 
 @OptIn(ExperimentalComposeUiApi::class, ExperimentalMaterial3Api::class)
 @Composable
@@ -74,7 +63,6 @@ fun Login(
     context: Context,
     navController: NavController,
     userViewModel: UserViewModel,
-    productViewModel: ProductViewModel,
     dialogViewModel: DialogViewModel
 ) {
     val authState by remember { userViewModel.authState }
@@ -225,7 +213,7 @@ fun Login(
                 .background(Color.Transparent.copy(0.2f)),
             contentAlignment = Alignment.Center
         ) {
-            LoginNeededToAccessProfileDialog(navController, productViewModel, dialogViewModel, context)
+            LoginNeededToAccessProfileDialog(navController, dialogViewModel)
         }
     }
 }

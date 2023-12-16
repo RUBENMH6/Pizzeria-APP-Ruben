@@ -1,13 +1,10 @@
 package com.example.pizzeria.screens.products
 
-import android.content.Context
 import android.content.res.Configuration
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -23,14 +20,11 @@ import androidx.navigation.NavController
 import com.example.pizzeria.R
 import com.example.pizzeria.classes.viewmodels.DialogViewModel
 import com.example.pizzeria.classes.viewmodels.ProductViewModel
-import com.example.pizzeria.components.products.pasta.MyPastaCard
 import com.example.pizzeria.components.products.pizza.MyPizzaCard
 import com.example.pizzeria.dialogs.LoginNeededToAccessProfileDialog
-import com.example.pizzeria.ui.theme.Palette_1_4
-import com.example.pizzeria.ui.theme.tostadito
 
 @Composable
-fun PastaMenu(navController: NavController, productViewModel: ProductViewModel, dialogViewModel: DialogViewModel, context: Context, configuration: Configuration) {
+fun PastaMenu(navController: NavController, productViewModel: ProductViewModel, dialogViewModel: DialogViewModel, configuration: Configuration) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -81,7 +75,7 @@ fun PastaMenu(navController: NavController, productViewModel: ProductViewModel, 
             modifier = Modifier.fillMaxSize().background(Color.Transparent.copy(0.2f)),
             contentAlignment = Alignment.Center
         ) {
-            LoginNeededToAccessProfileDialog(navController, productViewModel, dialogViewModel, context)
+            LoginNeededToAccessProfileDialog(navController, dialogViewModel)
         }
     }
 }
