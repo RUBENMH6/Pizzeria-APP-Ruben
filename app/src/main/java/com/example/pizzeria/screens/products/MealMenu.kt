@@ -37,9 +37,9 @@ fun MealMenu(navController: NavController, productViewModel: ProductViewModel) {
                         "Carbonara" -> MyPizzaCard(product, productViewModel, R.drawable.pizza5)
                         "Calzone" -> MyPizzaCard(product, productViewModel, R.drawable.pizza7)
                     }
-
+                    Spacer(modifier = Modifier.weight(0.10f))
                 }
-                Spacer(modifier = Modifier.weight(0.10f))
+
             }
         }
     }
