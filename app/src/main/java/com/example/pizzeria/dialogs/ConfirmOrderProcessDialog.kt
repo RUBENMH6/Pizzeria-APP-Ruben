@@ -42,7 +42,7 @@ fun ConfirmOrderPizzaDialog(navController: NavController, productViewModel: Prod
                     dialogViewModel.dialogConfirmOrderPizza.value = false
                     navController.navigate(Routes.SplashScreenOrderConfirmed.route)
                 },
-                colors = ButtonDefaults.buttonColors(Palette_1_7),
+                colors = ButtonDefaults.buttonColors(Palette_1_11),
                 modifier = Modifier.padding(end = 10.dp)) {
                 Text("Confirm")
             }

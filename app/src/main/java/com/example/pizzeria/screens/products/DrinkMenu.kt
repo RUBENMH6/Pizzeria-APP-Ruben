@@ -34,7 +34,7 @@ import com.example.pizzeria.ui.theme.tostadito
 fun DrinkMenu(navController: NavController, productViewModel: ProductViewModel, dialogViewModel: DialogViewModel, context: Context, configuration: Configuration) {
     Column(
         modifier = Modifier
-            .fillMaxSize().background(tostadito)
+            .fillMaxSize()
     ) {
         val listState = rememberLazyStaggeredGridState()
         val list = productViewModel.productList
