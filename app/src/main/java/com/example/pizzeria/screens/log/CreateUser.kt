@@ -26,6 +26,7 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.ShapeDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
+import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -107,7 +108,7 @@ fun CreateUser(
                 modifier = Modifier
                     .width(250.dp)
                     .height(300.dp)
-                    .border(1.dp, Palette_1_10, RoundedCornerShape(16.dp))
+                    .border(1.dp, Palette_1_11, RoundedCornerShape(16.dp))
                     .background(Palette_1_11, RoundedCornerShape(16.dp)),
                 contentAlignment = Alignment.Center
             ) {
@@ -115,9 +116,9 @@ fun CreateUser(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    OutlinedTextField(
+                    TextField(
                         value = name,
-                        onValueChange = { name = it },
+                        onValueChange = { name = it.replace(" ", "") },
                         label = { Text("Name") },
                         keyboardOptions = KeyboardOptions.Default.copy(imeAction = androidx.compose.ui.text.input.ImeAction.Next),
                         modifier = Modifier.width(200.dp),
@@ -127,13 +128,13 @@ fun CreateUser(
                             cursorColor = Palette_1_11,
                             containerColor = Color.White,
                             focusedLabelColor = Color.White,
-                            unfocusedLabelColor = Color.White
+                            unfocusedLabelColor = Palette_1_11,
                         )
                     )
-
-                    OutlinedTextField(
+                    Spacer(modifier = Modifier.height(10.dp))
+                    TextField(
                         value = email,
-                        onValueChange = { email = it },
+                        onValueChange = { email = it.replace(" ", "") },
                         label = { Text("Email") },
                         keyboardOptions = KeyboardOptions.Default.copy(imeAction = androidx.compose.ui.text.input.ImeAction.Next),
                         modifier = Modifier.width(200.dp),
@@ -143,12 +144,13 @@ fun CreateUser(
                             cursorColor = Palette_1_11,
                             containerColor = Color.White,
                             focusedLabelColor = Color.White,
-                            unfocusedLabelColor = Color.White
+                            unfocusedLabelColor = Palette_1_11
                         )
                     )
-                    OutlinedTextField(
+                    Spacer(modifier = Modifier.height(10.dp))
+                    TextField(
                         value = password,
-                        onValueChange = { password = it },
+                        onValueChange = { password = it.replace(" ", "") },
                         label = { Text("Password") },
                         visualTransformation = PasswordVisualTransformation(),
                         keyboardOptions = KeyboardOptions.Default.copy(imeAction = androidx.compose.ui.text.input.ImeAction.Done),
@@ -160,7 +162,7 @@ fun CreateUser(
                             cursorColor = Palette_1_11,
                             containerColor = Color.White,
                             focusedLabelColor = Color.White,
-                            unfocusedLabelColor = Color.White
+                            unfocusedLabelColor = Palette_1_11
                         )
                     )
 

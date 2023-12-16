@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -27,6 +28,7 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.ShapeDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
+import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -129,7 +131,7 @@ fun Login(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    OutlinedTextField(
+                    TextField(
                         value = email,
                         onValueChange = { email = it.replace(" ", "")},
                         label = { Text("Email") },
@@ -141,12 +143,13 @@ fun Login(
                             cursorColor = Palette_1_11,
                             containerColor = Color.White,
                             focusedLabelColor = Color.White,
-                            unfocusedLabelColor = Color.White
+                            unfocusedLabelColor = Palette_1_11
                         )
                     )
-                    OutlinedTextField(
+                    Spacer(modifier = Modifier.height(10.dp))
+                    TextField(
                         value = password,
-                        onValueChange = { password = it },
+                        onValueChange = { password = it.replace(" ", "") },
                         label = { Text("Password") },
                         visualTransformation = PasswordVisualTransformation(),
                         keyboardOptions = KeyboardOptions.Default.copy(imeAction = androidx.compose.ui.text.input.ImeAction.Done),
@@ -158,7 +161,7 @@ fun Login(
                             cursorColor = Palette_1_11,
                             containerColor = Color.White,
                             focusedLabelColor = Color.White,
-                            unfocusedLabelColor = Color.White
+                            unfocusedLabelColor = Palette_1_11
                         )
                     )
                     Button(
