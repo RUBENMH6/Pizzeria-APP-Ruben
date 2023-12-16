@@ -45,7 +45,7 @@ fun ConfirmOrderPizzaDialog(navController: NavController, productViewModel: Prod
                     dialogViewModel.dialogConfirmOrderPizza.value = false
 
                 },
-                colors = ButtonDefaults.buttonColors(Palette_1_7),
+                colors = ButtonDefaults.buttonColors(Palette_1_11),
                 modifier = Modifier.padding(end = 10.dp)) {
                 Text("Confirm")
             }
