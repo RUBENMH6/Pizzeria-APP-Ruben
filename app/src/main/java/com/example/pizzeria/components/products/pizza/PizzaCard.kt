@@ -3,6 +3,7 @@ package com.example.pizzeria.components.products.pizza
 import android.content.res.Configuration
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -16,6 +17,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.staggeredgrid.LazyVerticalStaggeredGrid
 import androidx.compose.foundation.lazy.staggeredgrid.StaggeredGridCells
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Divider
@@ -36,6 +38,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.ImagePainter
@@ -69,11 +72,8 @@ fun MyPizzaCard(
     Card(
         colors = CardDefaults.cardColors(tostadito),
         elevation = CardDefaults.cardElevation(10.dp),
-        modifier = Modifier.padding(5.dp)
+        modifier = Modifier.padding(5.dp).border(6.dp, tostadito, RoundedCornerShape(12.dp))
     ) {
-        if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) {
-
-
             Row(
                 modifier = Modifier.fillMaxSize()
             ) {
@@ -86,7 +86,7 @@ fun MyPizzaCard(
                         contentDescription = productInfo.name,
                         contentScale = ContentScale.Crop,
                         modifier = Modifier
-                            .height(100.dp)
+                            .height(160.dp)
                             .fillMaxSize()
                     )
                     Row(
@@ -106,8 +106,11 @@ fun MyPizzaCard(
                                 color = Palette_1_11,
                                 fontWeight = FontWeight.Bold,
                                 modifier = Modifier
-                                    .padding(start = 12.dp),
-                                fontFamily = FontCWGSans
+                                    .padding(start = 12.dp, end = 12.dp),
+                                fontFamily = FontCWGSans,
+                                maxLines = 1,
+                                softWrap = false,
+                                overflow = TextOverflow.Ellipsis
                             )
                         }
                         Row(
@@ -246,12 +249,10 @@ fun MyPizzaCard(
                             }
                         }
                     }
-                    Spacer(modifier = Modifier.width(12.dp))
-                    Divider(color = Palette_1_11)
                     Row(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .height(6.dp)
+                            .height(6.dp).border(1.dp, Palette_1_11)
                     ) {
                         Column(
                             modifier = Modifier
@@ -272,8 +273,6 @@ fun MyPizzaCard(
                                 .background(Palette_1_11)
                         ) {}
                     }
-                    Divider(color = Palette_1_11)
-                    Spacer(modifier = Modifier.width(12.dp))
                     Row(
                         modifier = Modifier
                             .height(100.dp)
@@ -302,14 +301,6 @@ fun MyPizzaCard(
                         )
                     }
                 }
-
             }
-        } else {
-            LazyVerticalStaggeredGrid(
-                columns = StaggeredGridCells
-            ) {
-
-            }
-        }
     }
 }

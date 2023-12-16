@@ -33,8 +33,8 @@ fun ConfirmOrderPizzaDialog(navController: NavController, productViewModel: Prod
         },
         text =
         {
-            Divider(color = Palette_1_8)
-            Text("\nAre you sure you want to confirm the order?", color = Palette_1_10) }
+            Divider(color = Palette_1_11)
+            Text("\nAre you sure you want to confirm the order?", color = Palette_1_11) }
         ,
         confirmButton = {
             Button(
@@ -42,7 +42,7 @@ fun ConfirmOrderPizzaDialog(navController: NavController, productViewModel: Prod
                     dialogViewModel.dialogConfirmOrderPizza.value = false
                     navController.navigate(Routes.SplashScreenOrderConfirmed.route)
                 },
-                colors = ButtonDefaults.buttonColors(Palette_1_8),
+                colors = ButtonDefaults.buttonColors(Palette_1_7),
                 modifier = Modifier.padding(end = 10.dp)) {
                 Text("Confirm")
             }
@@ -52,12 +52,12 @@ fun ConfirmOrderPizzaDialog(navController: NavController, productViewModel: Prod
                 onClick = {
                     dialogViewModel.dialogConfirmOrderPizza.value = false
                 },
-                colors = ButtonDefaults.buttonColors(Palette_1_8),
+                colors = ButtonDefaults.buttonColors(Palette_1_11),
                 modifier = Modifier.padding(end = 40.dp)) {
                 Text("Dismiss")
             }
         },
-        containerColor = Palette_1_2,
+        containerColor = tostadito,
         titleContentColor = Palette_1_11,
         shape = RoundedCornerShape(24.dp),
         modifier = Modifier.border(1.dp, Palette_1_11, RoundedCornerShape(24.dp))

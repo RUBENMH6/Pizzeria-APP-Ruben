@@ -48,6 +48,7 @@ import com.example.pizzeria.classes.viewmodels.ProductViewModel
 import com.example.pizzeria.classes.viewmodels.UserViewModel
 import com.example.pizzeria.ui.theme.Palette_1_11
 import com.example.pizzeria.ui.theme.Palette_1_4
+import com.example.pizzeria.ui.theme.tostadito
 import kotlinx.coroutines.delay
 @Composable
 fun SplashScreen(navController: NavController, userViewModel: UserViewModel, productViewModel: ProductViewModel) {
@@ -85,7 +86,7 @@ fun AnimatedSplash(splashText: String) {
     )
 
     Column(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier.fillMaxSize().background(tostadito),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {

@@ -1,6 +1,7 @@
 package com.example.pizzeria.screens
 
 import android.content.Context
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -21,11 +22,14 @@ import com.example.pizzeria.classes.viewmodels.ProductViewModel
 import com.example.pizzeria.components.local.MyLocal
 import com.example.pizzeria.dialogs.LoginNeededOrderPizzaDialog
 import com.example.pizzeria.dialogs.LoginNeededToAccessProfileDialog
+import com.example.pizzeria.ui.theme.tostadito
 
 @Composable
 fun PizzaLocal(navController: NavController, localViewModel: LocalViewModel, dialogViewModel: DialogViewModel, productViewModel: ProductViewModel, context: Context) {
     val locals = getPizzaLocal()
-    Column(modifier = Modifier.fillMaxWidth()) {
+    Column(
+        modifier = Modifier.fillMaxWidth().background(tostadito)
+    ) {
         LazyColumn(modifier = Modifier.padding(start = 10.dp, end = 10.dp)) {
             items(getPizzaLocal().size) {
                 Spacer(modifier = Modifier.height(10.dp))

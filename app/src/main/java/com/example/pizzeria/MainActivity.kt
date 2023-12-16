@@ -290,7 +290,8 @@ class MainActivity : ComponentActivity() {
                                         userViewModel,
                                         dialogViewModel,
                                         productViewModel,
-                                        context
+                                        context,
+                                        configuration
                                     )
                                 }
                                 composable(
@@ -312,7 +313,8 @@ class MainActivity : ComponentActivity() {
                                         navController,
                                         productViewModel,
                                         dialogViewModel,
-                                        context
+                                        context,
+                                        configuration
                                     )
                                 }
                                 composable(
@@ -334,7 +336,8 @@ class MainActivity : ComponentActivity() {
                                         navController,
                                         productViewModel,
                                         dialogViewModel,
-                                        context
+                                        context,
+                                        configuration
                                     )
                                 }
                                 composable(
@@ -356,7 +359,8 @@ class MainActivity : ComponentActivity() {
                                         navController,
                                         productViewModel,
                                         dialogViewModel,
-                                        context
+                                        context,
+                                        configuration
                                     )
                                 }
                                 composable(
@@ -378,7 +382,8 @@ class MainActivity : ComponentActivity() {
                                         navController,
                                         productViewModel,
                                         dialogViewModel,
-                                        context
+                                        context,
+                                        configuration
                                     )
                                 }
                                 composable(
@@ -400,7 +405,8 @@ class MainActivity : ComponentActivity() {
                                         navController,
                                         productViewModel,
                                         dialogViewModel,
-                                        context
+                                        context,
+                                        configuration
                                     )
                                 }
                                 composable(

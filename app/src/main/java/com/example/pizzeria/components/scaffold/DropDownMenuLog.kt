@@ -1,6 +1,7 @@
 package com.example.pizzeria.components.scaffold
 
 import android.content.Context
+import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
@@ -94,7 +95,17 @@ fun MyDropDownMenuLog(expanded: Boolean, onExpandedChange: (Boolean) -> Unit, na
                 onClick = {
                     when (item) {
                         "Log In" -> navController.navigate(Routes.Login.route)
-                        "Profile" -> if (userViewModel.authState.value == UserViewModel.AuthState.UNAUTHENTICATED) dialogViewModel.dialogLoginToAccessProfile.value = true else navController.navigate(Routes.Profile.route)
+                        "Profile" ->  {
+                            if (userViewModel.authState.value == UserViewModel.AuthState.UNAUTHENTICATED) {
+                                if (currentRoute != Routes.Login.route) {
+                                    dialogViewModel.dialogLoginToAccessProfile.value = true
+                                } else {
+                                    Toast.makeText(context, "Please log in first", Toast.LENGTH_LONG).show()
+                                }
+                            } else {
+                                navController.navigate(Routes.Profile.route)
+                            }
+                        }
                         else -> {
                             userViewModel.auth.signOut()
                             navController.navigate(Routes.MainMenu.route)

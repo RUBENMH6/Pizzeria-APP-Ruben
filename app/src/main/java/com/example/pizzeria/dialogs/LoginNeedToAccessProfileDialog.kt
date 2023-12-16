@@ -27,8 +27,8 @@ fun LoginNeededToAccessProfileDialog(navController: NavController, productViewMo
         onDismissRequest = { dialogViewModel.dialogLoginToAccessProfile.value = false },
         title = { Text(text = "Please. Sign in!") },
         text = {
-            Divider(color = Palette_1_8)
-            Text("\nYou need to be logged to access in profile.", color = Palette_1_10) },
+            Divider(color = Palette_1_11)
+            Text("\nYou need to be logged to access in profile.", color = Palette_1_11) },
         confirmButton = {
             Button(
                 onClick = {
@@ -36,7 +36,7 @@ fun LoginNeededToAccessProfileDialog(navController: NavController, productViewMo
                     dialogViewModel.dialogLoginToAccessProfile.value = false
                     navController.navigate(Routes.Login.route)
                 },
-                colors = ButtonDefaults.buttonColors(Palette_1_8),
+                colors = ButtonDefaults.buttonColors(Palette_1_11),
                 modifier = Modifier.padding(end = 10.dp)) {
                 Text("Sign in")
             }
@@ -46,12 +46,12 @@ fun LoginNeededToAccessProfileDialog(navController: NavController, productViewMo
                 onClick = {
                     dialogViewModel.dialogLoginToAccessProfile.value = false
                 },
-                colors = ButtonDefaults.buttonColors(Palette_1_8),
+                colors = ButtonDefaults.buttonColors(Palette_1_11),
                 modifier = Modifier.padding(end = 40.dp)) {
                 Text("Dismiss")
             }
         },
-        containerColor = Palette_1_2,
+        containerColor = tostadito,
         titleContentColor = Palette_1_11,
         shape = RoundedCornerShape(24.dp),
         modifier = Modifier.border(1.dp, Palette_1_11, RoundedCornerShape(24.dp))

@@ -40,6 +40,7 @@ val Palette_1_11 = Color(0xFFcc0000)
 
 
 val tostadito = Color(0xFFE2C799)
+val tostadito2 = Color(0xFFA89471)
 val marroncito = Color(0xFF994D1C)
 val VerdeItalia = Color(0xFF52A869)
 

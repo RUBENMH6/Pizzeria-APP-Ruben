@@ -72,9 +72,9 @@ fun MyTopAppBar(
                         Routes.MealMenu.route  -> "Meals"
                         Routes.DrinkMenu.route  -> "Drinks"
                         Routes.OrderProduct.route  -> "Your order"
-                        Routes.OrderProcess.route  -> "Confirm order"
+                        Routes.OrderProcess.route  -> "Ordering"
                         Routes.Login.route  -> "Sign in"
-                        Routes.CreateUser.route  -> "Create account"
+                        Routes.CreateUser.route  -> "Register"
                         else -> ""
                     },
                     color = Color.White,
@@ -105,18 +105,14 @@ fun MyTopAppBar(
                     BadgedBox(
                         badge = {
                             Text(
-                                text = productViewModel.getQuantityProductTotal().toString(),
+                                text = if (productViewModel.getQuantityProductTotal() != 0) productViewModel.getQuantityProductTotal().toString() else "",
                                 color = Palette_1_1,
                                 fontSize = 12.sp,
                                 textAlign = TextAlign.Center,
                                 modifier = Modifier
                                     .size(18.dp)
                                     .offset((-50).dp, (10).dp)
-                                    .background(
-                                        Palette_1_10,
-                                        RoundedCornerShape(30.dp)
 
-                                    )
                             )
                         }) {
                         IconButton(
@@ -129,17 +125,11 @@ fun MyTopAppBar(
                                 modifier = Modifier.size(40.dp)
                             )
                         }
+                        MyDropDownMenuIconFood(expandedDDMIcon, { expandedDDMIcon = it}, productViewModel, navController, route)
                     }
-                    MyDropDownMenuIconFood(expandedDDMIcon, { expandedDDMIcon = it}, productViewModel, navController, route)
+
                     IconButton(
-                        onClick = {
-                            expandedDDMLog = true
-//                            if (userViewModel.auth.currentUser != null) {
-//                                productViewModel.safeDeleteOrderMap()
-//                                userViewModel.auth.signOut()
-//                            }
-//                            navController.navigate("Login")
-                        }
+                        onClick = { expandedDDMLog = true }
                     ) {
                         Icon(
                             painter = painterResource(if (userViewModel.auth.currentUser == null) R.drawable.baseline_login_24 else R.drawable.baseline_logout_24 ),

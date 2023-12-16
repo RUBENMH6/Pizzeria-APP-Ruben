@@ -1,6 +1,7 @@
 package com.example.pizzeria.screens
 
 import android.content.Context
+import android.content.res.Configuration
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -46,6 +47,7 @@ import com.example.pizzeria.dialogs.LoginNeededOrderPizzaDialog
 import com.example.pizzeria.dialogs.LoginNeededToAccessProfileDialog
 import com.example.pizzeria.ui.theme.FontCWGSans
 import com.example.pizzeria.ui.theme.Palette_1_1
+import com.example.pizzeria.ui.theme.Palette_1_11
 import com.example.pizzeria.ui.theme.Palette_1_3
 import com.example.pizzeria.ui.theme.Palette_1_6
 import com.example.pizzeria.ui.theme.Palette_1_7
@@ -55,7 +57,7 @@ import com.example.pizzeria.ui.theme.tostadito
 import com.google.firebase.auth.FirebaseAuth
 
 @Composable
-fun MainMenu(navController: NavController, userViewModel: UserViewModel, dialogViewModel: DialogViewModel, productViewModel: ProductViewModel, context: Context) {
+fun MainMenu(navController: NavController, userViewModel: UserViewModel, dialogViewModel: DialogViewModel, productViewModel: ProductViewModel, context: Context, configuration: Configuration) {
     val listButtons = listOf<String>(
         Routes.PizzaMenu.route,
         Routes.PastaMenu.route,
@@ -70,24 +72,31 @@ fun MainMenu(navController: NavController, userViewModel: UserViewModel, dialogV
             .background(tostadito)
 
         ) {
+
+            if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .weight(0.4f),
+                    horizontalArrangement = Arrangement.Center,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Image(
+                        painter = painterResource(R.drawable.pizzalogo),
+                        contentDescription = "Logo",
+                        modifier = Modifier.size(200.dp),
+                        contentScale = ContentScale.Crop
+                    )
+                }
+            }
+
+
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .weight(0.4f),
+                .weight(if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) 0.6f else 1f),
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically
-        ) {
-            Image(
-                painter = painterResource(R.drawable.pizzalogo),
-                contentDescription = "Logo",
-                modifier = Modifier.size(200.dp),
-                contentScale = ContentScale.Crop
-            )
-        }
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .weight(0.6f)
         ) {
             Column(
                 modifier = Modifier
@@ -101,7 +110,7 @@ fun MainMenu(navController: NavController, userViewModel: UserViewModel, dialogV
                         Button(
                             onClick = { navController.navigate(it) },
                             shape = ShapeDefaults.Small,
-                            colors = ButtonDefaults.buttonColors(Palette_1_7),
+                            colors = ButtonDefaults.buttonColors(Palette_1_11),
                             modifier = Modifier.width(250.dp),
                             elevation = ButtonDefaults.elevatedButtonElevation(6.dp)
                         ) {
@@ -115,7 +124,7 @@ fun MainMenu(navController: NavController, userViewModel: UserViewModel, dialogV
                                     else -> ""
                                 },
                                 fontWeight = FontWeight.Bold,
-                                color = Palette_1_1,
+                                color = Color.White,
                                 fontFamily = FontCWGSans
                             )
                         }

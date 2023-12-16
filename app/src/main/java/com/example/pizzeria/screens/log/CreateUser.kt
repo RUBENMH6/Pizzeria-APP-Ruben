@@ -20,8 +20,10 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.ShapeDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TextFieldDefaults
@@ -40,6 +42,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.pizzeria.R
 import com.example.pizzeria.classes.viewmodels.DialogViewModel
@@ -48,11 +51,14 @@ import com.example.pizzeria.classes.Routes
 import com.example.pizzeria.classes.data.UserInfo
 import com.example.pizzeria.classes.viewmodels.UserViewModel
 import com.example.pizzeria.dialogs.LoginNeededOrderPizzaDialog
+import com.example.pizzeria.dialogs.LoginNeededToAccessProfileDialog
 import com.example.pizzeria.ui.theme.Palette_1_1
 import com.example.pizzeria.ui.theme.Palette_1_10
 import com.example.pizzeria.ui.theme.Palette_1_11
 import com.example.pizzeria.ui.theme.Palette_1_3
 import com.example.pizzeria.ui.theme.Palette_1_5
+import com.example.pizzeria.ui.theme.Palette_1_9
+import com.example.pizzeria.ui.theme.tostadito
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.auth.User
 
@@ -66,7 +72,7 @@ fun CreateUser(
     dialogViewModel: DialogViewModel
     ) {
     Column(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier.fillMaxSize().background(tostadito),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
@@ -102,7 +108,7 @@ fun CreateUser(
                     .width(250.dp)
                     .height(300.dp)
                     .border(1.dp, Palette_1_10, RoundedCornerShape(16.dp))
-                    .background(Palette_1_3, RoundedCornerShape(16.dp)),
+                    .background(Palette_1_11, RoundedCornerShape(16.dp)),
                 contentAlignment = Alignment.Center
             ) {
                 Column(
@@ -117,9 +123,11 @@ fun CreateUser(
                         modifier = Modifier.width(200.dp),
                         colors = TextFieldDefaults.outlinedTextFieldColors(
                             focusedBorderColor = Palette_1_11,
-                            unfocusedBorderColor = Palette_1_5,
+                            unfocusedBorderColor = Palette_1_9,
                             cursorColor = Palette_1_11,
-                            containerColor = Palette_1_1
+                            containerColor = Color.White,
+                            focusedLabelColor = Color.White,
+                            unfocusedLabelColor = Color.White
                         )
                     )
 
@@ -131,9 +139,11 @@ fun CreateUser(
                         modifier = Modifier.width(200.dp),
                         colors = TextFieldDefaults.outlinedTextFieldColors(
                             focusedBorderColor = Palette_1_11,
-                            unfocusedBorderColor = Palette_1_5,
+                            unfocusedBorderColor = Palette_1_9,
                             cursorColor = Palette_1_11,
-                            containerColor = Palette_1_1
+                            containerColor = Color.White,
+                            focusedLabelColor = Color.White,
+                            unfocusedLabelColor = Color.White
                         )
                     )
                     OutlinedTextField(
@@ -146,9 +156,11 @@ fun CreateUser(
                         modifier = Modifier.width(200.dp),
                         colors = TextFieldDefaults.outlinedTextFieldColors(
                             focusedBorderColor = Palette_1_11,
-                            unfocusedBorderColor = Palette_1_5,
+                            unfocusedBorderColor = Palette_1_9,
                             cursorColor = Palette_1_11,
-                            containerColor = Palette_1_1
+                            containerColor = Color.White,
+                            focusedLabelColor = Color.White,
+                            unfocusedLabelColor = Color.White
                         )
                     )
 
@@ -156,9 +168,13 @@ fun CreateUser(
                             onClick = {
                                     userViewModel.createUserWithEmailAndPassword(email, password, context, navController, name)
                             },
-                            modifier = Modifier.padding(top = 16.dp)
+                            modifier = Modifier.padding(top = 16.dp).border(1.dp, Color.White, ShapeDefaults.Small).background(
+                                tostadito, ShapeDefaults.Small),
+                            colors =  ButtonDefaults.buttonColors(tostadito)
                         ) {
-                            Text("Create account")
+                            Text(
+                                text = "Create account",
+                                color = Palette_1_11)
                         }
 
 
@@ -166,27 +182,38 @@ fun CreateUser(
                 }
             }
         }
+    }
+    Box(
+        modifier = Modifier.fillMaxSize(),
+        contentAlignment = Alignment.BottomCenter
+    ) {
         Row(
             modifier = Modifier.fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.Center
         ) {
-            Text("Do you already have an account?")
-            TextButton(onClick = { navController.navigate(Routes.Login.route) }) {
+            Text(
+                text = "Do you already have an account?",
+                fontSize = 10.sp,
+                modifier = Modifier.height(20.dp))
+            TextButton(
+                onClick = { navController.navigate(Routes.Login.route) },
+                modifier = Modifier.height(20.dp)
+            ) {
                 Text(
                     text = "Sign in",
-                    fontWeight = FontWeight.Bold
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 10.sp
                 )
             }
         }
-
     }
     if (dialogViewModel.dialogLoginToAccessProfile.value) {
         Box(
             modifier = Modifier.fillMaxSize().background(Color.Transparent.copy(0.2f)),
             contentAlignment = Alignment.Center
         ) {
-            LoginNeededOrderPizzaDialog(navController, productViewModel, dialogViewModel, context)
+            LoginNeededToAccessProfileDialog(navController, productViewModel, dialogViewModel, context)
         }
     }
 }

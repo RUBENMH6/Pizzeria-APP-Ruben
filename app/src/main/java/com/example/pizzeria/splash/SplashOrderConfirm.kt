@@ -22,6 +22,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -43,6 +44,7 @@ import com.example.pizzeria.ui.theme.Palette_1_1
 import com.example.pizzeria.ui.theme.Palette_1_11
 import com.example.pizzeria.ui.theme.Palette_1_4
 import com.example.pizzeria.ui.theme.Palette_1_6
+import com.example.pizzeria.ui.theme.tostadito
 import kotlinx.coroutines.delay
 
 @Composable
@@ -77,7 +79,7 @@ fun AnimatedSplashOrderConfirmed() {
 
 
     Column(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier.fillMaxSize().background(tostadito),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -101,7 +103,7 @@ fun AnimatedSplashOrderConfirmed() {
         }
     }
     Box(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier.fillMaxSize().padding(bottom = 10.dp),
         contentAlignment = Alignment.BottomCenter
     ) {
         Text(
