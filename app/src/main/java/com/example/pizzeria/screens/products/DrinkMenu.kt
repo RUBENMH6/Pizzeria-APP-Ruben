@@ -33,7 +33,6 @@ fun DrinkMenu(navController: NavController, productViewModel: ProductViewModel, 
     ) {
         LazyColumn(modifier = Modifier.padding(10.dp)) {
             items(productViewModel.productList) { product ->
-                Spacer(modifier = Modifier.height(10.dp))
                 if (product.type == "DRINK") {
                     when(product.name) {
                         "Margarita" -> MyPizzaCard(product, productViewModel, R.drawable.pizza1)
@@ -43,9 +42,8 @@ fun DrinkMenu(navController: NavController, productViewModel: ProductViewModel, 
                         "Carbonara" -> MyPizzaCard(product, productViewModel, R.drawable.pizza5)
                         "Calzone" -> MyPizzaCard(product, productViewModel, R.drawable.pizza7)
                     }
-
                 }
-                Spacer(modifier = Modifier.weight(0.10f))
+
             }
         }
     }

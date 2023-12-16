@@ -58,7 +58,7 @@ fun MyTopAppBar(
     var expandedDDMIcon by remember { mutableStateOf(false) }
     var expandedDDMLog by remember { mutableStateOf(false) }
     TopAppBar(
-        colors = TopAppBarDefaults.largeTopAppBarColors(scaffold),
+        colors = TopAppBarDefaults.largeTopAppBarColors(Palette_1_11),
         title = {
             Row(
                 modifier = Modifier.fillMaxWidth()

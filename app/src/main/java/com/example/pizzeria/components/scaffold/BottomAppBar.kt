@@ -45,15 +45,13 @@ fun MyBottomAppBar(
     userViewModel: UserViewModel
     ) {
     BottomAppBar(
-        containerColor = scaffold,
+        containerColor = Palette_1_11,
         modifier = Modifier.height(60.dp)
     ) {
         Row(
             modifier = Modifier.weight(0.2f)
         ) {
             IconButton(
-                modifier = Modifier.clip(RoundedCornerShape(16.dp)),
-                colors = IconButtonDefaults.iconButtonColors(button),
                 onClick = {
                 when (currentRoute) {
                     Routes.OrderProduct.route -> navController.navigate(Routes.PizzaMenu.route)

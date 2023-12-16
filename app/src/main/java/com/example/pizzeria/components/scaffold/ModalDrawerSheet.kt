@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.DrawerState
@@ -32,10 +33,13 @@ import com.example.pizzeria.classes.data.getNavDrawInfo
 import com.example.pizzeria.classes.viewmodels.UserViewModel
 import com.example.pizzeria.ui.theme.FontCWGSans
 import com.example.pizzeria.ui.theme.Palette_1_1
+import com.example.pizzeria.ui.theme.Palette_1_11
 import com.example.pizzeria.ui.theme.Palette_1_4
+import com.example.pizzeria.ui.theme.Palette_1_7
 import com.example.pizzeria.ui.theme.Palette_1_8
 import com.example.pizzeria.ui.theme.button
 import com.example.pizzeria.ui.theme.scaffold
+import com.example.pizzeria.ui.theme.tostadito
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
@@ -51,20 +55,23 @@ fun MyModalDrawerSheet(
 ) {
     val items = getNavDrawInfo()
     ModalDrawerSheet(
-        drawerContainerColor = Palette_1_4,
+        drawerContainerColor = tostadito,
         drawerTonalElevation = 2.dp,
         modifier = Modifier
-            .fillMaxWidth(if(configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) 0.5f else 0.25f)
-            .padding(end = if(configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) 0.dp else 70.dp),
+            //Ajustar el ModalDrawer para cada tipo de orientación
+            .fillMaxWidth(if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) 0.5f else 0.25f)
+            .padding(end = if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) 0.dp else 70.dp),
     ) {
         Column(
-            modifier = Modifier.fillMaxSize()
+            modifier = Modifier
+                .fillMaxSize()
                 .verticalScroll(rememberScrollState()),
-            horizontalAlignment = Alignment.CenterHorizontally
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
         ) {
             if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) {
                 Column(
-                    modifier = Modifier.weight(0.4f),
+                    modifier = Modifier.weight(0.25f),
                     verticalArrangement = Arrangement.Center
                 ) {
                     Spacer(modifier = Modifier.height(20.dp))
@@ -74,8 +81,10 @@ fun MyModalDrawerSheet(
                     )
                 }
             }
-
-
+            Column(
+                modifier = Modifier.weight(if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) 0.85f else 1f),
+                verticalArrangement = Arrangement.Center
+            ) {
                 items.forEach { item ->
                     if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) {
                         NavigationDrawerItem(
@@ -84,34 +93,29 @@ fun MyModalDrawerSheet(
                                     text =
                                     if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) {
                                         if (item.name == "Login") {
-                                            if(userViewModel.auth.currentUser == null) {
-                                                "Sign In"
-                                            } else {
-                                                "Sign Out"
-                                            }
+                                            if (userViewModel.auth.currentUser == null) "Sign In" else "Sign Out"
                                         } else {
                                             item.name
                                         }
-                                    } else {
-                                        ""
-                                    }
-                                    ,
-                                    fontFamily = FontCWGSans
+                                    } else "",
+                                    fontFamily = FontCWGSans,
+                                    color = if (item.url == currentRoute) Color.White else Palette_1_11
+
                                 )
                             },
                             icon = {
-
                                 Icon(
                                     painter = painterResource(item.icon),
                                     contentDescription = item.name,
                                     modifier = Modifier.size(30.dp),
-                                    tint = scaffold
+                                    tint = if (item.url == currentRoute) Color.White else Palette_1_11
                                 )
+                                Spacer(modifier = Modifier.width(10.dp))
                             },
                             selected = item.url == currentRoute,
                             onClick = {
                                 if (item.name == "Login") {
-                                    if(userViewModel.auth.currentUser != null) {
+                                    if (userViewModel.auth.currentUser != null) {
                                         userViewModel.auth.signOut()
                                     }
                                 }
@@ -120,9 +124,9 @@ fun MyModalDrawerSheet(
                             },
                             colors = NavigationDrawerItemDefaults.colors(
                                 unselectedContainerColor = Color.Transparent,
-                                selectedTextColor = Palette_1_1,
-                                selectedIconColor = Palette_1_1,
-                                selectedContainerColor = button
+                                selectedTextColor = Color.White,
+                                selectedIconColor = Color.White,
+                                selectedContainerColor = Palette_1_7
                             )
 
                         )
@@ -148,7 +152,7 @@ fun MyModalDrawerSheet(
                                 selected = item.url == currentRoute,
                                 onClick = {
                                     if (item.name == "Login") {
-                                        if(userViewModel.auth.currentUser != null) {
+                                        if (userViewModel.auth.currentUser != null) {
                                             userViewModel.auth.signOut()
                                         }
                                     }
@@ -157,18 +161,15 @@ fun MyModalDrawerSheet(
                                 },
                                 colors = NavigationDrawerItemDefaults.colors(
                                     unselectedContainerColor = Color.Transparent,
-                                    selectedTextColor = Palette_1_1,
-                                    selectedIconColor = Palette_1_1,
-                                    selectedContainerColor = Palette_1_8
+                                    selectedTextColor = Color.White,
+                                    selectedIconColor = Color.White,
+                                    selectedContainerColor = Palette_1_7
                                 )
-
                             )
                         }
-
                     }
-
-
-        }
+                }
+            }
 
         }
     }

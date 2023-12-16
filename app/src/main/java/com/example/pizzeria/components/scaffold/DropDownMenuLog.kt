@@ -43,6 +43,7 @@ import com.example.pizzeria.ui.theme.Palette_1_11
 import com.example.pizzeria.ui.theme.Palette_1_4
 import com.example.pizzeria.ui.theme.Palette_1_6
 import com.example.pizzeria.ui.theme.Palette_1_8
+import com.example.pizzeria.ui.theme.tostadito
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -55,7 +56,7 @@ fun MyDropDownMenuLog(expanded: Boolean, onExpandedChange: (Boolean) -> Unit, na
             onExpandedChange(false)
         },
         modifier = Modifier
-            .background(Palette_1_1)
+            .background(tostadito)
             .width(160.dp),
         properties = PopupProperties(dismissOnBackPress = true)
     ) {
@@ -105,13 +106,16 @@ fun MyDropDownMenuLog(expanded: Boolean, onExpandedChange: (Boolean) -> Unit, na
                     .height(60.dp)
                     .background(
                         when (item) {
-                            "Log In" -> if (currentRoute != Routes.Login.route) Palette_1_1 else Palette_1_8
-                            "Profile" -> if (currentRoute != Routes.Profile.route) Palette_1_1 else Palette_1_8
+                            "Log In" -> if (currentRoute != Routes.Login.route) Color.Transparent else Palette_1_8
+                            "Profile" -> if (currentRoute != Routes.Profile.route) Color.Transparent else Palette_1_8
                             else -> Color.Transparent
                         }
                     ),
                 contentPadding = PaddingValues(start = 20.dp)
             )
+            if (index < items.size -1) {
+                Divider(color = Palette_1_11)
+            }
 
         }
     }

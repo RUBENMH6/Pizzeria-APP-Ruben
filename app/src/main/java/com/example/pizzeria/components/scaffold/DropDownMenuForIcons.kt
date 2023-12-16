@@ -34,19 +34,19 @@ import com.example.pizzeria.ui.theme.Palette_1_10
 import com.example.pizzeria.ui.theme.Palette_1_11
 import com.example.pizzeria.ui.theme.Palette_1_4
 import com.example.pizzeria.ui.theme.Palette_1_8
+import com.example.pizzeria.ui.theme.tostadito
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MyDropDownMenuIconFood(expanded: Boolean, onExpandedChange: (Boolean) -> Unit, productViewModel: ProductViewModel, navController: NavController, currentRoute: String) {
     val items = productViewModel.getListOfTypeProduct()
-
     DropdownMenu(
         expanded = expanded,
         onDismissRequest = {
             onExpandedChange(false)
         },
         modifier = Modifier
-            .background(Palette_1_4)
+            .background(tostadito)
             .width(160.dp),
         properties = PopupProperties(dismissOnBackPress = true)
     ) {
@@ -58,8 +58,8 @@ fun MyDropDownMenuIconFood(expanded: Boolean, onExpandedChange: (Boolean) -> Uni
                             BadgedBox(
                                 badge = {
                                     Text(
-                                        text = productViewModel.getQuantityTypeProduct(it)
-                                            .toString(),
+                                        text = if (productViewModel.getQuantityTypeProduct(it) != 0) productViewModel.getQuantityTypeProduct(it)
+                                            .toString() else "",
                                         color = Palette_1_1,
                                         fontSize = 12.sp,
                                         textAlign = TextAlign.Center,
@@ -67,15 +67,15 @@ fun MyDropDownMenuIconFood(expanded: Boolean, onExpandedChange: (Boolean) -> Uni
                                             .offset(x = (-40).dp, y = 35.dp)
                                             .size(18.dp)
                                             .background(
-                                                Palette_1_10,
+                                                if (productViewModel.getQuantityTypeProduct(it) != 0) Palette_1_11 else Color.Transparent,
                                                 RoundedCornerShape(30.dp)
                                             )
                                     )
                                 }) {
                                 Icon(
                                     painter = painterResource(R.drawable.pizzaicon),
-                                    contentDescription = it.toString(),
-                                    tint = Palette_1_11,
+                                    contentDescription = it,
+                                    tint = if (currentRoute == Routes.PizzaMenu.route) Color.White else Palette_1_11,
                                     modifier = Modifier.size(30.dp).padding(start = 5.dp)
                                 )
                             }
@@ -85,8 +85,9 @@ fun MyDropDownMenuIconFood(expanded: Boolean, onExpandedChange: (Boolean) -> Uni
                             BadgedBox(
                                 badge = {
                                     Text(
-                                        text = productViewModel.getQuantityTypeProduct(it)
-                                            .toString(),
+                                        text =
+                                        if (productViewModel.getQuantityTypeProduct(it) != 0) productViewModel.getQuantityTypeProduct(it)
+                                            .toString() else "",
                                         color = Palette_1_1,
                                         fontSize = 12.sp,
                                         textAlign = TextAlign.Center,
@@ -94,7 +95,7 @@ fun MyDropDownMenuIconFood(expanded: Boolean, onExpandedChange: (Boolean) -> Uni
                                             .offset(x = (-40).dp, y = 35.dp)
                                             .size(18.dp)
                                             .background(
-                                                Palette_1_10,
+                                                if (productViewModel.getQuantityTypeProduct(it) != 0) Palette_1_11 else Color.Transparent,
                                                 RoundedCornerShape(30.dp)
                                             )
                                     )
@@ -102,7 +103,7 @@ fun MyDropDownMenuIconFood(expanded: Boolean, onExpandedChange: (Boolean) -> Uni
                                 Icon(
                                     painter = painterResource(R.drawable.pastaicon),
                                     contentDescription = it,
-                                    tint = Palette_1_11,
+                                    tint =  if (currentRoute == Routes.PastaMenu.route) Color.White else Palette_1_11,
                                     modifier = Modifier.size(30.dp).padding(start = 5.dp)
                                 )
                             }
@@ -113,8 +114,8 @@ fun MyDropDownMenuIconFood(expanded: Boolean, onExpandedChange: (Boolean) -> Uni
                             BadgedBox(
                                 badge = {
                                     Text(
-                                        text = productViewModel.getQuantityTypeProduct(it)
-                                            .toString(),
+                                        text = if (productViewModel.getQuantityTypeProduct(it) != 0) productViewModel.getQuantityTypeProduct(it)
+                                            .toString() else "",
                                         color = Palette_1_1,
                                         fontSize = 12.sp,
                                         textAlign = TextAlign.Center,
@@ -122,7 +123,7 @@ fun MyDropDownMenuIconFood(expanded: Boolean, onExpandedChange: (Boolean) -> Uni
                                             .offset(x = (-40).dp, y = 35.dp)
                                             .size(18.dp)
                                             .background(
-                                                Palette_1_10,
+                                                if (productViewModel.getQuantityTypeProduct(it) != 0) Palette_1_11 else Color.Transparent,
                                                 RoundedCornerShape(30.dp)
                                             )
                                     )
@@ -130,7 +131,7 @@ fun MyDropDownMenuIconFood(expanded: Boolean, onExpandedChange: (Boolean) -> Uni
                                 Icon(
                                     painter = painterResource(R.drawable.mealicon),
                                     contentDescription = it,
-                                    tint = Palette_1_11,
+                                    tint =  if (currentRoute == Routes.MealMenu.route) Color.White else Palette_1_11,
                                     modifier = Modifier.size(30.dp).padding(start = 5.dp)
                                 )
                             }
@@ -140,8 +141,8 @@ fun MyDropDownMenuIconFood(expanded: Boolean, onExpandedChange: (Boolean) -> Uni
                             BadgedBox(
                                 badge = {
                                     Text(
-                                        text = productViewModel.getQuantityTypeProduct(it)
-                                            .toString(),
+                                        text = if (productViewModel.getQuantityTypeProduct(it) != 0) productViewModel.getQuantityTypeProduct(it)
+                                            .toString() else "",
                                         color = Palette_1_1,
                                         fontSize = 12.sp,
                                         textAlign = TextAlign.Center,
@@ -149,7 +150,7 @@ fun MyDropDownMenuIconFood(expanded: Boolean, onExpandedChange: (Boolean) -> Uni
                                             .offset(x = (-40).dp, y = 35.dp)
                                             .size(18.dp)
                                             .background(
-                                                Palette_1_10,
+                                                if (productViewModel.getQuantityTypeProduct(it) != 0) Palette_1_11 else Color.Transparent,
                                                 RoundedCornerShape(30.dp)
                                             )
                                     )
@@ -157,7 +158,7 @@ fun MyDropDownMenuIconFood(expanded: Boolean, onExpandedChange: (Boolean) -> Uni
                                 Icon(
                                     painter = painterResource(R.drawable.drinkicon),
                                     contentDescription = it,
-                                    tint = Palette_1_11,
+                                    tint =  if (currentRoute == Routes.DrinkMenu.route) Color.White else Palette_1_11,
                                     modifier = Modifier.size(30.dp).padding(start = 5.dp)
                                 )
                             }
@@ -167,30 +168,30 @@ fun MyDropDownMenuIconFood(expanded: Boolean, onExpandedChange: (Boolean) -> Uni
                 text = {
                     when (it) {
                         "PIZZA" -> Text(
-                            text = "Pizzas",
+                            text = if (currentRoute != Routes.PizzaMenu.route) "Pizzas" else "PIZZAS",
                             fontSize = if (currentRoute != Routes.PizzaMenu.route) 16.sp else 20.sp,
-                            color = if (currentRoute != Routes.PizzaMenu.route) Palette_1_8 else Palette_1_11,
+                            color = if (currentRoute != Routes.PizzaMenu.route) Palette_1_11 else Color.White,
                             fontWeight = if (currentRoute != Routes.PizzaMenu.route) FontWeight.Light else FontWeight.ExtraBold
                         )
 
                         "PASTA" -> Text(
-                            text = "Pastas",
+                            text = if (currentRoute != Routes.PastaMenu.route) "Pastas" else "PASTAS",
                             fontSize =  if (currentRoute != Routes.PastaMenu.route) 16.sp else 20.sp,
-                            color = if (currentRoute != Routes.PastaMenu.route) Palette_1_8 else Palette_1_11,
+                            color = if (currentRoute != Routes.PastaMenu.route) Palette_1_11 else Color.White,
                             fontWeight = if (currentRoute != Routes.PastaMenu.route) FontWeight.Light else FontWeight.ExtraBold
                         )
 
                         "MEAL"-> Text(
-                            text = "Meals",
+                            text = if (currentRoute != Routes.MealMenu.route) "Meals" else "MEALS",
                             fontSize =  if (currentRoute != Routes.MealMenu.route) 16.sp else 20.sp,
-                            color = if (currentRoute != Routes.MealMenu.route) Palette_1_8 else Palette_1_11,
+                            color = if (currentRoute != Routes.MealMenu.route) Palette_1_11 else Color.White,
                             fontWeight = if (currentRoute != Routes.MealMenu.route) FontWeight.Light else FontWeight.ExtraBold
                         )
 
                         "DRINK" -> Text(
-                            text = "Drinks",
+                            text = if (currentRoute != Routes.DrinkMenu.route) "Drinks" else "DRINKS",
                             fontSize =  if (currentRoute != Routes.DrinkMenu.route) 16.sp else 20.sp,
-                            color = if (currentRoute != Routes.DrinkMenu.route) Palette_1_8 else Palette_1_11,
+                            color = if (currentRoute != Routes.DrinkMenu.route) Palette_1_11 else Color.White,
                             fontWeight = if (currentRoute != Routes.DrinkMenu.route) FontWeight.Light else FontWeight.ExtraBold
                         )
 
@@ -207,10 +208,10 @@ fun MyDropDownMenuIconFood(expanded: Boolean, onExpandedChange: (Boolean) -> Uni
                 },
                 modifier = Modifier.height(60.dp).background(
                     when (it) {
-                        "PIZZA" -> if (currentRoute != Routes.PizzaMenu.route) Palette_1_4 else Color.Transparent
-                        "PASTA" -> if (currentRoute != Routes.PastaMenu.route) Palette_1_4 else Color.Transparent
-                        "MEAL" -> if (currentRoute != Routes.MealMenu.route) Palette_1_4 else Color.Transparent
-                        "DRINK" -> if (currentRoute != Routes.DrinkMenu.route) Palette_1_4 else Color.Transparent
+                        "PIZZA" -> if (currentRoute == Routes.PizzaMenu.route) Palette_1_11 else Color.Transparent
+                        "PASTA" -> if (currentRoute == Routes.PastaMenu.route) Palette_1_11 else Color.Transparent
+                        "MEAL" -> if (currentRoute == Routes.MealMenu.route) Palette_1_11 else Color.Transparent
+                        "DRINK" -> if (currentRoute == Routes.DrinkMenu.route) Palette_1_11 else Color.Transparent
                         else -> Color.Transparent
                     }
                 ),

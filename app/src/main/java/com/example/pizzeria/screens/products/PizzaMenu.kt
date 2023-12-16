@@ -55,7 +55,6 @@ fun PizzaMenu(navController: NavController, productViewModel: ProductViewModel, 
                         "Calzone" -> MyPizzaCard(product, productViewModel, R.drawable.pizza7)
                     }
                 }
-
             }
         }
     }

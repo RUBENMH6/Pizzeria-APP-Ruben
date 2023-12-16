@@ -7,9 +7,13 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.animation.AnimatedContentTransitionScope
 import androidx.compose.animation.core.tween
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.calculateStartPadding
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
@@ -22,6 +26,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalConfiguration
@@ -41,6 +46,7 @@ import com.example.pizzeria.classes.viewmodels.UserViewModel
 import com.example.pizzeria.components.local.MyLocal
 import com.example.pizzeria.components.scaffold.MyBottomAppBar
 import com.example.pizzeria.components.scaffold.MyFABtoBack
+import com.example.pizzeria.components.scaffold.MyFABtoBuy
 import com.example.pizzeria.components.scaffold.MyModalDrawerSheet
 import com.example.pizzeria.components.scaffold.MyTopAppBar
 import com.example.pizzeria.screens.log.CreateUser
@@ -118,12 +124,35 @@ class MainActivity : ComponentActivity() {
                     floatingActionButton = {
                         if (configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
                             if (currentRoute != Routes.SplashScreen.route && currentRoute != Routes.SplashScreenOrderConfirmed.route) {
-                                    MyFABtoBack(
-                                        navController,
-                                        currentRoute,
-                                        productViewModel,
-                                        userViewModel
-                                    )
+                                Row(
+                                    modifier = Modifier.fillMaxWidth()
+                                ) {
+                                    Column(
+                                        modifier = Modifier.weight(0.5f).fillMaxWidth().padding(start = 30.dp),
+                                        horizontalAlignment = Alignment.Start
+                                    ) {
+                                        MyFABtoBack(
+                                            navController,
+                                            currentRoute,
+                                            productViewModel,
+                                            userViewModel
+                                        )
+                                    }
+                                    Column(
+                                        modifier = Modifier.weight(0.5f).fillMaxWidth(),
+                                        horizontalAlignment = Alignment.End
+                                    ) {
+                                        MyFABtoBuy(
+                                            navController,
+                                            currentRoute,
+                                            productViewModel,
+                                            userViewModel,
+                                            context, dialogViewModel
+                                        )
+                                    }
+
+                                }
+
                                 }
 
                         }

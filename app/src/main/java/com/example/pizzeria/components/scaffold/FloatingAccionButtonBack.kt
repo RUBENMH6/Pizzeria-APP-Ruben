@@ -12,6 +12,8 @@ import androidx.navigation.NavController
 import com.example.pizzeria.classes.Routes
 import com.example.pizzeria.classes.viewmodels.ProductViewModel
 import com.example.pizzeria.classes.viewmodels.UserViewModel
+import com.example.pizzeria.ui.theme.Palette_1_11
+import com.example.pizzeria.ui.theme.Palette_1_7
 import com.example.pizzeria.ui.theme.scaffold
 
 @Composable
@@ -23,7 +25,7 @@ fun MyFABtoBack(
 ) {
 
     FloatingActionButton(
-        containerColor = scaffold,
+        containerColor = Palette_1_11,
         onClick = {
             when (currentRoute) {
                 Routes.OrderProduct.route -> navController.navigate(Routes.PizzaMenu.route)

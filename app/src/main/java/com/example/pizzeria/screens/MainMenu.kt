@@ -15,9 +15,11 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.ShapeDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -46,8 +48,10 @@ import com.example.pizzeria.ui.theme.FontCWGSans
 import com.example.pizzeria.ui.theme.Palette_1_1
 import com.example.pizzeria.ui.theme.Palette_1_3
 import com.example.pizzeria.ui.theme.Palette_1_6
+import com.example.pizzeria.ui.theme.Palette_1_7
 import com.example.pizzeria.ui.theme.Palette_1_8
 import com.example.pizzeria.ui.theme.button
+import com.example.pizzeria.ui.theme.tostadito
 import com.google.firebase.auth.FirebaseAuth
 
 @Composable
@@ -63,6 +67,7 @@ fun MainMenu(navController: NavController, userViewModel: UserViewModel, dialogV
         modifier = Modifier
             .fillMaxSize()
             .verticalScroll(rememberScrollState())
+            .background(tostadito)
 
         ) {
         Row(
@@ -95,8 +100,10 @@ fun MainMenu(navController: NavController, userViewModel: UserViewModel, dialogV
                     Row() {
                         Button(
                             onClick = { navController.navigate(it) },
-                            colors = ButtonDefaults.buttonColors(button),
-                            modifier = Modifier.width(250.dp)
+                            shape = ShapeDefaults.Small,
+                            colors = ButtonDefaults.buttonColors(Palette_1_7),
+                            modifier = Modifier.width(250.dp),
+                            elevation = ButtonDefaults.elevatedButtonElevation(6.dp)
                         ) {
                             Text(
                                 text = when (it) {
