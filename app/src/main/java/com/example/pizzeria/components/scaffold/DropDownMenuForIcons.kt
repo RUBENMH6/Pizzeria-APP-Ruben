@@ -1,7 +1,6 @@
 package com.example.pizzeria.components.scaffold
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
@@ -22,19 +21,15 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.PopupProperties
 import androidx.navigation.NavController
 import com.example.pizzeria.R
-import com.example.pizzeria.classes.viewmodels.ProductViewModel
 import com.example.pizzeria.classes.Routes
+import com.example.pizzeria.classes.viewmodels.ProductViewModel
 import com.example.pizzeria.ui.theme.Palette_1_1
-import com.example.pizzeria.ui.theme.Palette_1_10
 import com.example.pizzeria.ui.theme.Palette_1_11
-import com.example.pizzeria.ui.theme.Palette_1_4
-import com.example.pizzeria.ui.theme.Palette_1_8
 import com.example.pizzeria.ui.theme.tostadito
 
 @OptIn(ExperimentalMaterial3Api::class)
