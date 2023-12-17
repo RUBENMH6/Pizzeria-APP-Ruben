@@ -35,8 +35,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.pizzeria.R
-import com.example.pizzeria.classes.viewmodels.DialogViewModel
-import com.example.pizzeria.classes.viewmodels.ProductViewModel
+import com.example.pizzeria.models.viewmodels.DialogViewModel
+import com.example.pizzeria.models.viewmodels.ProductViewModel
 import com.example.pizzeria.components.products.order.MyCardPedido
 import com.example.pizzeria.dialogs.LoginNeededToAccessProfileDialog
 import com.example.pizzeria.dialogs.RemoveOrderPizzaDialog

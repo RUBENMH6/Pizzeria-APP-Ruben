@@ -12,9 +12,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import com.example.pizzeria.classes.viewmodels.DialogViewModel
-import com.example.pizzeria.classes.viewmodels.ProductViewModel
-import com.example.pizzeria.ui.theme.*
+import com.example.pizzeria.models.viewmodels.DialogViewModel
+import com.example.pizzeria.models.viewmodels.ProductViewModel
+import com.example.pizzeria.ui.theme.Palette_1_11
+import com.example.pizzeria.ui.theme.tostadito
 
 @Composable
 fun RemoveOrderPizzaDialog(productViewModel: ProductViewModel, dialogViewModel: DialogViewModel) {

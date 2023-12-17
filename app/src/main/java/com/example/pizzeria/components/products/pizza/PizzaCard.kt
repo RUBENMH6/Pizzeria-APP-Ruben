@@ -7,16 +7,12 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.lazy.staggeredgrid.LazyVerticalStaggeredGrid
-import androidx.compose.foundation.lazy.staggeredgrid.StaggeredGridCells
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -41,30 +37,17 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import coil.compose.ImagePainter
 import com.example.pizzeria.R
-import com.example.pizzeria.classes.data.ProductInfo
-import com.example.pizzeria.classes.viewmodels.ProductViewModel
+import com.example.pizzeria.models.data.ProductInfo
+import com.example.pizzeria.models.viewmodels.ProductViewModel
 import com.example.pizzeria.ui.theme.FontCWGSans
-import com.example.pizzeria.ui.theme.Palette_1_1
 import com.example.pizzeria.ui.theme.Palette_1_11
-import com.example.pizzeria.ui.theme.Palette_1_4
-import com.example.pizzeria.ui.theme.Palette_1_6
-import com.example.pizzeria.ui.theme.Palette_1_8
-import com.example.pizzeria.ui.theme.Palette_1_9
 import com.example.pizzeria.ui.theme.VerdeItalia
 import com.example.pizzeria.ui.theme.tostadito
-import com.google.firebase.Firebase
-import com.google.firebase.storage.storage
 
 
 @Composable
-fun MyPizzaCard(
-    productInfo: ProductInfo,
-    viewModel: ProductViewModel,
-    imageId: Int,
-    configuration: Configuration
-) {
+fun MyPizzaCard(productInfo: ProductInfo, viewModel: ProductViewModel, imageId: Int, configuration: Configuration) {
     var ingredients by remember { mutableStateOf("") }
     ingredients = getIngredientsFromPizza(productInfo)
 

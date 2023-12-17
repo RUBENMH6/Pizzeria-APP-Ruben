@@ -19,9 +19,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.example.pizzeria.classes.viewmodels.DialogViewModel
-import com.example.pizzeria.classes.viewmodels.ProductViewModel
-import com.example.pizzeria.classes.viewmodels.UserViewModel
+import com.example.pizzeria.models.viewmodels.DialogViewModel
+import com.example.pizzeria.models.viewmodels.ProductViewModel
+import com.example.pizzeria.models.viewmodels.UserViewModel
 import com.example.pizzeria.components.products.order.MyOrderProcessButton
 import com.example.pizzeria.components.products.order.MyTicket
 import com.example.pizzeria.dialogs.ConfirmOrderPizzaDialog

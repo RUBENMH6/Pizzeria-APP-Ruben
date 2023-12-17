@@ -9,7 +9,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Divider
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -20,15 +19,14 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.PopupProperties
 import androidx.navigation.NavController
 import com.example.pizzeria.R
-import com.example.pizzeria.classes.Routes
-import com.example.pizzeria.classes.viewmodels.DialogViewModel
-import com.example.pizzeria.classes.viewmodels.UserViewModel
+import com.example.pizzeria.models.Routes
+import com.example.pizzeria.models.viewmodels.DialogViewModel
+import com.example.pizzeria.models.viewmodels.UserViewModel
 import com.example.pizzeria.ui.theme.Palette_1_1
 import com.example.pizzeria.ui.theme.Palette_1_11
 import com.example.pizzeria.ui.theme.Palette_1_8
 import com.example.pizzeria.ui.theme.tostadito
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MyDropDownMenuLog(expanded: Boolean, onExpandedChange: (Boolean) -> Unit, navController: NavController, currentRoute: String, dialogViewModel: DialogViewModel,  userViewModel: UserViewModel, context: Context) {
     val items = listOf("Profile", "Log In", "Log Out")

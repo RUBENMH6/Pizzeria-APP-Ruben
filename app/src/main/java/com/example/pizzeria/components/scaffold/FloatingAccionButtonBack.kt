@@ -3,26 +3,17 @@ package com.example.pizzeria.components.scaffold
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.FloatingActionButton
-import androidx.compose.material3.FloatingActionButtonDefaults
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.navigation.NavController
-import com.example.pizzeria.classes.Routes
-import com.example.pizzeria.classes.viewmodels.ProductViewModel
-import com.example.pizzeria.classes.viewmodels.UserViewModel
+import com.example.pizzeria.models.Routes
+import com.example.pizzeria.models.viewmodels.ProductViewModel
+import com.example.pizzeria.models.viewmodels.UserViewModel
 import com.example.pizzeria.ui.theme.Palette_1_11
-import com.example.pizzeria.ui.theme.Palette_1_7
-import com.example.pizzeria.ui.theme.scaffold
 
 @Composable
-fun MyFABtoBack(
-    navController: NavController,
-    currentRoute: String?,
-    productViewModel: ProductViewModel,
-    userViewModel: UserViewModel
-) {
+fun MyFABtoBack(navController: NavController, currentRoute: String?, productViewModel: ProductViewModel, userViewModel: UserViewModel) {
 
     FloatingActionButton(
         containerColor = Palette_1_11,

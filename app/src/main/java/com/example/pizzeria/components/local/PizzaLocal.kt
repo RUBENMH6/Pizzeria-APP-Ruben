@@ -1,4 +1,4 @@
-package com.example.pizzeria.screens
+package com.example.pizzeria.components.local
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -14,11 +14,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.example.pizzeria.classes.data.getPizzaLocal
-import com.example.pizzeria.classes.viewmodels.DialogViewModel
-import com.example.pizzeria.classes.viewmodels.LocalViewModel
-import com.example.pizzeria.components.local.MyLocal
 import com.example.pizzeria.dialogs.LoginNeededToAccessProfileDialog
+import com.example.pizzeria.models.data.getPizzaLocal
+import com.example.pizzeria.models.viewmodels.DialogViewModel
+import com.example.pizzeria.models.viewmodels.LocalViewModel
+import com.example.pizzeria.screens.local.MyLocal
 import com.example.pizzeria.ui.theme.tostadito
 
 @Composable

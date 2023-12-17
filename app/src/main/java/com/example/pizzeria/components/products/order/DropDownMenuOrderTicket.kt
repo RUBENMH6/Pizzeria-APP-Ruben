@@ -24,20 +24,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.pizzeria.R
-import com.example.pizzeria.classes.data.ProductInfo
-import com.example.pizzeria.classes.viewmodels.ProductViewModel
+import com.example.pizzeria.models.data.ProductInfo
+import com.example.pizzeria.models.viewmodels.ProductViewModel
 import com.example.pizzeria.ui.theme.Palette_1_10
 import com.example.pizzeria.ui.theme.Palette_1_11
-import com.example.pizzeria.ui.theme.Palette_1_4
 import com.example.pizzeria.ui.theme.tostadito
 
 @Composable
-fun MyDropDownMenu(
-    expanded: Boolean,
-    onExpandedChange: (Boolean) -> Unit,
-    viewModel: ProductViewModel,
-    productInfo: ProductInfo
-) {
+fun MyDropDownMenu(expanded: Boolean, onExpandedChange: (Boolean) -> Unit, viewModel: ProductViewModel, productInfo: ProductInfo) {
     var selectedText by remember { mutableStateOf("") }
     val items = listOf("Remove all", "Remove", "Add")
     Spacer(modifier = Modifier.height(65.dp))

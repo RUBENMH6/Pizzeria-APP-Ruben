@@ -29,10 +29,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.pizzeria.R
-import com.example.pizzeria.classes.Routes
-import com.example.pizzeria.classes.viewmodels.DialogViewModel
-import com.example.pizzeria.classes.viewmodels.ProductViewModel
-import com.example.pizzeria.classes.viewmodels.UserViewModel
+import com.example.pizzeria.models.Routes
+import com.example.pizzeria.models.viewmodels.DialogViewModel
+import com.example.pizzeria.models.viewmodels.ProductViewModel
+import com.example.pizzeria.models.viewmodels.UserViewModel
 import com.example.pizzeria.ui.theme.FontCWGSans
 import com.example.pizzeria.ui.theme.Palette_1_1
 import com.example.pizzeria.ui.theme.Palette_1_11
@@ -41,16 +41,7 @@ import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MyTopAppBar(
-    route: String,
-    navController: NavController,
-    productViewModel: ProductViewModel,
-    scope: CoroutineScope,
-    drawerState: DrawerState,
-    userViewModel: UserViewModel,
-    dialogViewModel: DialogViewModel,
-    context: Context
-) {
+fun MyTopAppBar(route: String, navController: NavController, productViewModel: ProductViewModel, scope: CoroutineScope, drawerState: DrawerState, userViewModel: UserViewModel, dialogViewModel: DialogViewModel, context: Context) {
     var expandedDDMIcon by remember { mutableStateOf(false) }
     var expandedDDMLog by remember { mutableStateOf(false) }
     TopAppBar(

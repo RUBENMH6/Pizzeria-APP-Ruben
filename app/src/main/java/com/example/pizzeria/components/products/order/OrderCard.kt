@@ -12,7 +12,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Divider
@@ -37,22 +36,16 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.pizzeria.R
-import com.example.pizzeria.classes.data.ProductInfo
-import com.example.pizzeria.classes.viewmodels.ProductViewModel
 import com.example.pizzeria.components.products.pizza.getIngredientsFromPizza
+import com.example.pizzeria.models.data.ProductInfo
+import com.example.pizzeria.models.viewmodels.ProductViewModel
 import com.example.pizzeria.ui.theme.FontCWGSans
 import com.example.pizzeria.ui.theme.Palette_1_11
-import com.example.pizzeria.ui.theme.Palette_1_9
 import com.example.pizzeria.ui.theme.VerdeItalia
 import com.example.pizzeria.ui.theme.tostadito
 
 @Composable
-fun MyCardPedido(
-    productInfo: ProductInfo,
-    onTotalPriceChange: (Double) -> Unit,
-    viewModel: ProductViewModel,
-    imageId: Int
-) {
+fun MyCardPedido(productInfo: ProductInfo, onTotalPriceChange: (Double) -> Unit, viewModel: ProductViewModel, imageId: Int) {
     var ingredients by remember { mutableStateOf("") }
     val totalPrice = viewModel.selectedProductMap[productInfo]?.times(productInfo.price)
 

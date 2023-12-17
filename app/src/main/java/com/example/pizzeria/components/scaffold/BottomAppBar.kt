@@ -24,22 +24,15 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.pizzeria.R
-import com.example.pizzeria.classes.Routes
-import com.example.pizzeria.classes.viewmodels.DialogViewModel
-import com.example.pizzeria.classes.viewmodels.ProductViewModel
-import com.example.pizzeria.classes.viewmodels.UserViewModel
+import com.example.pizzeria.models.Routes
+import com.example.pizzeria.models.viewmodels.DialogViewModel
+import com.example.pizzeria.models.viewmodels.ProductViewModel
+import com.example.pizzeria.models.viewmodels.UserViewModel
 import com.example.pizzeria.ui.theme.Palette_1_11
 import com.example.pizzeria.ui.theme.Palette_1_8
 
 @Composable
-fun MyBottomAppBar(
-    currentRoute: String?,
-    navController: NavController,
-    productViewModel: ProductViewModel,
-    dialogViewModel: DialogViewModel,
-    context: Context,
-    userViewModel: UserViewModel
-    ) {
+fun MyBottomAppBar(currentRoute: String?, navController: NavController, productViewModel: ProductViewModel, dialogViewModel: DialogViewModel, context: Context, userViewModel: UserViewModel) {
     BottomAppBar(
         containerColor = Palette_1_11,
         modifier = Modifier.height(60.dp)

@@ -1,4 +1,4 @@
-package com.example.pizzeria.screens
+package com.example.pizzeria.screens.log
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background

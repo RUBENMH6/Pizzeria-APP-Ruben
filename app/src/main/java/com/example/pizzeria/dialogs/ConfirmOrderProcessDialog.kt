@@ -13,8 +13,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.example.pizzeria.classes.Routes
-import com.example.pizzeria.classes.viewmodels.DialogViewModel
+import com.example.pizzeria.models.Routes
+import com.example.pizzeria.models.viewmodels.DialogViewModel
 import com.example.pizzeria.ui.theme.Palette_1_11
 import com.example.pizzeria.ui.theme.tostadito
 

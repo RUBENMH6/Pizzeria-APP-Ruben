@@ -1,19 +1,14 @@
 package com.example.pizzeria.splash
 
-import android.content.Context
-import android.widget.Toast
 import androidx.compose.animation.core.FastOutLinearInEasing
-import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.LinearOutSlowInEasing
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.infiniteRepeatable
 import androidx.compose.animation.core.keyframes
 import androidx.compose.animation.core.rememberInfiniteTransition
-import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -22,7 +17,6 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -41,13 +35,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.pizzeria.R
-import com.example.pizzeria.classes.Routes
-import com.example.pizzeria.classes.data.getProductsFromFirestore
-import com.example.pizzeria.classes.data.getUserFromFirestore
-import com.example.pizzeria.classes.viewmodels.ProductViewModel
-import com.example.pizzeria.classes.viewmodels.UserViewModel
+import com.example.pizzeria.models.Routes
+import com.example.pizzeria.models.data.getProductsFromFirestore
+import com.example.pizzeria.models.data.getUserFromFirestore
+import com.example.pizzeria.models.viewmodels.ProductViewModel
+import com.example.pizzeria.models.viewmodels.UserViewModel
 import com.example.pizzeria.ui.theme.Palette_1_11
-import com.example.pizzeria.ui.theme.Palette_1_4
 import com.example.pizzeria.ui.theme.tostadito
 import kotlinx.coroutines.delay
 @Composable

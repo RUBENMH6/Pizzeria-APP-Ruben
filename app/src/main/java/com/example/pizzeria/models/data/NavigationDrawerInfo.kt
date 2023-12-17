@@ -1,4 +1,4 @@
-package com.example.pizzeria.classes.data
+package com.example.pizzeria.models.data
 
 import com.example.pizzeria.R
 

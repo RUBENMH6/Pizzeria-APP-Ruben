@@ -29,15 +29,11 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.pizzeria.R
-import com.example.pizzeria.classes.data.getNavDrawInfo
-import com.example.pizzeria.classes.viewmodels.UserViewModel
+import com.example.pizzeria.models.data.getNavDrawInfo
+import com.example.pizzeria.models.viewmodels.UserViewModel
 import com.example.pizzeria.ui.theme.FontCWGSans
-import com.example.pizzeria.ui.theme.Palette_1_1
 import com.example.pizzeria.ui.theme.Palette_1_11
-import com.example.pizzeria.ui.theme.Palette_1_4
 import com.example.pizzeria.ui.theme.Palette_1_7
-import com.example.pizzeria.ui.theme.Palette_1_8
-import com.example.pizzeria.ui.theme.button
 import com.example.pizzeria.ui.theme.scaffold
 import com.example.pizzeria.ui.theme.tostadito
 import kotlinx.coroutines.CoroutineScope
@@ -45,14 +41,7 @@ import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MyModalDrawerSheet(
-    scope: CoroutineScope,
-    drawerState: DrawerState,
-    navController: NavController,
-    currentRoute: String?,
-    userViewModel: UserViewModel,
-    configuration: Configuration
-) {
+fun MyModalDrawerSheet(scope: CoroutineScope, drawerState: DrawerState, navController: NavController, currentRoute: String?, userViewModel: UserViewModel, configuration: Configuration) {
     val items = getNavDrawInfo()
     ModalDrawerSheet(
         drawerContainerColor = tostadito,

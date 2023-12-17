@@ -44,11 +44,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.pizzeria.R
-import com.example.pizzeria.classes.Routes
-import com.example.pizzeria.classes.viewmodels.DialogViewModel
-import com.example.pizzeria.classes.viewmodels.ProductViewModel
-import com.example.pizzeria.classes.viewmodels.UserViewModel
 import com.example.pizzeria.dialogs.LoginNeededToAccessProfileDialog
+import com.example.pizzeria.models.Routes
+import com.example.pizzeria.models.viewmodels.DialogViewModel
+import com.example.pizzeria.models.viewmodels.UserViewModel
 import com.example.pizzeria.ui.theme.Palette_1_11
 import com.example.pizzeria.ui.theme.Palette_1_9
 import com.example.pizzeria.ui.theme.tostadito
@@ -60,7 +59,7 @@ fun CreateUser(
     navController: NavController,
     userViewModel: UserViewModel,
     dialogViewModel: DialogViewModel
-    ) {
+) {
     Column(
         modifier = Modifier.fillMaxSize().background(tostadito),
         horizontalAlignment = Alignment.CenterHorizontally,
