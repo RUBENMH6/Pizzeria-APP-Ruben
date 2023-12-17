@@ -1,7 +1,6 @@
 package com.example.pizzeria.dialogs
 
 
-import android.content.Context
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -14,14 +13,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.example.pizzeria.classes.viewmodels.DialogViewModel
-import com.example.pizzeria.classes.viewmodels.ProductViewModel
-import com.example.pizzeria.classes.Routes
-import com.example.pizzeria.ui.theme.*
+import com.example.pizzeria.models.Routes
+import com.example.pizzeria.models.viewmodels.DialogViewModel
+import com.example.pizzeria.ui.theme.Palette_1_11
+import com.example.pizzeria.ui.theme.tostadito
 
 
 @Composable
-fun LoginNeededOrderPizzaDialog(navController: NavController, productViewModel: ProductViewModel, dialogViewModel: DialogViewModel, context: Context) {
+fun LoginNeededOrderPizzaDialog(navController: NavController, dialogViewModel: DialogViewModel) {
+
     AlertDialog(
         onDismissRequest = { dialogViewModel.dialogLoginNeededOrderPizza.value = false },
         title = { Text(text = "Please. Sign in!") },
@@ -31,7 +31,6 @@ fun LoginNeededOrderPizzaDialog(navController: NavController, productViewModel: 
         confirmButton = {
             Button(
                 onClick = {
-                    dialogViewModel.commingToLoginNeededOrderPizza.value = false
                     dialogViewModel.dialogLoginNeededOrderPizza.value = false
                     navController.navigate(Routes.Login.route)
                           },

@@ -15,7 +15,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.BottomAppBar
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.runtime.Composable
@@ -25,24 +24,15 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.pizzeria.R
-import com.example.pizzeria.classes.viewmodels.DialogViewModel
-import com.example.pizzeria.classes.viewmodels.ProductViewModel
-import com.example.pizzeria.classes.Routes
-import com.example.pizzeria.classes.viewmodels.UserViewModel
+import com.example.pizzeria.models.Routes
+import com.example.pizzeria.models.viewmodels.DialogViewModel
+import com.example.pizzeria.models.viewmodels.ProductViewModel
+import com.example.pizzeria.models.viewmodels.UserViewModel
 import com.example.pizzeria.ui.theme.Palette_1_11
 import com.example.pizzeria.ui.theme.Palette_1_8
-import com.google.firebase.auth.FirebaseAuth
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MyBottomAppBar(
-    currentRoute: String?,
-    navController: NavController,
-    productViewModel: ProductViewModel,
-    dialogViewModel: DialogViewModel,
-    context: Context,
-    userViewModel: UserViewModel
-    ) {
+fun MyBottomAppBar(currentRoute: String?, navController: NavController, productViewModel: ProductViewModel, dialogViewModel: DialogViewModel, context: Context, userViewModel: UserViewModel) {
     BottomAppBar(
         containerColor = Palette_1_11,
         modifier = Modifier.height(60.dp)
@@ -50,7 +40,8 @@ fun MyBottomAppBar(
         Row(
             modifier = Modifier.weight(0.2f)
         ) {
-            IconButton(onClick = {
+            IconButton(
+                onClick = {
                 when (currentRoute) {
                     Routes.OrderProduct.route -> navController.navigate(Routes.PizzaMenu.route)
                     Routes.OrderProcess.route -> {
@@ -91,7 +82,9 @@ fun MyBottomAppBar(
         }
 
         Row(
-            modifier = Modifier.weight(0.3f).padding(end = 15.dp),
+            modifier = Modifier
+                .weight(0.3f)
+                .padding(end = 15.dp),
             horizontalArrangement = Arrangement.End
         ) {
             when (currentRoute) {
@@ -137,7 +130,12 @@ fun MyBottomAppBar(
                     Spacer(modifier = Modifier.width(30.dp))
                     IconButton(
                         onClick = {
-                            dialogViewModel.changeStateDialogRemoveOrderPizza()
+                            if (!productViewModel.selectedProductMap.isEmpty() || productViewModel.getQuantityProductTotal() > 0) {
+                                dialogViewModel.dialogRemoveOrderPizza.value = true
+                            } else {
+                                Toast.makeText(context,"You have not selected any product", Toast.LENGTH_LONG).show()
+                            }
+
                         },
                         modifier = Modifier
                             .size(20.dp)

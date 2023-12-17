@@ -1,12 +1,12 @@
 package com.example.pizzeria.components.scaffold
 
 import android.content.Context
-import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.DrawerState
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -29,34 +29,27 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.pizzeria.R
-import com.example.pizzeria.classes.viewmodels.ProductViewModel
-import com.example.pizzeria.classes.Routes
-import com.example.pizzeria.classes.viewmodels.DialogViewModel
-import com.example.pizzeria.classes.viewmodels.UserViewModel
+import com.example.pizzeria.models.Routes
+import com.example.pizzeria.models.viewmodels.DialogViewModel
+import com.example.pizzeria.models.viewmodels.ProductViewModel
+import com.example.pizzeria.models.viewmodels.UserViewModel
 import com.example.pizzeria.ui.theme.FontCWGSans
 import com.example.pizzeria.ui.theme.Palette_1_1
-import com.example.pizzeria.ui.theme.Palette_1_10
 import com.example.pizzeria.ui.theme.Palette_1_11
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MyTopAppBar(
-    route: String,
-    navController: NavController,
-    productViewModel: ProductViewModel,
-    scope: CoroutineScope,
-    drawerState: DrawerState,
-    userViewModel: UserViewModel,
-    dialogViewModel: DialogViewModel,
-    context: Context
-) {
+fun MyTopAppBar(route: String, navController: NavController, productViewModel: ProductViewModel, scope: CoroutineScope, drawerState: DrawerState, userViewModel: UserViewModel, dialogViewModel: DialogViewModel, context: Context) {
     var expandedDDMIcon by remember { mutableStateOf(false) }
     var expandedDDMLog by remember { mutableStateOf(false) }
     TopAppBar(
         colors = TopAppBarDefaults.largeTopAppBarColors(Palette_1_11),
         title = {
+            Row(
+                modifier = Modifier.fillMaxWidth()
+            ) {
                 Spacer(modifier = Modifier.width(10.dp))
                 Text(
                     text = when (route) {
@@ -76,6 +69,8 @@ fun MyTopAppBar(
                     fontWeight = FontWeight(500),
                     fontFamily = FontCWGSans
                 )
+            }
+
 
         },
         navigationIcon = {
@@ -94,12 +89,6 @@ fun MyTopAppBar(
             }
         },
         actions = {
-            when(route) {
-                "Login", "CreateUser" -> {
-
-                }
-                else -> {
-
                     BadgedBox(
                         badge = {
                             Text(
@@ -136,9 +125,9 @@ fun MyTopAppBar(
                             modifier = Modifier.size(40.dp)
                         )
                     }
-                    MyDropDownMenuLog(expandedDDMLog, { expandedDDMLog= it}, navController, route, dialogViewModel, productViewModel, userViewModel, context)
-                }
-            }
+                    MyDropDownMenuLog(expandedDDMLog, { expandedDDMLog= it}, navController, route, dialogViewModel,  userViewModel, context)
+
+
         }
     )
 }

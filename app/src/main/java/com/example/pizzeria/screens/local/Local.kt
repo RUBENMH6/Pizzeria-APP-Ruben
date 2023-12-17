@@ -1,4 +1,4 @@
-package com.example.pizzeria.components.local
+package com.example.pizzeria.screens.local
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -13,23 +13,19 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.example.pizzeria.R
-import com.example.pizzeria.classes.Routes
-import com.example.pizzeria.classes.data.LocalInfo
-import com.example.pizzeria.classes.viewmodels.LocalViewModel
-import com.example.pizzeria.components.MyRatingBar
+import com.example.pizzeria.components.local.MyRatingBar
+import com.example.pizzeria.models.Routes
+import com.example.pizzeria.models.data.LocalInfo
+import com.example.pizzeria.models.viewmodels.LocalViewModel
 import com.example.pizzeria.ui.theme.Palette_1_11
-import com.example.pizzeria.ui.theme.Palette_1_5
 import com.example.pizzeria.ui.theme.tostadito
 
 

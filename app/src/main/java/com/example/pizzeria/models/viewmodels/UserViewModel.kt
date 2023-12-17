@@ -1,4 +1,4 @@
-package com.example.pizzeria.classes.viewmodels
+package com.example.pizzeria.models.viewmodels
 
 import android.content.Context
 import android.util.Log
@@ -10,15 +10,13 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavController
-import com.example.pizzeria.classes.Routes
-import com.example.pizzeria.classes.data.ProductInfo
-import com.example.pizzeria.classes.data.UserInfo
-import com.example.pizzeria.classes.data.setUserToFirestore
+import com.example.pizzeria.models.Routes
+import com.example.pizzeria.models.data.UserInfo
+import com.example.pizzeria.models.data.setUserToFirestore
 
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.auth.ktx.auth
-import com.google.firebase.crashlytics.buildtools.reloc.org.apache.http.auth.AuthState
 import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.launch
 

@@ -18,7 +18,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import com.example.pizzeria.classes.viewmodels.ProductViewModel
+import com.example.pizzeria.models.viewmodels.ProductViewModel
 import com.example.pizzeria.ui.theme.Palette_1_11
 import java.text.DecimalFormat
 

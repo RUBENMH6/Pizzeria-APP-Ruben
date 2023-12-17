@@ -1,4 +1,4 @@
-package com.example.pizzeria.classes.data
+package com.example.pizzeria.models.data
 
 import android.util.Log
 import androidx.compose.runtime.mutableStateListOf

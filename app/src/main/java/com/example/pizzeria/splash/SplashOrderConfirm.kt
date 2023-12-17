@@ -2,9 +2,7 @@ package com.example.pizzeria.splash
 
 import android.content.Context
 import android.widget.Toast
-import androidx.compose.animation.core.FastOutLinearInEasing
 import androidx.compose.animation.core.LinearEasing
-import androidx.compose.animation.core.LinearOutSlowInEasing
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.infiniteRepeatable
@@ -12,7 +10,6 @@ import androidx.compose.animation.core.keyframes
 import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -21,7 +18,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -29,25 +26,22 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.scale
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.pizzeria.R
-import com.example.pizzeria.classes.Routes
-import com.example.pizzeria.classes.viewmodels.ProductViewModel
-import com.example.pizzeria.ui.theme.Palette_1_1
+import com.example.pizzeria.models.Routes
+import com.example.pizzeria.models.viewmodels.ProductViewModel
 import com.example.pizzeria.ui.theme.Palette_1_11
-import com.example.pizzeria.ui.theme.Palette_1_4
-import com.example.pizzeria.ui.theme.Palette_1_6
+import com.example.pizzeria.ui.theme.tostadito
 import kotlinx.coroutines.delay
 
 @Composable
-fun SplashOrderConfirmed(
-    navController: NavController,
-    productViewModel: ProductViewModel,
-    context: Context
-) {
+fun SplashOrderConfirmed(navController: NavController, productViewModel: ProductViewModel, context: Context) {
     LaunchedEffect(true) {
         delay(3000)
         productViewModel.safeDeleteOrderMap()
@@ -78,7 +72,7 @@ fun AnimatedSplashOrderConfirmed() {
 
 
     Column(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier.fillMaxSize().background(tostadito),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -91,17 +85,25 @@ fun AnimatedSplashOrderConfirmed() {
         )
         Spacer(modifier = Modifier.height(20.dp))
         Row(
-            modifier = Modifier.fillMaxWidth().height(40.dp).border(1.dp, Palette_1_11).background(Palette_1_4),
+            modifier = Modifier.fillMaxWidth().height(40.dp).background(Palette_1_11),
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically
         ) {
             Text(
                 text = "Please wait a second. Ordering...",
-                color = Palette_1_11
+                color = Color.White
             )
         }
-
-
-
+    }
+    Box(
+        modifier = Modifier.fillMaxSize().padding(bottom = 10.dp),
+        contentAlignment = Alignment.BottomCenter
+    ) {
+        Text(
+            text = "Created by Rubén",
+            fontWeight = FontWeight.Bold,
+            fontSize = 12.sp,
+            color = Palette_1_11
+        )
     }
 }

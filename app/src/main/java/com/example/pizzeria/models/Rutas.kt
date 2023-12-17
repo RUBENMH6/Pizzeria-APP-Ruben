@@ -1,4 +1,4 @@
-package com.example.pizzeria.classes
+package com.example.pizzeria.models
 
 
 sealed class Routes(val route : String){

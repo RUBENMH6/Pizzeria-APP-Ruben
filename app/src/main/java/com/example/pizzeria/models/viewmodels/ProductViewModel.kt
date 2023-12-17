@@ -1,10 +1,9 @@
-package com.example.pizzeria.classes.viewmodels
+package com.example.pizzeria.models.viewmodels
 
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateMapOf
-import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.lifecycle.ViewModel
-import com.example.pizzeria.classes.data.ProductInfo
+import com.example.pizzeria.models.data.ProductInfo
 
 class ProductViewModel : ViewModel() {
     var selectedProductList = mutableStateListOf<ProductInfo>()
@@ -12,11 +11,6 @@ class ProductViewModel : ViewModel() {
     var selectedProductMap = mutableStateMapOf<ProductInfo,Int>()
     var selectedQuantityMap = mutableStateMapOf<String, Int>()
 
-
-
-    fun getOrderProduct() :SnapshotStateList<ProductInfo> {
-        return selectedProductList
-    }
 
     fun addProductToOrder(productInfo: ProductInfo) {
         selectedProductList.add(productInfo)

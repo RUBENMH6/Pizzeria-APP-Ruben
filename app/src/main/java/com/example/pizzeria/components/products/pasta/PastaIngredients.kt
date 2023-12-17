@@ -1,6 +1,6 @@
 package com.example.pizzeria.components.products.pasta
 
-import com.example.pizzeria.classes.data.ProductInfo
+import com.example.pizzeria.models.data.ProductInfo
 
 fun getIngredientsFromPasta(product: ProductInfo): String {
     var ingredientes = ""

@@ -1,13 +1,17 @@
 package com.example.pizzeria
 
 import android.annotation.SuppressLint
+import android.content.res.Configuration
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.animation.AnimatedContentTransitionScope
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -16,7 +20,9 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -24,30 +30,30 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.example.pizzeria.classes.viewmodels.DialogViewModel
-import com.example.pizzeria.classes.viewmodels.ProductViewModel
-import com.example.pizzeria.classes.Routes
-import com.example.pizzeria.classes.viewmodels.LocalViewModel
-import com.example.pizzeria.classes.viewmodels.UserViewModel
-import com.example.pizzeria.components.local.MyLocal
+import com.example.pizzeria.components.local.PizzaLocal
 import com.example.pizzeria.components.scaffold.MyBottomAppBar
+import com.example.pizzeria.components.scaffold.MyFABtoBack
+import com.example.pizzeria.components.scaffold.MyFABtoBuy
 import com.example.pizzeria.components.scaffold.MyModalDrawerSheet
 import com.example.pizzeria.components.scaffold.MyTopAppBar
+import com.example.pizzeria.models.Routes
+import com.example.pizzeria.models.viewmodels.DialogViewModel
+import com.example.pizzeria.models.viewmodels.LocalViewModel
+import com.example.pizzeria.models.viewmodels.ProductViewModel
+import com.example.pizzeria.models.viewmodels.UserViewModel
+import com.example.pizzeria.screens.MainMenu
 import com.example.pizzeria.screens.log.CreateUser
 import com.example.pizzeria.screens.log.Login
-import com.example.pizzeria.screens.products.DrinkMenu
-import com.example.pizzeria.screens.MainMenu
-import com.example.pizzeria.screens.PizzaLocal
-import com.example.pizzeria.screens.Profile
-import com.example.pizzeria.screens.products.MealMenu
+import com.example.pizzeria.screens.log.Profile
 import com.example.pizzeria.screens.order.OrderPizza
 import com.example.pizzeria.screens.order.OrderProcess
+import com.example.pizzeria.screens.products.DrinkMenu
+import com.example.pizzeria.screens.products.MealMenu
 import com.example.pizzeria.screens.products.PastaMenu
 import com.example.pizzeria.screens.products.PizzaMenu
 import com.example.pizzeria.splash.SplashOrderConfirmed
 import com.example.pizzeria.splash.SplashScreen
 import com.example.pizzeria.ui.theme.*
-import com.example.pizzeria.ui.theme.PizzeriaTheme
 
 class MainActivity : ComponentActivity() {
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -66,6 +72,7 @@ class MainActivity : ComponentActivity() {
                 val context = LocalContext.current
                 val drawerState = rememberDrawerState(DrawerValue.Closed)
                 val scope = rememberCoroutineScope()
+                val configuration = LocalConfiguration.current
 
 
 
@@ -73,17 +80,72 @@ class MainActivity : ComponentActivity() {
                 Scaffold(
                     topBar = {
                         if (currentRoute != null) {
-                            if (currentRoute != Routes.SplashScreen.route) {
-                                MyTopAppBar(currentRoute, navController, productViewModel, scope, drawerState, userViewModel, dialogViewModel, context)
+                            if (currentRoute != Routes.SplashScreen.route && currentRoute != Routes.SplashScreenOrderConfirmed.route) {
+                                MyTopAppBar(
+                                    currentRoute,
+                                    navController,
+                                    productViewModel,
+                                    scope,
+                                    drawerState,
+                                    userViewModel,
+                                    dialogViewModel,
+                                    context
+                                )
                             }
 
                         }
                     },
                     bottomBar = {
-                        if (currentRoute != Routes.SplashScreen.route) {
-                            MyBottomAppBar(currentRoute, navController, productViewModel, dialogViewModel, context, userViewModel)
+                        if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) {
+                            if (currentRoute != Routes.SplashScreen.route && currentRoute != Routes.SplashScreenOrderConfirmed.route) {
+                                MyBottomAppBar(
+                                    currentRoute,
+                                    navController,
+                                    productViewModel,
+                                    dialogViewModel,
+                                    context,
+                                    userViewModel
+                                )
+                            }
                         }
 
+
+                    },
+                    floatingActionButton = {
+                        if (configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+                            if (currentRoute != Routes.SplashScreen.route && currentRoute != Routes.SplashScreenOrderConfirmed.route) {
+                                Row(
+                                    modifier = Modifier.fillMaxWidth()
+                                ) {
+                                    Column(
+                                        modifier = Modifier.weight(0.5f).fillMaxWidth().padding(start = 30.dp),
+                                        horizontalAlignment = Alignment.Start
+                                    ) {
+                                        MyFABtoBack(
+                                            navController,
+                                            currentRoute,
+                                            productViewModel,
+                                            userViewModel
+                                        )
+                                    }
+                                    Column(
+                                        modifier = Modifier.weight(0.5f).fillMaxWidth(),
+                                        horizontalAlignment = Alignment.End
+                                    ) {
+                                        MyFABtoBuy(
+                                            navController,
+                                            currentRoute,
+                                            productViewModel,
+                                            userViewModel,
+                                            context, dialogViewModel
+                                        )
+                                    }
+
+                                }
+
+                                }
+
+                        }
                     }
                 ) {
                     Box(
@@ -92,16 +154,22 @@ class MainActivity : ComponentActivity() {
                             .padding(
                                 top = it.calculateTopPadding(),
                                 bottom = it.calculateBottomPadding()
-                            )
-                        ,
+                            ),
 
-                    ) {
+                        ) {
                         ModalNavigationDrawer(
                             drawerState = drawerState,
                             drawerContent = {
-                                MyModalDrawerSheet(scope, drawerState, navController, currentRoute, userViewModel)
+                                MyModalDrawerSheet(
+                                    scope,
+                                    drawerState,
+                                    navController,
+                                    currentRoute,
+                                    userViewModel,
+                                    configuration)
                             }
                         ) {
+
                             NavHost(
                                 navController = navController,
                                 startDestination = Routes.SplashScreen.route
@@ -114,7 +182,7 @@ class MainActivity : ComponentActivity() {
                                             animationSpec = tween(700)
                                         )
                                     }
-                                    ) {
+                                ) {
                                     SplashScreen(navController, userViewModel, productViewModel)
                                 }
                                 composable(
@@ -144,7 +212,12 @@ class MainActivity : ComponentActivity() {
                                         )
                                     }
                                 ) {
-                                    Login(context, navController, userViewModel, productViewModel, dialogViewModel)
+                                    Login(
+                                        context,
+                                        navController,
+                                        userViewModel,
+                                        dialogViewModel
+                                    )
                                 }
                                 composable(
                                     route = Routes.CreateUser.route,
@@ -161,7 +234,12 @@ class MainActivity : ComponentActivity() {
                                         )
                                     }
                                 ) {
-                                    CreateUser(context, navController, userViewModel, productViewModel, dialogViewModel)
+                                    CreateUser(
+                                        context,
+                                        navController,
+                                        userViewModel,
+                                        dialogViewModel
+                                    )
                                 }
                                 composable(
                                     route = Routes.Profile.route,
@@ -195,7 +273,11 @@ class MainActivity : ComponentActivity() {
                                         )
                                     }
                                 ) {
-                                    MainMenu(navController, userViewModel)
+                                    MainMenu(
+                                        navController,
+                                        dialogViewModel,
+                                        configuration
+                                    )
                                 }
                                 composable(
                                     route = Routes.PizzaMenu.route,
@@ -212,7 +294,7 @@ class MainActivity : ComponentActivity() {
                                         )
                                     }
                                 ) {
-                                    PizzaMenu(navController, productViewModel)
+                                    PizzaMenu(navController, productViewModel, dialogViewModel, configuration)
                                 }
                                 composable(
                                     route = Routes.PastaMenu.route,
@@ -229,7 +311,7 @@ class MainActivity : ComponentActivity() {
                                         )
                                     }
                                 ) {
-                                    PastaMenu(navController, productViewModel)
+                                    PastaMenu(navController, productViewModel, dialogViewModel, configuration)
                                 }
                                 composable(
                                     route = Routes.DrinkMenu.route,
@@ -246,7 +328,7 @@ class MainActivity : ComponentActivity() {
                                         )
                                     }
                                 ) {
-                                    DrinkMenu(navController, productViewModel)
+                                    DrinkMenu(navController, productViewModel, dialogViewModel, configuration)
                                 }
                                 composable(
                                     route = Routes.MealMenu.route,
@@ -263,7 +345,7 @@ class MainActivity : ComponentActivity() {
                                         )
                                     }
                                 ) {
-                                    MealMenu(navController, productViewModel)
+                                    MealMenu(navController, productViewModel, dialogViewModel, configuration)
                                 }
                                 composable(
                                     route = Routes.OrderProduct.route,
@@ -280,7 +362,7 @@ class MainActivity : ComponentActivity() {
                                         )
                                     }
                                 ) {
-                                    OrderPizza(navController, productViewModel, dialogViewModel)
+                                    OrderPizza(navController, productViewModel, dialogViewModel, configuration)
                                 }
                                 composable(
                                     route = Routes.OrderProcess.route,
@@ -297,7 +379,7 @@ class MainActivity : ComponentActivity() {
                                         )
                                     }
                                 ) {
-                                    OrderProcess(navController, productViewModel, dialogViewModel, context, userViewModel)
+                                    OrderProcess(navController, productViewModel, dialogViewModel, userViewModel)
                                 }
                                 composable(
                                     route = Routes.Local.route,
@@ -314,17 +396,19 @@ class MainActivity : ComponentActivity() {
                                         )
                                     }
                                 ) {
-                                    PizzaLocal(navController, localViewModel)
+                                    PizzaLocal(navController, localViewModel, dialogViewModel)
                                 }
 
                             }
                         }
+
                     }
                 }
             }
         }
     }
 }
+
 
 
 

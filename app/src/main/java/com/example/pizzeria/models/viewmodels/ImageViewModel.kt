@@ -1,4 +1,4 @@
-package com.example.pizzeria.classes.viewmodels
+package com.example.pizzeria.models.viewmodels
 
 import android.graphics.ImageDecoder
 import androidx.compose.runtime.mutableStateListOf
