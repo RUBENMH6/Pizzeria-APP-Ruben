@@ -39,6 +39,8 @@
     <string name="log_in">Log In</string>
     <string name="log_out">Log Out</string>
     <string name="text_createuser">Register</string>
+    <string name="question_create_account">Do you already have an account?</string>
+    <string name="question_login">Don\'t you have an account?</string>
 
     <!-- Toast -->
     <string name="user_create_successfully">User created successfully</string>
