@@ -8,5 +8,9 @@
     <string name="screen_top_name_pastamenu">Nuestras pastas</string>
     <string name="screen_top_name_mealmenu">Nuestras carnes</string>
     <string name="screen_top_name_drinkmenu">Bebidas</string>
+    <string name="screen_top_name_orderprocess">Procesando</string>
+    <string name="screen_top_name_orderproduct">Tu pedido</string>
+    <string name="screen_top_name_login">Inicio sesión</string>
+    <string name="screen_top_name_createuser">Registrarse</string>
 
 </resources>
