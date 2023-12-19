@@ -1,5 +1,6 @@
 package com.example.pizzeria.screens
 
+import android.content.Context
 import android.content.res.Configuration
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -35,7 +36,7 @@ import com.example.pizzeria.ui.theme.Palette_1_11
 import com.example.pizzeria.ui.theme.tostadito
 
 @Composable
-fun MainMenu(navController: NavController, dialogViewModel: DialogViewModel, configuration: Configuration) {
+fun MainMenu(navController: NavController, dialogViewModel: DialogViewModel, configuration: Configuration, context: Context) {
     val listButtons = listOf(
         Routes.PizzaMenu.route,
         Routes.PastaMenu.route,
@@ -89,11 +90,11 @@ fun MainMenu(navController: NavController, dialogViewModel: DialogViewModel, con
                         ) {
                             Text(
                                 text = when (it) {
-                                    Routes.PizzaMenu.route -> "Pizza"
-                                    Routes.PastaMenu.route -> "Pasta"
-                                    Routes.MealMenu.route -> "Meal"
-                                    Routes.DrinkMenu.route -> "Drink"
-                                    Routes.Local.route -> "Location"
+                                    Routes.PizzaMenu.route -> context.getString(R.string.button_mainmenu_pizza)
+                                    Routes.PastaMenu.route -> context.getString(R.string.button_mainmenu_pasta)
+                                    Routes.MealMenu.route -> context.getString(R.string.button_mainmenu_meal)
+                                    Routes.DrinkMenu.route -> context.getString(R.string.button_mainmenu_drink)
+                                    Routes.Local.route -> context.getString(R.string.button_mainmenu_location)
                                     else -> ""
                                 },
                                 fontWeight = FontWeight.Bold,
