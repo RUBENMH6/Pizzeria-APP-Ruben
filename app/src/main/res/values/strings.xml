@@ -27,5 +27,13 @@
     <string name="modal_button_logout">Cerrar sesión</string>
 
 
+    //Boton del menú principal
+
+    <string name="button_mainmenu_pizza">Pizzas</string>
+    <string name="button_mainmenu_pasta">Pastas</string>
+    <string name="button_mainmenu_meal">Carnes</string>
+    <string name="button_mainmenu_drink">Bebidas</string>
+    <string name="button_mainmenu_location">Dónde estamos</string>
+
 
 </resources>
