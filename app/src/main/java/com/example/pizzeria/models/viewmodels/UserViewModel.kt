@@ -10,6 +10,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavController
+import com.example.pizzeria.R
 import com.example.pizzeria.models.Routes
 import com.example.pizzeria.models.data.UserInfo
 import com.example.pizzeria.models.data.setUserToFirestore
@@ -52,14 +53,12 @@ class UserViewModel : ViewModel() {
         navController: NavController,
         dialogViewModel: DialogViewModel
     ) = viewModelScope.launch {
-        Log.e("TestLoginDentro", "${dialogViewModel.commingToLoginNeededOrderPizza.value.toString()}")
         try {
             auth.signInWithEmailAndPassword(email, password).addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     val user = auth.currentUser
                     val userId = user?.uid
                     Log.d("Firebase", "Sign in. User ID: $userId")
-                    Log.e("Test", "${dialogViewModel.commingToLoginNeededOrderPizza.value.toString()}")
                     if (dialogViewModel.commingToLoginNeededOrderPizza.value) {
                         navController.navigate(Routes.OrderProcess.route)
                     } else {
@@ -102,7 +101,7 @@ class UserViewModel : ViewModel() {
                                         setUserToFirestore(userInfo)
                                         Toast.makeText(
                                             context,
-                                            "User created successfully",
+                                            context.getString(R.string.user_create_successfully),
                                             Toast.LENGTH_LONG
                                         ).show()
                                         navController.navigate(Routes.MainMenu.route)
@@ -110,7 +109,7 @@ class UserViewModel : ViewModel() {
                                         // Fallo al establecer el displayName
                                         Toast.makeText(
                                             context,
-                                            "${updateProfileTask.exception?.message}",
+                                            context.getString(R.string.display_name_error),
                                             Toast.LENGTH_LONG
                                         ).show()
                                     }

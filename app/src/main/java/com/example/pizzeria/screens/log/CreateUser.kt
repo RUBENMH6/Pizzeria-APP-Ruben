@@ -107,7 +107,7 @@ fun CreateUser(
                     TextField(
                         value = name,
                         onValueChange = { name = it.replace(" ", "") },
-                        label = { Text("Name") },
+                        label = { Text(context.getString(R.string.label_name)) },
                         keyboardOptions = KeyboardOptions.Default.copy(imeAction = androidx.compose.ui.text.input.ImeAction.Next),
                         modifier = Modifier.width(200.dp),
                         colors = TextFieldDefaults.outlinedTextFieldColors(
@@ -123,7 +123,7 @@ fun CreateUser(
                     TextField(
                         value = email,
                         onValueChange = { email = it.replace(" ", "") },
-                        label = { Text("Email") },
+                        label = { Text(context.getString(R.string.label_email)) },
                         keyboardOptions = KeyboardOptions.Default.copy(imeAction = androidx.compose.ui.text.input.ImeAction.Next),
                         modifier = Modifier.width(200.dp),
                         colors = TextFieldDefaults.outlinedTextFieldColors(
@@ -139,7 +139,7 @@ fun CreateUser(
                     TextField(
                         value = password,
                         onValueChange = { password = it.replace(" ", "") },
-                        label = { Text("Password") },
+                        label = { Text(context.getString(R.string.label_password)) },
                         visualTransformation = PasswordVisualTransformation(),
                         keyboardOptions = KeyboardOptions.Default.copy(imeAction = androidx.compose.ui.text.input.ImeAction.Done),
                         keyboardActions = KeyboardActions(onDone = { keyboardController?.hide() }),

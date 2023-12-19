@@ -33,9 +33,24 @@
 
     <string name="dropdown_log_profile">Profile</string>
 
-    //Iniciar sesión - Cerrar sesión
+    <!-- Autenticación -->
 
 
     <string name="log_in">Log In</string>
     <string name="log_out">Log Out</string>
+    <string name="text_createuser">Register</string>
+
+    <!-- Usuarios -->
+    <string name="user_create_successfully">User created successfully</string>
+    <string name="welcome_message">Welcome</string>
+
+    <!-- Campos de texto -->
+    <string name="label_name">Name</string>
+    <string name="label_email">Address</string>
+    <string name="label_password">Password</string>
+
+    <!-- Errores -->
+    <string name="display_name_error">Unable to assign that name. Please try another name.</string>
+    <string name="create_user_error">Unable to create user. Check your connection.</string>
+
 </resources>
