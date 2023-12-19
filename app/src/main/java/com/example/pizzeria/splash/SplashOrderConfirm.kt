@@ -48,7 +48,7 @@ fun SplashOrderConfirmed(navController: NavController, productViewModel: Product
         navController.navigate(Routes.MainMenu.route)
         Toast.makeText(
             context,
-            "Order process correctly",
+            context.getString(R.string.order_successfully),
             Toast.LENGTH_LONG
         ).show()
     }

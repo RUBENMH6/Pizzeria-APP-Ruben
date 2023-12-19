@@ -1,5 +1,6 @@
 package com.example.pizzeria.splash
 
+import android.content.Context
 import androidx.compose.animation.core.FastOutLinearInEasing
 import androidx.compose.animation.core.LinearOutSlowInEasing
 import androidx.compose.animation.core.RepeatMode
@@ -44,27 +45,27 @@ import com.example.pizzeria.ui.theme.Palette_1_11
 import com.example.pizzeria.ui.theme.tostadito
 import kotlinx.coroutines.delay
 @Composable
-fun SplashScreen(navController: NavController, userViewModel: UserViewModel, productViewModel: ProductViewModel) {
-    var splashText by remember { mutableStateOf("Loading packages...")}
+fun SplashScreen(navController: NavController, userViewModel: UserViewModel, productViewModel: ProductViewModel, context: Context) {
+    var splashText by remember { mutableStateOf(context.getString(R.string.splash_initial))}
     LaunchedEffect(true) {
         userViewModel.auth.signOut()
         delay(1500)
         getProductsFromFirestore { productViewModel.productList = it }
-        splashText = "Loading products..."
+        splashText = context.getString(R.string.splash_loading_products)
         delay(1500)
         getUserFromFirestore { userViewModel.userList = it }
-        splashText = "Loading users..."
+        splashText = context.getString(R.string.splash_loading_usuarios)
         delay(1500)
-        splashText = "Getting everything ready"
+        splashText = context.getString(R.string.splash_getting_ready)
         navController.navigate(Routes.MainMenu.route)
 
     }
-    AnimatedSplash(splashText)
+    AnimatedSplash(splashText, context)
     
 }
 
 @Composable
-fun AnimatedSplash(splashText: String) {
+fun AnimatedSplash(splashText: String, context: Context) {
     val rotationState by rememberInfiniteTransition().animateFloat(
         initialValue = 0f,
         targetValue = 45f,
@@ -108,7 +109,7 @@ fun AnimatedSplash(splashText: String) {
         contentAlignment = Alignment.BottomCenter
     ) {
         Text(
-            text = "Created by Rubén",
+            text = context.getString(R.string.splash_created_by),
             fontWeight = FontWeight.Bold,
             fontSize = 12.sp,
             color = Palette_1_11

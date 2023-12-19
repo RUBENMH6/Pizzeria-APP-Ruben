@@ -198,7 +198,7 @@ fun Login(
                 onClick = { navController.navigate(Routes.CreateUser.route) },
             ) {
                 Text(
-                    text = "Create account",
+                    text = context.getString(R.string.text_createuser),
                     fontWeight = FontWeight.Bold,
                     fontSize = 8.sp
                 )

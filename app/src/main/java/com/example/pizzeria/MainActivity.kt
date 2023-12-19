@@ -184,7 +184,7 @@ class MainActivity : ComponentActivity() {
                                         )
                                     }
                                 ) {
-                                    SplashScreen(navController, userViewModel, productViewModel)
+                                    SplashScreen(navController, userViewModel, productViewModel, context)
                                 }
                                 composable(
                                     route = Routes.SplashScreenOrderConfirmed.route,
