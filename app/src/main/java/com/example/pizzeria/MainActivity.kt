@@ -2,23 +2,38 @@ package com.example.pizzeria
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.animation.AnimatedContentTransitionScope
 import androidx.compose.animation.core.tween
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -86,65 +101,54 @@ class MainActivity : ComponentActivity() {
 
                         }
                     },
-                   /*bottomBar = {
-                        if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) {
-                            if (currentRoute != Routes.SplashScreen.route && currentRoute != Routes.SplashScreenOrderConfirmed.route) {
-                                MyBottomAppBar(
-                                    currentRoute,
-                                    navController,
-                                    productViewModel,
-                                    dialogViewModel,
-                                    context,
-                                    userViewModel
-                                )
+                    floatingActionButton = {
+                        if (currentRoute != Routes.SplashScreen.route && currentRoute != Routes.SplashScreenOrderConfirmed.route){
+                            BadgedBox(
+                                badge = {
+                                    Text(
+                                        text = if (productViewModel.getQuantityProductTotal() != 0) productViewModel.getQuantityProductTotal()
+                                            .toString() else "",
+                                        color = Color.White,
+                                        fontSize = 12.sp,
+                                        textAlign = TextAlign.Center,
+                                        modifier = Modifier
+                                            .size(18.dp)
+                                            .offset((-25).dp, (-30).dp).background(if (productViewModel.getQuantityProductTotal() != 0)Palette_1_11 else Color.Transparent, CircleShape)
+
+                                    )
+                                }) {
+                                IconButton(
+                                    onClick = {
+                                        if (productViewModel.selectedProductList.isEmpty() || productViewModel.getQuantityProductTotal() == 0) {
+                                            Toast.makeText(
+                                                context,
+                                                context.getString(R.string.order_empty),
+                                                Toast.LENGTH_LONG
+                                            ).show()
+                                        } else {
+                                            navController.navigate(Routes.OrderProduct.route)
+                                        }
+                                    },
+                                    modifier = Modifier
+                                        .size(20.dp)
+                                        .background(Palette_1_8, RoundedCornerShape(16.dp))
+                                ) {
+                                    Icon(
+                                        painter = painterResource(R.drawable.baseline_shopping_cart_24),
+                                        contentDescription = "Shopping Product",
+                                        tint = Color.White
+                                    )
+                                }
                             }
                         }
 
-
-                    },*/
-                    /*floatingActionButton = {
-                        if (configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-                            if (currentRoute != Routes.SplashScreen.route && currentRoute != Routes.SplashScreenOrderConfirmed.route) {
-                                Row(
-                                    modifier = Modifier.fillMaxWidth()
-                                ) {
-                                    Column(
-                                        modifier = Modifier.weight(0.5f).fillMaxWidth().padding(start = 30.dp),
-                                        horizontalAlignment = Alignment.Start
-                                    ) {
-                                        MyFABtoBack(
-                                            navController,
-                                            currentRoute,
-                                            productViewModel,
-                                            userViewModel
-                                        )
-                                    }
-                                    Column(
-                                        modifier = Modifier.weight(0.5f).fillMaxWidth(),
-                                        horizontalAlignment = Alignment.End
-                                    ) {
-                                        MyFABtoBuy(
-                                            navController,
-                                            currentRoute,
-                                            productViewModel,
-                                            userViewModel,
-                                            context, dialogViewModel
-                                        )
-                                    }
-
-                                }
-
-                                }
-
-                        }
-                    }*/
+                    }
                 ) {
                     Box(
                         modifier = Modifier
                             .fillMaxSize()
                             .padding(
-                                top = it.calculateTopPadding(),
-                                //bottom = it.calculateBottomPadding()
+                                top = it.calculateTopPadding()
                             ),
 
                         ) {
