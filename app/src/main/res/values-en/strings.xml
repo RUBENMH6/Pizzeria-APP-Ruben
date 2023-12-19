@@ -3,8 +3,6 @@
 
     <string name="app_name">Rubén Pizza</string>
 
-    <!-- Titulo TopAppBar -->
-
     <string name="screen_top_name_mainmenu">Main menu</string>
     <string name="screen_top_name_pizzamenu">Ours pizzas</string>
     <string name="screen_top_name_pastamenu">Ours pastaas</string>
@@ -13,9 +11,9 @@
     <string name="screen_top_name_orderprocess">Processing</string>
     <string name="screen_top_name_orderproduct">Your order</string>
     <string name="screen_top_name_login">Identify</string>
+    <string name="screen_top_name_createuser">Sign up</string>
 
 
-    <!-- Botones ModalDrawer-->
 
     <string name="modal_button_mainmenu">Menu</string>
     <string name="modal_button_pizzamenu">Pizzas</string>
@@ -23,7 +21,6 @@
     <string name="modal_button_mealmenu">Meals</string>
     <string name="modal_button_drinkmenu">Drinks</string>
 
-    <!-- Botones menú principal -->
 
     <string name="button_mainmenu_pizza">Pizzas</string>
     <string name="button_mainmenu_pasta">Pastas</string>
@@ -32,7 +29,7 @@
     <string name="button_mainmenu_location">Location</string>
 
 
-    <!-- DropDownMenu Log-->
+    //Botones DropDownMenu del Log
 
     <string name="dropdown_log_profile">Profile</string>
 
@@ -42,8 +39,6 @@
     <string name="log_in">Log In</string>
     <string name="log_out">Log Out</string>
     <string name="text_createuser">Register</string>
-    <string name="question_create_account">Do you already have an account?</string>
-    <string name="question_login">Don\'t you have an account?</string>
 
     <!-- Toast -->
     <string name="user_create_successfully">User created successfully</string>
@@ -66,10 +61,8 @@
 
 
     <!-- Errores -->
-
     <string name="display_name_error">Unable to assign that name. Please try another name.</string>
     <string name="create_user_error">Unable to create user. Check your connection.</string>
-
 
     <!-- Advertencia -->
 
