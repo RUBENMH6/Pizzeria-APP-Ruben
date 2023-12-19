@@ -60,8 +60,8 @@ fun MyTopAppBar(route: String, navController: NavController, productViewModel: P
                         Routes.DrinkMenu.route  -> context.getString(R.string.screen_top_name_drinkmenu)
                         Routes.OrderProduct.route  -> context.getString(R.string.screen_top_name_orderproduct)
                         Routes.OrderProcess.route  -> context.getString(R.string.screen_top_name_orderprocess)
-                        Routes.Login.route  -> "Sign in"
-                        Routes.CreateUser.route  -> "Register"
+                        Routes.Login.route  -> context.getString(R.string.screen_top_name_login)
+                        Routes.CreateUser.route  -> context.getString(R.string.screen_top_name_createuser)
                         else -> ""
                     },
                     color = Color.White,
