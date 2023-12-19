@@ -1,5 +1,6 @@
 package com.example.pizzeria.dialogs
 
+import android.content.Context
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -12,24 +13,25 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import com.example.pizzeria.R
 import com.example.pizzeria.models.viewmodels.DialogViewModel
 import com.example.pizzeria.models.viewmodels.ProductViewModel
 import com.example.pizzeria.ui.theme.Palette_1_11
 import com.example.pizzeria.ui.theme.tostadito
 
 @Composable
-fun RemoveOrderPizzaDialog(productViewModel: ProductViewModel, dialogViewModel: DialogViewModel) {
+fun RemoveOrderPizzaDialog(productViewModel: ProductViewModel, dialogViewModel: DialogViewModel, context: Context) {
     AlertDialog(
         onDismissRequest = {
             dialogViewModel.dialogRemoveOrderPizza.value = false
         },
         title = {
-            Text(text = "Warning! Deleting order.")
+            Text(text = context.getString(R.string.dialog_title_delete))
         },
         text =
         {
             Divider(color = Palette_1_11)
-            Text(text = "\nAre you sure you want to delete the pizza list? This action cannot be undone.", textAlign = TextAlign.Justify, color = Palette_1_11 ) }
+            Text(text = "\n" + context.getString(R.string.dialog_body_delete), textAlign = TextAlign.Justify, color = Palette_1_11 ) }
         ,
         confirmButton = {
             Button(
@@ -39,7 +41,7 @@ fun RemoveOrderPizzaDialog(productViewModel: ProductViewModel, dialogViewModel: 
                 },
                 colors = ButtonDefaults.buttonColors(Palette_1_11),
                 modifier = Modifier.padding(end = 10.dp)) {
-                Text("Confirm")
+                Text(context.getString(R.string.dialog_button_confirmar))
             }
 
         },
@@ -49,8 +51,8 @@ fun RemoveOrderPizzaDialog(productViewModel: ProductViewModel, dialogViewModel: 
                     dialogViewModel.dialogRemoveOrderPizza.value = false
                 },
                 colors = ButtonDefaults.buttonColors(Palette_1_11),
-                modifier = Modifier.padding(end = 40.dp)) {
-                Text("Dismiss")
+                modifier = Modifier.padding(end = 20.dp)) {
+                Text(context.getString(R.string.dialog_button_dismiss))
             }
         },
         containerColor = tostadito,

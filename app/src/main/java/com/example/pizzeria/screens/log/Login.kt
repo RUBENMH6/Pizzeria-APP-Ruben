@@ -191,14 +191,14 @@ fun Login(
         ) {
 
             Text(
-                text = "Don't you have an account?",
+                text = context.getString(R.string.question_login),
                 fontSize = 8.sp
             )
             TextButton(
                 onClick = { navController.navigate(Routes.CreateUser.route) },
             ) {
                 Text(
-                    text = "Create account",
+                    text = context.getString(R.string.text_createuser),
                     fontWeight = FontWeight.Bold,
                     fontSize = 8.sp
                 )
@@ -213,7 +213,7 @@ fun Login(
                 .background(Color.Transparent.copy(0.2f)),
             contentAlignment = Alignment.Center
         ) {
-            LoginNeededToAccessProfileDialog(navController, dialogViewModel)
+            LoginNeededToAccessProfileDialog(navController, dialogViewModel, context)
         }
     }
 }

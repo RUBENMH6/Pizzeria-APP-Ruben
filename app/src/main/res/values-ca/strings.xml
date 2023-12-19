@@ -42,17 +42,31 @@
     <string name="log_in">Inicia sessió</string>
     <string name="log_out">Tanca sessió</string>
     <string name="text_createuser">Registra\'t</string>
+    <string name="question_create_account">Ja tens un compte?</string>
+    <string name="question_login">No tens un compte?</string>
 
-    <!-- Usuarios -->
+
+    <!-- Toast -->
 
     <string name="user_create_successfully">Usuari creat correctament</string>
     <string name="welcome_message">Benvingut</string>
+    <string name="order_successfully">La comanda s\'ha processat correctament</string>
+
 
     <!-- Campos de texto -->
 
     <string name="label_name">Nom</string>
     <string name="label_email">Adreça</string>
     <string name="label_password">Contrasenya</string>
+
+    <!-- Splash -->
+
+    <string name="splash_initial">Carregant paquets</string>
+    <string name="splash_loading_products">Carregant els productes</string>
+    <string name="splash_loading_usuarios">Carregant els usuaris</string>
+    <string name="splash_getting_ready">Preparant-ho tot</string>
+    <string name="splash_created_by">Creat per Rubén</string>
+
 
 
     <!-- Errores_ -->
@@ -64,5 +78,20 @@
     <!-- Advertencias -->
 
     <string name="advertencia_log_in">Si us plau, inicia sessió</string>
+
+    <!-- Diálogos -->
+
+    <string name="dialog_title_login">Si us plau, inicia sessió!</string>
+    <string name="dialog_body_login_profile">Necessites iniciar sessió per accedir al perfil</string>
+    <string name="dialog_body_login_order">Necessites iniciar sessió per fer una comanda</string>
+
+    <string name="dialog_title_delete">Cuidat, estàs esborrant la comanda!</string>
+    <string name="dialog_body_delete">Estàs segur que vols esborrar la comanda? No es podrà recuperar.</string>
+
+    <string name="dialog_title_ordering">Atenció, estàs a punt de confirmar la comanda!</string>
+    <string name="dialog_body_ordering">Estàs segur que vols confirmar la comanda?</string>
+
+    <string name="dialog_button_dismiss">Cancel·lar</string>
+    <string name="dialog_button_confirmar">Confirmar</string>
 
 </resources>

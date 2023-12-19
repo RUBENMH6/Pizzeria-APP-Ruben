@@ -163,7 +163,7 @@ fun CreateUser(
                             colors =  ButtonDefaults.buttonColors(tostadito)
                         ) {
                             Text(
-                                text = "Create account",
+                                text = context.getString(R.string.text_createuser),
                                 color = Palette_1_11)
                         }
 
@@ -183,15 +183,14 @@ fun CreateUser(
             horizontalArrangement = Arrangement.Center
         ) {
             Text(
-                text = "Do you already have an account?",
-                fontSize = 10.sp,
-                modifier = Modifier.height(20.dp))
+                text = context.getString(R.string.question_create_account),
+                fontSize = 10.sp
+            )
             TextButton(
                 onClick = { navController.navigate(Routes.Login.route) },
-                modifier = Modifier.height(20.dp)
             ) {
                 Text(
-                    text = "Sign in",
+                    text = context.getString(R.string.log_in),
                     fontWeight = FontWeight.Bold,
                     fontSize = 10.sp
                 )
@@ -203,7 +202,7 @@ fun CreateUser(
             modifier = Modifier.fillMaxSize().background(Color.Transparent.copy(0.2f)),
             contentAlignment = Alignment.Center
         ) {
-            LoginNeededToAccessProfileDialog(navController, dialogViewModel)
+            LoginNeededToAccessProfileDialog(navController, dialogViewModel, context)
         }
     }
 }

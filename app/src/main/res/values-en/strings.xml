@@ -61,4 +61,20 @@
 
     <string name="advertencia_log_in">Please, log in</string>
 
+    <!-- Diálogos -->
+
+    <string name="dialog_title_login">Please, log in!</string>
+    <string name="dialog_body_login_profile">You need to log in to access the profile</string>
+    <string name="dialog_body_login_order">You need to log in to place an order</string>
+
+    <string name="dialog_title_delete">Careful, you are deleting the order!</string>
+    <string name="dialog_body_delete">Are you sure you want to delete the order? It cannot be recovered.</string>
+
+    <string name="dialog_title_ordering">Attention, you are about to confirm the order!</string>
+    <string name="dialog_body_ordering">Are you sure you want to confirm the order?</string>
+
+    <string name="dialog_button_dismiss">Dismiss</string>
+    <string name="dialog_button_confirmar">Confirm</string>
+
+
 </resources>

@@ -114,7 +114,7 @@ fun MainMenu(navController: NavController, dialogViewModel: DialogViewModel, con
                 .background(Color.Transparent.copy(0.2f)),
             contentAlignment = Alignment.Center
         ) {
-            LoginNeededToAccessProfileDialog(navController, dialogViewModel)
+            LoginNeededToAccessProfileDialog(navController, dialogViewModel, context)
         }
     }
 }

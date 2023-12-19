@@ -1,5 +1,6 @@
 package com.example.pizzeria.screens.order
 
+import android.content.Context
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -19,19 +20,19 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.example.pizzeria.models.viewmodels.DialogViewModel
-import com.example.pizzeria.models.viewmodels.ProductViewModel
-import com.example.pizzeria.models.viewmodels.UserViewModel
 import com.example.pizzeria.components.products.order.MyOrderProcessButton
 import com.example.pizzeria.components.products.order.MyTicket
 import com.example.pizzeria.dialogs.ConfirmOrderPizzaDialog
 import com.example.pizzeria.dialogs.LoginNeededOrderPizzaDialog
 import com.example.pizzeria.dialogs.LoginNeededToAccessProfileDialog
+import com.example.pizzeria.models.viewmodels.DialogViewModel
+import com.example.pizzeria.models.viewmodels.ProductViewModel
+import com.example.pizzeria.models.viewmodels.UserViewModel
 import com.example.pizzeria.ui.theme.Palette_1_8
 import com.example.pizzeria.ui.theme.tostadito
 
 @Composable
-fun OrderProcess(navController: NavController, productViewModel: ProductViewModel, dialogViewModel: DialogViewModel, userViewModel: UserViewModel) {
+fun OrderProcess(navController: NavController, productViewModel: ProductViewModel, dialogViewModel: DialogViewModel, userViewModel: UserViewModel, context: Context) {
     Column(
         modifier = Modifier.fillMaxSize().background(tostadito),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -76,7 +77,7 @@ fun OrderProcess(navController: NavController, productViewModel: ProductViewMode
             modifier = Modifier.fillMaxSize().background(Color.Transparent.copy(0.2f)),
             contentAlignment = Alignment.Center
         ) {
-            LoginNeededOrderPizzaDialog(navController, dialogViewModel)
+            LoginNeededOrderPizzaDialog(navController, dialogViewModel, context)
         }
     }
     if (dialogViewModel.dialogLoginToAccessProfile.value) {
@@ -85,7 +86,7 @@ fun OrderProcess(navController: NavController, productViewModel: ProductViewMode
             contentAlignment = Alignment.Center
         ) {
             dialogViewModel.commingToLoginNeededOrderPizza.value = true
-            LoginNeededToAccessProfileDialog(navController, dialogViewModel)
+            LoginNeededToAccessProfileDialog(navController, dialogViewModel, context)
         }
     }
 
@@ -94,7 +95,7 @@ fun OrderProcess(navController: NavController, productViewModel: ProductViewMode
             modifier = Modifier.fillMaxSize(),
             contentAlignment = Alignment.Center
         ) {
-            ConfirmOrderPizzaDialog(navController, dialogViewModel)
+            ConfirmOrderPizzaDialog(navController, dialogViewModel, context)
         }
     }
 

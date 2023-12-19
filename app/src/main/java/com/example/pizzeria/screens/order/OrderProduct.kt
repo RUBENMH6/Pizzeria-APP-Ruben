@@ -1,5 +1,6 @@
 package com.example.pizzeria.screens.order
 
+import android.content.Context
 import android.content.res.Configuration
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -35,17 +36,17 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.pizzeria.R
-import com.example.pizzeria.models.viewmodels.DialogViewModel
-import com.example.pizzeria.models.viewmodels.ProductViewModel
 import com.example.pizzeria.components.products.order.MyCardPedido
 import com.example.pizzeria.dialogs.LoginNeededToAccessProfileDialog
 import com.example.pizzeria.dialogs.RemoveOrderPizzaDialog
+import com.example.pizzeria.models.viewmodels.DialogViewModel
+import com.example.pizzeria.models.viewmodels.ProductViewModel
 import com.example.pizzeria.ui.theme.Palette_1_11
 import com.example.pizzeria.ui.theme.Palette_1_8
 import java.text.DecimalFormat
 
 @Composable
-fun OrderPizza(navController: NavController, productViewModel: ProductViewModel, dialogViewModel: DialogViewModel, configuration: Configuration) {
+fun OrderPizza(navController: NavController, productViewModel: ProductViewModel, dialogViewModel: DialogViewModel, configuration: Configuration, context: Context) {
     var totalPrice by remember { mutableDoubleStateOf(0.0) }
     totalPrice = getInitialPrice(productViewModel)
     val listState = rememberLazyStaggeredGridState()
@@ -162,7 +163,7 @@ fun OrderPizza(navController: NavController, productViewModel: ProductViewModel,
             modifier = Modifier.fillMaxSize(),
             contentAlignment = Alignment.Center
         ) {
-            RemoveOrderPizzaDialog(productViewModel, dialogViewModel)
+            RemoveOrderPizzaDialog(productViewModel, dialogViewModel, context)
         }
     }
 
@@ -241,7 +242,7 @@ fun OrderPizza(navController: NavController, productViewModel: ProductViewModel,
                     .background(Color.Transparent.copy(0.2f)),
                 contentAlignment = Alignment.Center
             ) {
-                LoginNeededToAccessProfileDialog(navController, dialogViewModel)
+                LoginNeededToAccessProfileDialog(navController, dialogViewModel, context)
             }
         }
     }
