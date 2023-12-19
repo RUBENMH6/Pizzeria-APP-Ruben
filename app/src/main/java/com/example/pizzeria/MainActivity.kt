@@ -277,7 +277,8 @@ class MainActivity : ComponentActivity() {
                                     MainMenu(
                                         navController,
                                         dialogViewModel,
-                                        configuration
+                                        configuration,
+                                        context
                                     )
                                 }
                                 composable(
