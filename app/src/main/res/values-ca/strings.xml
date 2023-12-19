@@ -3,6 +3,8 @@
 
     <string name="app_name">Rubén Pizza</string>
 
+    <!-- Titulo TopAppBar -->
+
     <string name="screen_top_name_mainmenu">Menu principal</string>
     <string name="screen_top_name_pizzamenu">Nostres pizzes</string>
     <string name="screen_top_name_pastamenu">Nostres pastes</string>
@@ -12,7 +14,7 @@
     <string name="screen_top_name_orderproduct">La teva comanda</string>
     <string name="screen_top_name_login">Idetifica\'t</string>
 
-
+    <!-- Botones ModalDrawer -->
 
     <string name="modal_button_mainmenu">Menu</string>
     <string name="modal_button_pizzamenu">Pizzes</string>
@@ -20,7 +22,7 @@
     <string name="modal_button_mealmenu">Carns</string>
     <string name="modal_button_drinkmenu">Begudes</string>
 
-
+    <!-- Botones menú principal -->
 
     <string name="button_mainmenu_pizza">Pizzes</string>
     <string name="button_mainmenu_pasta">Pastes</string>
@@ -28,34 +30,39 @@
     <string name="button_mainmenu_drink">Begudes</string>
     <string name="button_mainmenu_location">On som</string>
 
-    //Botones DropDownMenu del Log
+
+    <!-- DropDownMenu Log -->
 
     <string name="dropdown_log_profile">Perfil</string>
 
-    //Iniciar sesión - Cerrar sesión
+
+    <!-- Autentificación -->
 
 
     <string name="log_in">Inicia sessió</string>
     <string name="log_out">Tanca sessió</string>
     <string name="text_createuser">Registra\'t</string>
 
-
-
-    //Usuarios
+    <!-- Usuarios -->
 
     <string name="user_create_successfully">Usuari creat correctament</string>
     <string name="welcome_message">Benvingut</string>
 
-    //TextField
+    <!-- Campos de texto -->
 
     <string name="label_name">Nom</string>
     <string name="label_email">Adreça</string>
     <string name="label_password">Contrasenya</string>
 
 
-    //Errores
+    <!-- Errores_ -->
 
     <string name="display_name_error">No s\'ha pogut assignar aquest nom. Si us plau, proveu un altre nom.</string>
     <string name="create_user_error">No s\'ha pogut crear l\'usuari. Reviseu la connexió.</string>
+
+
+    <!-- Advertencias -->
+
+    <string name="advertencia_log_in">Si us plau, inicia sessió</string>
 
 </resources>
