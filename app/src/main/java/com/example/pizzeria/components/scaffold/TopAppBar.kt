@@ -53,13 +53,13 @@ fun MyTopAppBar(route: String, navController: NavController, productViewModel: P
                 Spacer(modifier = Modifier.width(10.dp))
                 Text(
                     text = when (route) {
-                        Routes.MainMenu.route -> "Menu "
-                        Routes.PizzaMenu.route  -> "Pizzas"
-                        Routes.PastaMenu.route -> "Pastas"
-                        Routes.MealMenu.route  -> "Meals"
-                        Routes.DrinkMenu.route  -> "Drinks"
-                        Routes.OrderProduct.route  -> "Your order"
-                        Routes.OrderProcess.route  -> "Ordering"
+                        Routes.MainMenu.route -> context.getString(R.string.screen_top_name_mainmenu)
+                        Routes.PizzaMenu.route  -> context.getString(R.string.screen_top_name_pizzamenu)
+                        Routes.PastaMenu.route -> context.getString(R.string.screen_top_name_pastamenu)
+                        Routes.MealMenu.route  -> context.getString(R.string.screen_top_name_mealmenu)
+                        Routes.DrinkMenu.route  -> context.getString(R.string.screen_top_name_drinkmenu)
+                        Routes.OrderProduct.route  -> context.getString(R.string.screen_top_name_orderproduct)
+                        Routes.OrderProcess.route  -> context.getString(R.string.screen_top_name_orderprocess)
                         Routes.Login.route  -> "Sign in"
                         Routes.CreateUser.route  -> "Register"
                         else -> ""
