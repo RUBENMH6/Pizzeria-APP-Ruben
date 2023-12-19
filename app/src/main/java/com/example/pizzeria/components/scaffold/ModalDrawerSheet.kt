@@ -1,5 +1,6 @@
 package com.example.pizzeria.components.scaffold
 
+import android.content.Context
 import android.content.res.Configuration
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -41,8 +42,8 @@ import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MyModalDrawerSheet(scope: CoroutineScope, drawerState: DrawerState, navController: NavController, currentRoute: String?, userViewModel: UserViewModel, configuration: Configuration) {
-    val items = getNavDrawInfo()
+fun MyModalDrawerSheet(scope: CoroutineScope, drawerState: DrawerState, navController: NavController, currentRoute: String?, userViewModel: UserViewModel, configuration: Configuration, context: Context) {
+    val items = getNavDrawInfo(context)
     ModalDrawerSheet(
         drawerContainerColor = tostadito,
         drawerTonalElevation = 2.dp,
@@ -82,7 +83,7 @@ fun MyModalDrawerSheet(scope: CoroutineScope, drawerState: DrawerState, navContr
                                     text =
                                     if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) {
                                         if (item.name == "Login") {
-                                            if (userViewModel.auth.currentUser == null) "Sign In" else "Sign Out"
+                                            if (userViewModel.auth.currentUser == null) context.getString(R.string.modal_button_login) else context.getString(R.string.modal_button_logout)
                                         } else {
                                             item.name
                                         }

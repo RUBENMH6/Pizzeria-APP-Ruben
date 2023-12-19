@@ -166,7 +166,8 @@ class MainActivity : ComponentActivity() {
                                     navController,
                                     currentRoute,
                                     userViewModel,
-                                    configuration)
+                                    configuration,
+                                    context)
                             }
                         ) {
 

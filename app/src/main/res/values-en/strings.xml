@@ -5,12 +5,22 @@
 
     <string name="screen_top_name_mainmenu">Main menu</string>
     <string name="screen_top_name_pizzamenu">Ours pizzas</string>
-    <string name="screen_top_name_pastamenu">Ours pastas</string>
+    <string name="screen_top_name_pastamenu">Ours pastries</string>
     <string name="screen_top_name_mealmenu">Ours meals</string>
     <string name="screen_top_name_drinkmenu">Drinks</string>
     <string name="screen_top_name_orderprocess">Processing</string>
     <string name="screen_top_name_orderproduct">Your order</string>
     <string name="screen_top_name_login">Log in</string>
     <string name="screen_top_name_createuser">Sign up</string>
+
+
+
+    <string name="modal_button_mainmenu">Menu</string>
+    <string name="modal_button_pizzamenu">Pizzas</string>
+    <string name="modal_button_pastamenu">Pastries</string>
+    <string name="modal_button_mealmenu">Meals</string>
+    <string name="modal_button_drinkmenu">Drinks</string>
+    <string name="modal_button_login">Log In</string>
+    <string name="modal_button_logout">Log Out</string>
 
 </resources>
