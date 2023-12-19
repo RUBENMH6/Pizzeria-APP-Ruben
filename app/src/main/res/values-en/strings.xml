@@ -11,7 +11,6 @@
     <string name="screen_top_name_orderprocess">Processing</string>
     <string name="screen_top_name_orderproduct">Your order</string>
     <string name="screen_top_name_login">Identify</string>
-    <string name="screen_top_name_createuser">Sign up</string>
 
 
 
@@ -61,6 +60,7 @@
 
 
     <!-- Errores -->
+
     <string name="display_name_error">Unable to assign that name. Please try another name.</string>
     <string name="create_user_error">Unable to create user. Check your connection.</string>
 
