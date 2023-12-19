@@ -14,7 +14,6 @@
     <string name="screen_top_name_orderprocess">Procesando</string>
     <string name="screen_top_name_orderproduct">Tu pedido</string>
     <string name="screen_top_name_login">Identificate</string>
-    <string name="screen_top_name_createuser">Registrarse</string>
 
     //Botones del ModalDrawer
 
@@ -44,6 +43,25 @@
 
     <string name="log_in">Iniciar sessión</string>
     <string name="log_out">Iniciar sessión</string>
+    <string name="text_createuser">Registrarse</string>
 
+
+
+    //Usuarios
+
+    <string name="user_create_successfully">Usuario creado correctamente</string>
+    <string name="welcome_message">Bienvenido</string>
+
+    //TextField
+
+    <string name="label_name">Nombre</string>
+    <string name="label_email">Correo</string>
+    <string name="label_password">Contraseña</string>
+
+
+    //Errores
+
+    <string name="display_name_error">No se ha podido asignar ese nombre. Intente otro nombre, por favor.</string>
+    <string name="create_user_error">No se ha podido crear el usuario. Revise la conexión.</string>
 
 </resources>

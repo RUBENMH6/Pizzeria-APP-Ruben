@@ -47,10 +47,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.pizzeria.R
+import com.example.pizzeria.dialogs.LoginNeededToAccessProfileDialog
 import com.example.pizzeria.models.Routes
 import com.example.pizzeria.models.viewmodels.DialogViewModel
 import com.example.pizzeria.models.viewmodels.UserViewModel
-import com.example.pizzeria.dialogs.LoginNeededToAccessProfileDialog
 import com.example.pizzeria.ui.theme.Palette_1_11
 import com.example.pizzeria.ui.theme.Palette_1_9
 import com.example.pizzeria.ui.theme.tostadito
@@ -73,7 +73,7 @@ fun Login(
             // If authenticated, get the current user and show a welcome Toast
             val user = Firebase.auth.currentUser
             val displayName = user?.displayName ?: "User"
-            Toast.makeText(context, "Welcome, $displayName", Toast.LENGTH_LONG).show()
+            Toast.makeText(context, "${context.getString(R.string.welcome_message)}, $displayName", Toast.LENGTH_LONG).show()
         }
     }
     Column(
@@ -122,7 +122,7 @@ fun Login(
                     TextField(
                         value = email,
                         onValueChange = { email = it.replace(" ", "")},
-                        label = { Text("Email") },
+                        label = { Text(context.getString(R.string.label_email)) },
                         keyboardOptions = KeyboardOptions.Default.copy(imeAction = androidx.compose.ui.text.input.ImeAction.Next),
                         modifier = Modifier.width(200.dp),
                         colors = TextFieldDefaults.outlinedTextFieldColors(
@@ -138,7 +138,7 @@ fun Login(
                     TextField(
                         value = password,
                         onValueChange = { password = it.replace(" ", "") },
-                        label = { Text("Password") },
+                        label = { Text(context.getString(R.string.label_password)) },
                         visualTransformation = PasswordVisualTransformation(),
                         keyboardOptions = KeyboardOptions.Default.copy(imeAction = androidx.compose.ui.text.input.ImeAction.Done),
                         keyboardActions = KeyboardActions(onDone = { keyboardController?.hide() }),
@@ -169,7 +169,7 @@ fun Login(
                         colors = ButtonDefaults.buttonColors(tostadito)
                     ) {
                         Text(
-                            text = "Sign In",
+                            text = context.getString(R.string.log_in),
                             color = Palette_1_11
                         )
                     }

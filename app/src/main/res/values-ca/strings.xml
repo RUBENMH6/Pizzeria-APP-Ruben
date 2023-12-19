@@ -11,7 +11,6 @@
     <string name="screen_top_name_orderprocess">Processant</string>
     <string name="screen_top_name_orderproduct">La teva comanda</string>
     <string name="screen_top_name_login">Idetifica\'t</string>
-    <string name="screen_top_name_createuser">Registra\'t</string>
 
 
 
@@ -38,5 +37,25 @@
 
     <string name="log_in">Inicia sessió</string>
     <string name="log_out">Tanca sessió</string>
+    <string name="text_createuser">Registra\'t</string>
+
+
+
+    //Usuarios
+
+    <string name="user_create_successfully">Usuari creat correctament</string>
+    <string name="welcome_message">Benvingut</string>
+
+    //TextField
+
+    <string name="label_name">Nom</string>
+    <string name="label_email">Adreça</string>
+    <string name="label_password">Contrasenya</string>
+
+
+    //Errores
+
+    <string name="display_name_error">No s\'ha pogut assignar aquest nom. Si us plau, proveu un altre nom.</string>
+    <string name="create_user_error">No s\'ha pogut crear l\'usuari. Reviseu la connexió.</string>
 
 </resources>

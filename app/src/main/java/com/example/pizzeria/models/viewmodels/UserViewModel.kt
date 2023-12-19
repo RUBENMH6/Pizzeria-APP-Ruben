@@ -10,6 +10,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavController
+import com.example.pizzeria.R
 import com.example.pizzeria.models.Routes
 import com.example.pizzeria.models.data.UserInfo
 import com.example.pizzeria.models.data.setUserToFirestore
@@ -80,47 +81,52 @@ class UserViewModel : ViewModel() {
         navController: NavController,
         name: String
     ) {
-        if (_loading.value == false) {
-            _loading.value = true
-            auth.createUserWithEmailAndPassword(email, password)
-                //Se ha compleado el proceso de creación de usuario correctamente
-                .addOnCompleteListener { task ->
-                    if (task.isSuccessful) {
-                        val user = auth.currentUser
-                        val profileUpdates = UserProfileChangeRequest.Builder()
-                            .setDisplayName(name)
-                            .build()
-                        user?.updateProfile(profileUpdates)
-                            //Se ha completado el proceso de modificar el usuario
-                            ?.addOnCompleteListener { updateProfileTask ->
-                                if (updateProfileTask.isSuccessful) {
-                                    // El displayName se ha establecido correctamente
-                                    val userInfo = UserInfo(user.uid, name, email)
-                                    setUserToFirestore(userInfo)
-                                    Toast.makeText(
-                                        context,
-                                        "User created successfully",
-                                        Toast.LENGTH_LONG
-                                    ).show()
-                                    navController.navigate(Routes.MainMenu.route)
-                                } else {
-                                    // Fallo al establecer el displayName
-                                    Toast.makeText(
-                                        context,
-                                        "${updateProfileTask.exception?.message}",
-                                        Toast.LENGTH_LONG
-                                    ).show()
+        try {
+            if (_loading.value == false) {
+                _loading.value = true
+                auth.createUserWithEmailAndPassword(email, password)
+                    //Se ha compleado el proceso de creación de usuario correctamente
+                    .addOnCompleteListener { task ->
+                        if (task.isSuccessful) {
+                            val user = auth.currentUser
+                            val profileUpdates = UserProfileChangeRequest.Builder()
+                                .setDisplayName(name)
+                                .build()
+                            user?.updateProfile(profileUpdates)
+                                //Se ha completado el proceso de modificar el usuario
+                                ?.addOnCompleteListener { updateProfileTask ->
+                                    if (updateProfileTask.isSuccessful) {
+                                        // El displayName se ha establecido correctamente
+                                        val userInfo = UserInfo(user.uid, name, email)
+                                        setUserToFirestore(userInfo)
+                                        Toast.makeText(
+                                            context,
+                                            context.getString(R.string.user_create_successfully),
+                                            Toast.LENGTH_LONG
+                                        ).show()
+                                        navController.navigate(Routes.MainMenu.route)
+                                    } else {
+                                        // Fallo al establecer el displayName
+                                        Toast.makeText(
+                                            context,
+                                            context.getString(R.string.display_name_error),
+                                            Toast.LENGTH_LONG
+                                        ).show()
+                                    }
+                                    _loading.value = false
                                 }
-                                _loading.value = false
-                            }
-                    } else {
-                        //Ha habido un error al crear el usuario
-                        Toast.makeText(context, "${task.exception?.message}", Toast.LENGTH_LONG)
-                            .show()
-                    }
-                    _loading.value = false
+                        } else {
+                            //Ha habido un error al crear el usuario
+                            Toast.makeText(context, "${task.exception?.message}", Toast.LENGTH_LONG)
+                                .show()
+                        }
+                        _loading.value = false
 
-                }
+                    }
+            }
+        } catch (ex: IllegalArgumentException) {
+            Toast.makeText(context, "${ex.message}", Toast.LENGTH_LONG).show()
         }
+
     }
 }
