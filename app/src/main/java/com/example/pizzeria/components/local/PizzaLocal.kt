@@ -1,7 +1,6 @@
 package com.example.pizzeria.components.local
 
 import android.content.Context
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -20,13 +19,12 @@ import com.example.pizzeria.models.data.getPizzaLocal
 import com.example.pizzeria.models.viewmodels.DialogViewModel
 import com.example.pizzeria.models.viewmodels.LocalViewModel
 import com.example.pizzeria.screens.local.MyLocal
-import com.example.pizzeria.ui.theme.tostadito
 
 @Composable
 fun PizzaLocal(navController: NavController, localViewModel: LocalViewModel, dialogViewModel: DialogViewModel, context: Context) {
     val locals = getPizzaLocal()
     Column(
-        modifier = Modifier.fillMaxWidth().background(tostadito)
+        modifier = Modifier.fillMaxWidth()
     ) {
         LazyColumn(modifier = Modifier.padding(start = 10.dp, end = 10.dp)) {
             items(getPizzaLocal().size) {

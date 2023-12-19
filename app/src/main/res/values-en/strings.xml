@@ -1,29 +1,27 @@
 <resources>
 
+    <string name="app_name">Ruben Pizza</string>
 
-    <string name="app_name">Rubén Pizza</string>
+    <!-- TopAppBar Title -->
 
-    <!-- Titulo TopAppBar -->
-
-    <string name="screen_top_name_mainmenu">Main menu</string>
-    <string name="screen_top_name_pizzamenu">Ours pizzas</string>
-    <string name="screen_top_name_pastamenu">Ours pastaas</string>
-    <string name="screen_top_name_mealmenu">Ours meals</string>
+    <string name="screen_top_name_mainmenu">Main Menu</string>
+    <string name="screen_top_name_pizzamenu">Our Pizzas</string>
+    <string name="screen_top_name_pastamenu">Our Pastas</string>
+    <string name="screen_top_name_mealmenu">Our Meats</string>
     <string name="screen_top_name_drinkmenu">Drinks</string>
     <string name="screen_top_name_orderprocess">Processing</string>
-    <string name="screen_top_name_orderproduct">Your order</string>
-    <string name="screen_top_name_login">Identify</string>
+    <string name="screen_top_name_orderproduct">Your Order</string>
+    <string name="screen_top_name_login">Login</string>
 
-
-    <!-- Botones ModalDrawer-->
+    <!-- ModalDrawer Buttons -->
 
     <string name="modal_button_mainmenu">Menu</string>
     <string name="modal_button_pizzamenu">Pizzas</string>
     <string name="modal_button_pastamenu">Pastas</string>
-    <string name="modal_button_mealmenu">Meals</string>
+    <string name="modal_button_mealmenu">Meats</string>
     <string name="modal_button_drinkmenu">Drinks</string>
 
-    <!-- Botones menú principal -->
+    <!-- Main Menu Buttons -->
 
     <string name="button_mainmenu_pizza">Pizzas</string>
     <string name="button_mainmenu_pasta">Pastas</string>
@@ -31,50 +29,64 @@
     <string name="button_mainmenu_drink">Drinks</string>
     <string name="button_mainmenu_location">Location</string>
 
-
-    <!-- DropDownMenu Log-->
+    <!-- DropDownMenu Log -->
 
     <string name="dropdown_log_profile">Profile</string>
 
-    <!-- Autenticación -->
-
+    <!-- Authentication -->
 
     <string name="log_in">Log In</string>
     <string name="log_out">Log Out</string>
-    <string name="text_createuser">Register</string>
+    <string name="text_createuser">Sign Up</string>
+    <string name="question_create_account">Already have an account?</string>
+    <string name="question_login">Don\'t have an account?</string>
 
-    <!-- Usuarios -->
+    <!-- Toast -->
+
     <string name="user_create_successfully">User created successfully</string>
     <string name="welcome_message">Welcome</string>
+    <string name="order_successfully">The order has been processed successfully</string>
+    <string name="order_empty">You haven\'t selected any product</string>
 
-    <!-- Campos de texto -->
+
+    <!-- Text Fields -->
+
     <string name="label_name">Name</string>
-    <string name="label_email">Address</string>
+    <string name="label_email">Email</string>
     <string name="label_password">Password</string>
 
-    <!-- Errores -->
+    <!-- Splash -->
+
+    <string name="splash_initial">Loading Packages</string>
+    <string name="splash_loading_products">Loading Products</string>
+    <string name="splash_loading_usuarios">Loading Users</string>
+    <string name="splash_getting_ready">Getting Ready</string>
+    <string name="splash_created_by">Created by Ruben</string>
+    <string name="splash_ordering">Processing order…</string>
+
+
+    <!-- Errors -->
+
     <string name="display_name_error">Unable to assign that name. Please try another name.</string>
-    <string name="create_user_error">Unable to create user. Check your connection.</string>
+    <string name="create_user_error">Unable to create the user. Check the connection.</string>
 
+    <!-- Warning -->
 
-    <!-- Advertencia -->
+    <string name="advertencia_log_in">Please log in</string>
 
-    <string name="advertencia_log_in">Please, log in</string>
+    <!-- Dialogs -->
 
-    <!-- Diálogos -->
-
-    <string name="dialog_title_login">Please, log in!</string>
+    <string name="dialog_title_login">Please Log In!</string>
     <string name="dialog_body_login_profile">You need to log in to access the profile</string>
     <string name="dialog_body_login_order">You need to log in to place an order</string>
 
-    <string name="dialog_title_delete">Careful, you are deleting the order!</string>
+    <string name="dialog_title_delete">Caution, you are deleting the order!</string>
     <string name="dialog_body_delete">Are you sure you want to delete the order? It cannot be recovered.</string>
 
     <string name="dialog_title_ordering">Attention, you are about to confirm the order!</string>
     <string name="dialog_body_ordering">Are you sure you want to confirm the order?</string>
 
-    <string name="dialog_button_dismiss">Dismiss</string>
+    <string name="dialog_button_dismiss">Cancel</string>
     <string name="dialog_button_confirmar">Confirm</string>
-
 
 </resources>

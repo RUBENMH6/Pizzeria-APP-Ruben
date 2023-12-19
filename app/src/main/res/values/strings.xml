@@ -55,6 +55,7 @@
     <string name="user_create_successfully">Usuario creado correctamente</string>
     <string name="welcome_message">Bienvenido</string>
     <string name="order_successfully">El pedido se ha procesado correctamente </string>
+    <string name="order_empty">No has seleccionado ningún producto</string>
 
     <!-- Campos de texto -->
 
@@ -69,6 +70,7 @@
     <string name="splash_loading_usuarios">Cargando los usuarios</string>
     <string name="splash_getting_ready">Preparando todo</string>
     <string name="splash_created_by">Creado por Rubén</string>
+    <string name="splash_ordering">Procesando pedido…</string>
 
 
 
