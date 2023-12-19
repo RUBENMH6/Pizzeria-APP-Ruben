@@ -29,7 +29,17 @@ import com.example.pizzeria.ui.theme.tostadito
 
 @Composable
 fun MyDropDownMenuLog(expanded: Boolean, onExpandedChange: (Boolean) -> Unit, navController: NavController, currentRoute: String, dialogViewModel: DialogViewModel,  userViewModel: UserViewModel, context: Context) {
-    val items = listOf(context.getString(R.string.dropdown_log_profile), context.getString(R.string.log_in), context.getString(R.string.log_out))
+
+    var items = emptyList<String>()
+
+    if (userViewModel.authState.value == UserViewModel.AuthState.AUTHENTICATED) {
+        items = listOf(context.getString(R.string.dropdown_log_profile), context.getString(R.string.log_out))
+    } else {
+        items = listOf(context.getString(R.string.dropdown_log_profile), context.getString(R.string.log_in))
+    }
+
+
+
 
     DropdownMenu(
         expanded = expanded,
@@ -41,22 +51,22 @@ fun MyDropDownMenuLog(expanded: Boolean, onExpandedChange: (Boolean) -> Unit, na
             .width(160.dp),
         properties = PopupProperties(dismissOnBackPress = true)
     ) {
+
         items.forEachIndexed { index, item ->
             DropdownMenuItem(
                 leadingIcon = {
                     Icon(
                         painter = painterResource(
                             when(item) {
-                                "Log In" -> R.drawable.baseline_login_24
-                                "Log Out" -> R.drawable.baseline_logout_24
-                                "Profile" -> R.drawable.baseline_person_24
+                                context.getString(R.string.log_in) -> R.drawable.baseline_login_24
+                                context.getString(R.string.log_out) -> R.drawable.baseline_logout_24
                                 else -> R.drawable.baseline_person_24
                             }
                         ),
                         contentDescription = item,
                         tint = when(item) {
-                            "Log In" -> if (currentRoute == Routes.Login.route) Palette_1_1 else Palette_1_11
-                            "Profile" -> if (currentRoute == Routes.Profile.route) Palette_1_1 else Palette_1_11
+                            context.getString(R.string.log_in) -> if (currentRoute == Routes.Login.route) Palette_1_1 else Palette_1_11
+                            context.getString(R.string.dropdown_log_profile) -> if (currentRoute == Routes.Profile.route) Palette_1_1 else Palette_1_11
                             else -> Palette_1_11
                         }
                     )
@@ -65,8 +75,8 @@ fun MyDropDownMenuLog(expanded: Boolean, onExpandedChange: (Boolean) -> Unit, na
                     Text(
                         text = item,
                         color = when(item) {
-                            "Log In" -> if (currentRoute == Routes.Login.route) Palette_1_1 else Palette_1_11
-                            "Profile" -> if (currentRoute == Routes.Profile.route) Palette_1_1 else Palette_1_11
+                            context.getString(R.string.log_in) -> if (currentRoute == Routes.Login.route) Palette_1_1 else Palette_1_11
+                            context.getString(R.string.dropdown_log_profile) -> if (currentRoute == Routes.Profile.route) Palette_1_1 else Palette_1_11
                             else -> Palette_1_11
                         }
 
@@ -74,8 +84,8 @@ fun MyDropDownMenuLog(expanded: Boolean, onExpandedChange: (Boolean) -> Unit, na
                 },
                 onClick = {
                     when (item) {
-                        "Log In" -> navController.navigate(Routes.Login.route)
-                        "Profile" ->  {
+                        context.getString(R.string.log_in) -> navController.navigate(Routes.Login.route)
+                        context.getString(R.string.dropdown_log_profile) ->  {
                             if (userViewModel.authState.value == UserViewModel.AuthState.UNAUTHENTICATED) {
                                 if (currentRoute != Routes.Login.route) {
                                     dialogViewModel.dialogLoginToAccessProfile.value = true

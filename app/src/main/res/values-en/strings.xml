@@ -3,6 +3,8 @@
 
     <string name="app_name">Rubén Pizza</string>
 
+    <!-- Titulo TopAppBar -->
+
     <string name="screen_top_name_mainmenu">Main menu</string>
     <string name="screen_top_name_pizzamenu">Ours pizzas</string>
     <string name="screen_top_name_pastamenu">Ours pastaas</string>
@@ -13,6 +15,7 @@
     <string name="screen_top_name_login">Identify</string>
 
 
+    <!-- Botones ModalDrawer-->
 
     <string name="modal_button_mainmenu">Menu</string>
     <string name="modal_button_pizzamenu">Pizzas</string>
@@ -20,6 +23,7 @@
     <string name="modal_button_mealmenu">Meals</string>
     <string name="modal_button_drinkmenu">Drinks</string>
 
+    <!-- Botones menú principal -->
 
     <string name="button_mainmenu_pizza">Pizzas</string>
     <string name="button_mainmenu_pasta">Pastas</string>
@@ -28,7 +32,7 @@
     <string name="button_mainmenu_location">Location</string>
 
 
-    //Botones DropDownMenu del Log
+    <!-- DropDownMenu Log-->
 
     <string name="dropdown_log_profile">Profile</string>
 
@@ -63,5 +67,10 @@
 
     <string name="display_name_error">Unable to assign that name. Please try another name.</string>
     <string name="create_user_error">Unable to create user. Check your connection.</string>
+
+
+    <!-- Advertencia -->
+
+    <string name="advertencia_log_in">Please, log in</string>
 
 </resources>
