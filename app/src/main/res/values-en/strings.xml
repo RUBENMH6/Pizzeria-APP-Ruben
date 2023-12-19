@@ -64,4 +64,8 @@
     <string name="display_name_error">Unable to assign that name. Please try another name.</string>
     <string name="create_user_error">Unable to create user. Check your connection.</string>
 
+    <!-- Advertencia -->
+
+    <string name="advertencia_log_in">Please, log in</string>
+
 </resources>
