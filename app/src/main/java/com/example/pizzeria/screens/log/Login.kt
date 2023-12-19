@@ -191,7 +191,7 @@ fun Login(
         ) {
 
             Text(
-                text = "Don't you have an account?",
+                text = context.getString(R.string.question_login),
                 fontSize = 8.sp
             )
             TextButton(

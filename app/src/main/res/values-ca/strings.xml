@@ -42,6 +42,9 @@
     <string name="log_in">Inicia sessió</string>
     <string name="log_out">Tanca sessió</string>
     <string name="text_createuser">Registra\'t</string>
+    <string name="question_create_account">Ja tens un compte?</string>
+    <string name="question_login">No tens un compte?</string>
+
 
     <!-- Toast -->
 
