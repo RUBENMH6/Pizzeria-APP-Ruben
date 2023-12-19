@@ -29,7 +29,7 @@ import com.example.pizzeria.ui.theme.tostadito
 
 @Composable
 fun MyDropDownMenuLog(expanded: Boolean, onExpandedChange: (Boolean) -> Unit, navController: NavController, currentRoute: String, dialogViewModel: DialogViewModel,  userViewModel: UserViewModel, context: Context) {
-    val items = listOf("Profile", "Log In", "Log Out")
+    val items = listOf(context.getString(R.string.dropdown_log_profile), context.getString(R.string.log_in), context.getString(R.string.log_out))
 
     DropdownMenu(
         expanded = expanded,

@@ -13,7 +13,7 @@
     <string name="screen_top_name_drinkmenu">Bebidas</string>
     <string name="screen_top_name_orderprocess">Procesando</string>
     <string name="screen_top_name_orderproduct">Tu pedido</string>
-    <string name="screen_top_name_login">Inicio sesión</string>
+    <string name="screen_top_name_login">Identificate</string>
     <string name="screen_top_name_createuser">Registrarse</string>
 
     //Botones del ModalDrawer
@@ -23,8 +23,7 @@
     <string name="modal_button_pastamenu">Pastas</string>
     <string name="modal_button_mealmenu">Carnes</string>
     <string name="modal_button_drinkmenu">Bebidas</string>
-    <string name="modal_button_login">Iniciar sesión</string>
-    <string name="modal_button_logout">Cerrar sesión</string>
+
 
 
     //Boton del menú principal
@@ -34,6 +33,17 @@
     <string name="button_mainmenu_meal">Carnes</string>
     <string name="button_mainmenu_drink">Bebidas</string>
     <string name="button_mainmenu_location">Dónde estamos</string>
+
+
+    //Botones DropDownMenu del Log
+
+    <string name="dropdown_log_profile">Perfil</string>
+
+    //Iniciar sesión - Cerrar sesión
+
+
+    <string name="log_in">Iniciar sessión</string>
+    <string name="log_out">Iniciar sessión</string>
 
 
 </resources>
