@@ -10,7 +10,7 @@
     <string name="screen_top_name_drinkmenu">Begudes</string>
     <string name="screen_top_name_orderprocess">Processant</string>
     <string name="screen_top_name_orderproduct">La teva comanda</string>
-    <string name="screen_top_name_login">Inicia sessió</string>
+    <string name="screen_top_name_login">Idetifica\'t</string>
     <string name="screen_top_name_createuser">Registra\'t</string>
 
 
@@ -20,8 +20,7 @@
     <string name="modal_button_pastamenu">Pastes</string>
     <string name="modal_button_mealmenu">Carns</string>
     <string name="modal_button_drinkmenu">Begudes</string>
-    <string name="modal_button_login">Iniciar sessió</string>
-    <string name="modal_button_logout">Cerrar sessió</string>
+
 
 
     <string name="button_mainmenu_pizza">Pizzes</string>
@@ -29,5 +28,15 @@
     <string name="button_mainmenu_meal">Carns</string>
     <string name="button_mainmenu_drink">Begudes</string>
     <string name="button_mainmenu_location">On som</string>
+
+    //Botones DropDownMenu del Log
+
+    <string name="dropdown_log_profile">Perfil</string>
+
+    //Iniciar sesión - Cerrar sesión
+
+
+    <string name="log_in">Inicia sessió</string>
+    <string name="log_out">Tanca sessió</string>
 
 </resources>

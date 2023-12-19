@@ -10,7 +10,7 @@
     <string name="screen_top_name_drinkmenu">Drinks</string>
     <string name="screen_top_name_orderprocess">Processing</string>
     <string name="screen_top_name_orderproduct">Your order</string>
-    <string name="screen_top_name_login">Log in</string>
+    <string name="screen_top_name_login">Identify</string>
     <string name="screen_top_name_createuser">Sign up</string>
 
 
@@ -20,8 +20,6 @@
     <string name="modal_button_pastamenu">Pastas</string>
     <string name="modal_button_mealmenu">Meals</string>
     <string name="modal_button_drinkmenu">Drinks</string>
-    <string name="modal_button_login">Log In</string>
-    <string name="modal_button_logout">Log Out</string>
 
 
     <string name="button_mainmenu_pizza">Pizzas</string>
@@ -30,4 +28,14 @@
     <string name="button_mainmenu_drink">Drinks</string>
     <string name="button_mainmenu_location">Location</string>
 
+
+    //Botones DropDownMenu del Log
+
+    <string name="dropdown_log_profile">Profile</string>
+
+    //Iniciar sesión - Cerrar sesión
+
+
+    <string name="log_in">Log In</string>
+    <string name="log_out">Log Out</string>
 </resources>

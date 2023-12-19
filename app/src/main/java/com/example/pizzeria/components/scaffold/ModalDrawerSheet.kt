@@ -83,7 +83,7 @@ fun MyModalDrawerSheet(scope: CoroutineScope, drawerState: DrawerState, navContr
                                     text =
                                     if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) {
                                         if (item.name == "Login") {
-                                            if (userViewModel.auth.currentUser == null) context.getString(R.string.modal_button_login) else context.getString(R.string.modal_button_logout)
+                                            if (userViewModel.auth.currentUser == null) context.getString(R.string.log_in) else context.getString(R.string.log_out)
                                         } else {
                                             item.name
                                         }
