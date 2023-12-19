@@ -23,4 +23,11 @@
     <string name="modal_button_login">Iniciar sessió</string>
     <string name="modal_button_logout">Cerrar sessió</string>
 
+
+    <string name="button_mainmenu_pizza">Pizzes</string>
+    <string name="button_mainmenu_pasta">Pastes</string>
+    <string name="button_mainmenu_meal">Carns</string>
+    <string name="button_mainmenu_drink">Begudes</string>
+    <string name="button_mainmenu_location">On som</string>
+
 </resources>

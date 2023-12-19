@@ -5,7 +5,7 @@
 
     <string name="screen_top_name_mainmenu">Main menu</string>
     <string name="screen_top_name_pizzamenu">Ours pizzas</string>
-    <string name="screen_top_name_pastamenu">Ours pastries</string>
+    <string name="screen_top_name_pastamenu">Ours pastaas</string>
     <string name="screen_top_name_mealmenu">Ours meals</string>
     <string name="screen_top_name_drinkmenu">Drinks</string>
     <string name="screen_top_name_orderprocess">Processing</string>
@@ -17,10 +17,17 @@
 
     <string name="modal_button_mainmenu">Menu</string>
     <string name="modal_button_pizzamenu">Pizzas</string>
-    <string name="modal_button_pastamenu">Pastries</string>
+    <string name="modal_button_pastamenu">Pastas</string>
     <string name="modal_button_mealmenu">Meals</string>
     <string name="modal_button_drinkmenu">Drinks</string>
     <string name="modal_button_login">Log In</string>
     <string name="modal_button_logout">Log Out</string>
+
+
+    <string name="button_mainmenu_pizza">Pizzas</string>
+    <string name="button_mainmenu_pasta">Pastas</string>
+    <string name="button_mainmenu_meal">Meats</string>
+    <string name="button_mainmenu_drink">Drinks</string>
+    <string name="button_mainmenu_location">Location</string>
 
 </resources>
