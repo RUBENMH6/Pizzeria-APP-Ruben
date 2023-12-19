@@ -13,4 +13,14 @@
     <string name="screen_top_name_login">Inicia sessió</string>
     <string name="screen_top_name_createuser">Registra\'t</string>
 
+
+
+    <string name="modal_button_mainmenu">Menu</string>
+    <string name="modal_button_pizzamenu">Pizzes</string>
+    <string name="modal_button_pastamenu">Pastes</string>
+    <string name="modal_button_mealmenu">Carns</string>
+    <string name="modal_button_drinkmenu">Begudes</string>
+    <string name="modal_button_login">Iniciar sessió</string>
+    <string name="modal_button_logout">Cerrar sessió</string>
+
 </resources>

@@ -3,6 +3,9 @@
 
     <string name="app_name">Rubén Pizza</string>
 
+
+    //Titulo que aparece en el texto del TopAppBar
+
     <string name="screen_top_name_mainmenu">Menú principal</string>
     <string name="screen_top_name_pizzamenu">Nuestras pizzas</string>
     <string name="screen_top_name_pastamenu">Nuestras pastas</string>
@@ -12,5 +15,17 @@
     <string name="screen_top_name_orderproduct">Tu pedido</string>
     <string name="screen_top_name_login">Inicio sesión</string>
     <string name="screen_top_name_createuser">Registrarse</string>
+
+    //Botones del ModalDrawer
+
+    <string name="modal_button_mainmenu">Menú</string>
+    <string name="modal_button_pizzamenu">Pizzas</string>
+    <string name="modal_button_pastamenu">Pastas</string>
+    <string name="modal_button_mealmenu">Carnes</string>
+    <string name="modal_button_drinkmenu">Bebidas</string>
+    <string name="modal_button_login">Iniciar sesión</string>
+    <string name="modal_button_logout">Cerrar sesión</string>
+
+
 
 </resources>
