@@ -4,7 +4,7 @@
     <string name="app_name">Rubén Pizza</string>
 
 
-    //Titulo que aparece en el texto del TopAppBar
+    <!-- Titulo TopAppBar -->
 
     <string name="screen_top_name_mainmenu">Menú principal</string>
     <string name="screen_top_name_pizzamenu">Nuestras pizzas</string>
@@ -15,7 +15,7 @@
     <string name="screen_top_name_orderproduct">Tu pedido</string>
     <string name="screen_top_name_login">Identificate</string>
 
-    //Botones del ModalDrawer
+    <!-- Botones ModalDrawer-->
 
     <string name="modal_button_mainmenu">Menú</string>
     <string name="modal_button_pizzamenu">Pizzas</string>
@@ -25,7 +25,7 @@
 
 
 
-    //Boton del menú principal
+    <!-- Botones menú principal -->
 
     <string name="button_mainmenu_pizza">Pizzas</string>
     <string name="button_mainmenu_pasta">Pastas</string>
@@ -34,34 +34,49 @@
     <string name="button_mainmenu_location">Dónde estamos</string>
 
 
-    //Botones DropDownMenu del Log
+    <!-- DropDownMenu Log-->
 
     <string name="dropdown_log_profile">Perfil</string>
 
-    //Iniciar sesión - Cerrar sesión
+    <!-- Autentificación -->
 
 
-    <string name="log_in">Iniciar sessión</string>
-    <string name="log_out">Iniciar sessión</string>
+    <string name="log_in">Iniciar sesión</string>
+    <string name="log_out">Cerrar sesión</string>
     <string name="text_createuser">Registrarse</string>
 
 
 
-    //Usuarios
+    <!-- Toast -->
 
     <string name="user_create_successfully">Usuario creado correctamente</string>
     <string name="welcome_message">Bienvenido</string>
+    <string name="order_successfully">El pedido se ha procesado correctamente </string>
 
-    //TextField
+    <!-- Campos de texto -->
 
     <string name="label_name">Nombre</string>
     <string name="label_email">Correo</string>
     <string name="label_password">Contraseña</string>
 
+    <!-- Splash -->
 
-    //Errores
+    <string name="splash_initial">Cargando paquetes</string>
+    <string name="splash_loading_products">Cargando los productos</string>
+    <string name="splash_loading_usuarios">Cargando los usuarios</string>
+    <string name="splash_getting_ready">Preparando todo</string>
+    <string name="splash_created_by">Creado por Rubén</string>
+
+
+
+    <!-- Errores -->
 
     <string name="display_name_error">No se ha podido asignar ese nombre. Intente otro nombre, por favor.</string>
     <string name="create_user_error">No se ha podido crear el usuario. Revise la conexión.</string>
+
+
+    <!-- Advertencia -->
+
+    <string name="advertencia_log_in">Por favor, inicia sesión</string>
 
 </resources>

@@ -40,14 +40,25 @@
     <string name="log_out">Log Out</string>
     <string name="text_createuser">Register</string>
 
-    <!-- Usuarios -->
+    <!-- Toast -->
     <string name="user_create_successfully">User created successfully</string>
     <string name="welcome_message">Welcome</string>
+    <string name="order_successfully">The order has been processed successfully</string>
+
 
     <!-- Campos de texto -->
     <string name="label_name">Name</string>
     <string name="label_email">Address</string>
     <string name="label_password">Password</string>
+
+    <!-- Splash -->
+
+    <string name="splash_initial">Loading packages</string>
+    <string name="splash_loading_products">Loading products</string>
+    <string name="splash_loading_usuarios">Loading users</string>
+    <string name="splash_getting_ready">Getting everything ready</string>
+    <string name="splash_created_by">Created by Rubén</string>
+
 
     <!-- Errores -->
     <string name="display_name_error">Unable to assign that name. Please try another name.</string>
