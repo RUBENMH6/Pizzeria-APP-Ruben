@@ -44,6 +44,9 @@
     <string name="log_in">Iniciar sesión</string>
     <string name="log_out">Cerrar sesión</string>
     <string name="text_createuser">Registrarse</string>
+    <string name="question_create_account">¿Ya tienes una cuenta?</string>
+    <string name="question_login">¿No tienes una cuenta?</string>
+
 
 
 
