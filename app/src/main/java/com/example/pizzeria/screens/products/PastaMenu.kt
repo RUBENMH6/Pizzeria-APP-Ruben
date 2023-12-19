@@ -1,5 +1,6 @@
 package com.example.pizzeria.screens.products
 
+import android.content.Context
 import android.content.res.Configuration
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -24,7 +25,7 @@ import com.example.pizzeria.models.viewmodels.DialogViewModel
 import com.example.pizzeria.models.viewmodels.ProductViewModel
 
 @Composable
-fun PastaMenu(navController: NavController, productViewModel: ProductViewModel, dialogViewModel: DialogViewModel, configuration: Configuration) {
+fun PastaMenu(navController: NavController, productViewModel: ProductViewModel, dialogViewModel: DialogViewModel, configuration: Configuration, context: Context) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -75,7 +76,7 @@ fun PastaMenu(navController: NavController, productViewModel: ProductViewModel, 
             modifier = Modifier.fillMaxSize().background(Color.Transparent.copy(0.2f)),
             contentAlignment = Alignment.Center
         ) {
-            LoginNeededToAccessProfileDialog(navController, dialogViewModel)
+            LoginNeededToAccessProfileDialog(navController, dialogViewModel, context)
         }
     }
 }

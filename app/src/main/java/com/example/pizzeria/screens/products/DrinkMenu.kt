@@ -1,6 +1,7 @@
 package com.example.pizzeria.screens.products
 
 
+import android.content.Context
 import android.content.res.Configuration
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -19,13 +20,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.pizzeria.R
-import com.example.pizzeria.models.viewmodels.DialogViewModel
-import com.example.pizzeria.models.viewmodels.ProductViewModel
 import com.example.pizzeria.components.products.pizza.MyPizzaCard
 import com.example.pizzeria.dialogs.LoginNeededToAccessProfileDialog
+import com.example.pizzeria.models.viewmodels.DialogViewModel
+import com.example.pizzeria.models.viewmodels.ProductViewModel
 
 @Composable
-fun DrinkMenu(navController: NavController, productViewModel: ProductViewModel, dialogViewModel: DialogViewModel, configuration: Configuration) {
+fun DrinkMenu(navController: NavController, productViewModel: ProductViewModel, dialogViewModel: DialogViewModel, configuration: Configuration, context: Context) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -76,7 +77,7 @@ fun DrinkMenu(navController: NavController, productViewModel: ProductViewModel, 
             modifier = Modifier.fillMaxSize().background(Color.Transparent.copy(0.2f)),
             contentAlignment = Alignment.Center
         ) {
-            LoginNeededToAccessProfileDialog(navController, dialogViewModel)
+            LoginNeededToAccessProfileDialog(navController, dialogViewModel, context)
         }
     }
 }

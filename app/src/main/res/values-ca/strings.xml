@@ -79,4 +79,19 @@
 
     <string name="advertencia_log_in">Si us plau, inicia sessió</string>
 
+    <!-- Diálogos -->
+
+    <string name="dialog_title_login">Si us plau, inicia sessió!</string>
+    <string name="dialog_body_login_profile">Necessites iniciar sessió per accedir al perfil</string>
+    <string name="dialog_body_login_order">Necessites iniciar sessió per fer una comanda</string>
+
+    <string name="dialog_title_delete">Cuidat, estàs esborrant la comanda!</string>
+    <string name="dialog_body_delete">Estàs segur que vols esborrar la comanda? No es podrà recuperar.</string>
+
+    <string name="dialog_title_ordering">Atenció, estàs a punt de confirmar la comanda!</string>
+    <string name="dialog_body_ordering">Estàs segur que vols confirmar la comanda?</string>
+
+    <string name="dialog_button_dismiss">Cancel·lar</string>
+    <string name="dialog_button_confirmar">Confirmar</string>
+
 </resources>

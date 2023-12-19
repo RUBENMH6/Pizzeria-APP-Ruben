@@ -42,31 +42,17 @@
     <string name="log_in">Log In</string>
     <string name="log_out">Log Out</string>
     <string name="text_createuser">Register</string>
-    <string name="question_create_account">Do you already have an account?</string>
-    <string name="question_login">Don\'t you have an account?</string>
 
-    <!-- Toast -->
+    <!-- Usuarios -->
     <string name="user_create_successfully">User created successfully</string>
     <string name="welcome_message">Welcome</string>
-    <string name="order_successfully">The order has been processed successfully</string>
-
 
     <!-- Campos de texto -->
     <string name="label_name">Name</string>
     <string name="label_email">Address</string>
     <string name="label_password">Password</string>
 
-    <!-- Splash -->
-
-    <string name="splash_initial">Loading packages</string>
-    <string name="splash_loading_products">Loading products</string>
-    <string name="splash_loading_usuarios">Loading users</string>
-    <string name="splash_getting_ready">Getting everything ready</string>
-    <string name="splash_created_by">Created by Rubén</string>
-
-
     <!-- Errores -->
-
     <string name="display_name_error">Unable to assign that name. Please try another name.</string>
     <string name="create_user_error">Unable to create user. Check your connection.</string>
 
@@ -74,5 +60,21 @@
     <!-- Advertencia -->
 
     <string name="advertencia_log_in">Please, log in</string>
+
+    <!-- Diálogos -->
+
+    <string name="dialog_title_login">Please, log in!</string>
+    <string name="dialog_body_login_profile">You need to log in to access the profile</string>
+    <string name="dialog_body_login_order">You need to log in to place an order</string>
+
+    <string name="dialog_title_delete">Careful, you are deleting the order!</string>
+    <string name="dialog_body_delete">Are you sure you want to delete the order? It cannot be recovered.</string>
+
+    <string name="dialog_title_ordering">Attention, you are about to confirm the order!</string>
+    <string name="dialog_body_ordering">Are you sure you want to confirm the order?</string>
+
+    <string name="dialog_button_dismiss">Dismiss</string>
+    <string name="dialog_button_confirmar">Confirm</string>
+
 
 </resources>

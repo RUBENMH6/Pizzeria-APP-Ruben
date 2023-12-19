@@ -296,7 +296,7 @@ class MainActivity : ComponentActivity() {
                                         )
                                     }
                                 ) {
-                                    PizzaMenu(navController, productViewModel, dialogViewModel, configuration)
+                                    PizzaMenu(navController, productViewModel, dialogViewModel, configuration, context)
                                 }
                                 composable(
                                     route = Routes.PastaMenu.route,
@@ -313,7 +313,7 @@ class MainActivity : ComponentActivity() {
                                         )
                                     }
                                 ) {
-                                    PastaMenu(navController, productViewModel, dialogViewModel, configuration)
+                                    PastaMenu(navController, productViewModel, dialogViewModel, configuration, context)
                                 }
                                 composable(
                                     route = Routes.DrinkMenu.route,
@@ -330,7 +330,7 @@ class MainActivity : ComponentActivity() {
                                         )
                                     }
                                 ) {
-                                    DrinkMenu(navController, productViewModel, dialogViewModel, configuration)
+                                    DrinkMenu(navController, productViewModel, dialogViewModel, configuration, context)
                                 }
                                 composable(
                                     route = Routes.MealMenu.route,
@@ -347,7 +347,7 @@ class MainActivity : ComponentActivity() {
                                         )
                                     }
                                 ) {
-                                    MealMenu(navController, productViewModel, dialogViewModel, configuration)
+                                    MealMenu(navController, productViewModel, dialogViewModel, configuration, context)
                                 }
                                 composable(
                                     route = Routes.OrderProduct.route,
@@ -364,7 +364,7 @@ class MainActivity : ComponentActivity() {
                                         )
                                     }
                                 ) {
-                                    OrderPizza(navController, productViewModel, dialogViewModel, configuration)
+                                    OrderPizza(navController, productViewModel, dialogViewModel, configuration, context)
                                 }
                                 composable(
                                     route = Routes.OrderProcess.route,
@@ -381,7 +381,7 @@ class MainActivity : ComponentActivity() {
                                         )
                                     }
                                 ) {
-                                    OrderProcess(navController, productViewModel, dialogViewModel, userViewModel)
+                                    OrderProcess(navController, productViewModel, dialogViewModel, userViewModel, context)
                                 }
                                 composable(
                                     route = Routes.Local.route,
@@ -398,7 +398,7 @@ class MainActivity : ComponentActivity() {
                                         )
                                     }
                                 ) {
-                                    PizzaLocal(navController, localViewModel, dialogViewModel)
+                                    PizzaLocal(navController, localViewModel, dialogViewModel, context)
                                 }
 
                             }

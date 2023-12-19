@@ -82,4 +82,20 @@
 
     <string name="advertencia_log_in">Por favor, inicia sesión</string>
 
+    <!-- Dialogs -->
+
+    <string name="dialog_title_login">¡Por favor, inicia sesión!</string>
+    <string name="dialog_body_login_profile">Necesitas iniciar sesión para acceder al perfil</string>
+    <string name="dialog_body_login_order">Necesitas iniciar sesión para realizar un pedido</string>
+
+    <string name="dialog_title_delete">¡Cuidado, estás borrando el pedido!</string>
+    <string name="dialog_body_delete">¿Estás seguro  de que quieres borrar el pedido? No se podrá recuperar.</string>
+
+    <string name="dialog_title_ordering">¡Atención, estás apunto de confirmar el pedido!</string>
+    <string name="dialog_body_ordering">¿Estás seguro de que quieres confirmar el pedido?</string>
+
+    <string name="dialog_button_dismiss">Cancelar</string>
+    <string name="dialog_button_confirmar">Confirmar</string>
+
+
 </resources>

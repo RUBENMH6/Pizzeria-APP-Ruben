@@ -1,6 +1,7 @@
 package com.example.pizzeria.dialogs
 
 
+import android.content.Context
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -13,6 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.example.pizzeria.R
 import com.example.pizzeria.models.Routes
 import com.example.pizzeria.models.viewmodels.DialogViewModel
 import com.example.pizzeria.ui.theme.Palette_1_11
@@ -20,14 +22,14 @@ import com.example.pizzeria.ui.theme.tostadito
 
 
 @Composable
-fun LoginNeededOrderPizzaDialog(navController: NavController, dialogViewModel: DialogViewModel) {
+fun LoginNeededOrderPizzaDialog(navController: NavController, dialogViewModel: DialogViewModel, context: Context) {
 
     AlertDialog(
         onDismissRequest = { dialogViewModel.dialogLoginNeededOrderPizza.value = false },
-        title = { Text(text = "Please. Sign in!") },
+        title = { Text(text = context.getString(R.string.dialog_title_login)) },
         text = {
             Divider(color = Palette_1_11)
-            Text("\nYou need to be logged in to place orders.", color = Palette_1_11) },
+            Text("\n" + context.getString(R.string.dialog_body_login_order), color = Palette_1_11) },
         confirmButton = {
             Button(
                 onClick = {
@@ -36,7 +38,7 @@ fun LoginNeededOrderPizzaDialog(navController: NavController, dialogViewModel: D
                           },
                 colors = ButtonDefaults.buttonColors(Palette_1_11),
                 modifier = Modifier.padding(end = 10.dp)) {
-                Text("Sign in")
+                Text(context.getString(R.string.dialog_button_confirmar))
             }
         },
         dismissButton = {
@@ -45,8 +47,8 @@ fun LoginNeededOrderPizzaDialog(navController: NavController, dialogViewModel: D
                     dialogViewModel.dialogLoginNeededOrderPizza.value = false
                           },
                 colors = ButtonDefaults.buttonColors(Palette_1_11),
-                modifier = Modifier.padding(end = 40.dp)) {
-                Text("Dismiss")
+                modifier = Modifier.padding(end = 20.dp)) {
+                Text(context.getString(R.string.dialog_button_dismiss))
             }
         },
         containerColor = tostadito,
