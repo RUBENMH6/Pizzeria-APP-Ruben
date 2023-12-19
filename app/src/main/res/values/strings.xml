@@ -1,3 +1,12 @@
 <resources>
+
+
     <string name="app_name">Rubén Pizza</string>
+
+    <string name="screen_top_name_mainmenu">Menú principal</string>
+    <string name="screen_top_name_pizzamenu">Nuestras pizzas</string>
+    <string name="screen_top_name_pastamenu">Nuestras pastas</string>
+    <string name="screen_top_name_mealmenu">Nuestras carnes</string>
+    <string name="screen_top_name_drinkmenu">Bebidas</string>
+
 </resources>
