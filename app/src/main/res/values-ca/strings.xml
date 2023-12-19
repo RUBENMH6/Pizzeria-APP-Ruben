@@ -1,68 +1,92 @@
 <resources>
 
+    <string name="app_name">Ruben Pizza</string>
 
-    <string name="app_name">Rubén Pizza</string>
+    <!-- Títol TopAppBar -->
 
-    <!-- Titulo TopAppBar -->
-
-    <string name="screen_top_name_mainmenu">Menu principal</string>
-    <string name="screen_top_name_pizzamenu">Nostres pizzes</string>
-    <string name="screen_top_name_pastamenu">Nostres pastes</string>
-    <string name="screen_top_name_mealmenu">Nostres carns</string>
+    <string name="screen_top_name_mainmenu">Menú principal</string>
+    <string name="screen_top_name_pizzamenu">Les nostres pizzes</string>
+    <string name="screen_top_name_pastamenu">Les nostres pastes</string>
+    <string name="screen_top_name_mealmenu">Les nostres carns</string>
     <string name="screen_top_name_drinkmenu">Begudes</string>
     <string name="screen_top_name_orderprocess">Processant</string>
     <string name="screen_top_name_orderproduct">La teva comanda</string>
-    <string name="screen_top_name_login">Idetifica\'t</string>
+    <string name="screen_top_name_login">Inicia sessió</string>
 
-    <!-- Botones ModalDrawer -->
+    <!-- Botons ModalDrawer -->
 
-    <string name="modal_button_mainmenu">Menu</string>
+    <string name="modal_button_mainmenu">Menú</string>
     <string name="modal_button_pizzamenu">Pizzes</string>
     <string name="modal_button_pastamenu">Pastes</string>
     <string name="modal_button_mealmenu">Carns</string>
     <string name="modal_button_drinkmenu">Begudes</string>
 
-    <!-- Botones menú principal -->
+    <!-- Botons menú principal -->
 
     <string name="button_mainmenu_pizza">Pizzes</string>
     <string name="button_mainmenu_pasta">Pastes</string>
     <string name="button_mainmenu_meal">Carns</string>
     <string name="button_mainmenu_drink">Begudes</string>
-    <string name="button_mainmenu_location">On som</string>
-
+    <string name="button_mainmenu_location">On estem</string>
 
     <!-- DropDownMenu Log -->
 
     <string name="dropdown_log_profile">Perfil</string>
 
-
-    <!-- Autentificación -->
-
+    <!-- Autenticació -->
 
     <string name="log_in">Inicia sessió</string>
     <string name="log_out">Tanca sessió</string>
     <string name="text_createuser">Registra\'t</string>
+    <string name="question_create_account">Ja tens un compte?</string>
+    <string name="question_login">No tens un compte?</string>
 
-    <!-- Usuarios -->
+    <!-- Toast -->
 
     <string name="user_create_successfully">Usuari creat correctament</string>
     <string name="welcome_message">Benvingut</string>
+    <string name="order_successfully">La comanda s\'ha processat correctament</string>
+    <string name="order_empty">No has seleccionat ningún producte</string>
 
-    <!-- Campos de texto -->
+
+    <!-- Camps de text -->
 
     <string name="label_name">Nom</string>
-    <string name="label_email">Adreça</string>
+    <string name="label_email">Correu electrònic</string>
     <string name="label_password">Contrasenya</string>
 
+    <!-- Splash -->
 
-    <!-- Errores_ -->
+    <string name="splash_initial">Carregant paquets</string>
+    <string name="splash_loading_products">Carregant els productes</string>
+    <string name="splash_loading_usuarios">Carregant els usuaris</string>
+    <string name="splash_getting_ready">Preparant-ho tot</string>
+    <string name="splash_created_by">Creat per Ruben</string>
+    <string name="splash_ordering">Processant comanda…</string>
 
-    <string name="display_name_error">No s\'ha pogut assignar aquest nom. Si us plau, proveu un altre nom.</string>
-    <string name="create_user_error">No s\'ha pogut crear l\'usuari. Reviseu la connexió.</string>
 
+    <!-- Errors -->
 
-    <!-- Advertencias -->
+    <string name="display_name_error">No s\'ha pogut assignar aquest nom. Proveu un altre nom, si us plau.</string>
+    <string name="create_user_error">No s\'ha pogut crear l\'usuari. Comproveu la connexió.</string>
+
+    <!-- Advertiment -->
 
     <string name="advertencia_log_in">Si us plau, inicia sessió</string>
+
+    <!-- Diàlegs -->
+
+    <string name="dialog_title_login">Si us plau, inicia sessió!</string>
+    <string name="dialog_body_login_profile">Necessites iniciar sessió per accedir al perfil</string>
+    <string name="dialog_body_login_order">Necessites iniciar sessió per realitzar una comanda</string>
+
+    <string name="dialog_title_delete">Atenció, estàs eliminant la comanda!</string>
+    <string name="dialog_body_delete">N\'estàs segur que vols eliminar la comanda? No es podrà recuperar.</string>
+
+    <string name="dialog_title_ordering">Atenció, estàs a punt de confirmar la comanda!</string>
+    <string name="dialog_body_ordering">N\'estàs segur que vols confirmar la comanda?</string>
+
+    <string name="dialog_button_dismiss">Cancel·lar</string>
+    <string name="dialog_button_confirmar">Confirmar</string>
 
 </resources>

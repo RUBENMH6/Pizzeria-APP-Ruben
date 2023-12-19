@@ -52,11 +52,11 @@ fun SplashOrderConfirmed(navController: NavController, productViewModel: Product
             Toast.LENGTH_LONG
         ).show()
     }
-    AnimatedSplashOrderConfirmed()
+    AnimatedSplashOrderConfirmed(context)
 }
 
 @Composable
-fun AnimatedSplashOrderConfirmed() {
+fun AnimatedSplashOrderConfirmed(context: Context) {
     val translationState  by rememberInfiniteTransition().animateFloat(
         initialValue = 0f,
         targetValue = 45f,
@@ -90,7 +90,7 @@ fun AnimatedSplashOrderConfirmed() {
             verticalAlignment = Alignment.CenterVertically
         ) {
             Text(
-                text = "Please wait a second. Ordering...",
+                text = context.getString(R.string.splash_ordering),
                 color = Color.White
             )
         }
@@ -100,7 +100,7 @@ fun AnimatedSplashOrderConfirmed() {
         contentAlignment = Alignment.BottomCenter
     ) {
         Text(
-            text = "Created by Rubén",
+            text = context.getString(R.string.splash_created_by),
             fontWeight = FontWeight.Bold,
             fontSize = 12.sp,
             color = Palette_1_11

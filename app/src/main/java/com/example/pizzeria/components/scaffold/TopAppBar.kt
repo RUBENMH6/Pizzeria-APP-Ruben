@@ -1,12 +1,15 @@
 package com.example.pizzeria.components.scaffold
 
 import android.content.Context
+import android.widget.Toast
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.DrawerState
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -36,12 +39,22 @@ import com.example.pizzeria.models.viewmodels.UserViewModel
 import com.example.pizzeria.ui.theme.FontCWGSans
 import com.example.pizzeria.ui.theme.Palette_1_1
 import com.example.pizzeria.ui.theme.Palette_1_11
+import com.example.pizzeria.ui.theme.Palette_1_8
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MyTopAppBar(route: String, navController: NavController, productViewModel: ProductViewModel, scope: CoroutineScope, drawerState: DrawerState, userViewModel: UserViewModel, dialogViewModel: DialogViewModel, context: Context) {
+fun MyTopAppBar(
+    route: String,
+    navController: NavController,
+    productViewModel: ProductViewModel,
+    scope: CoroutineScope,
+    drawerState: DrawerState,
+    userViewModel: UserViewModel,
+    dialogViewModel: DialogViewModel,
+    context: Context
+) {
     var expandedDDMIcon by remember { mutableStateOf(false) }
     var expandedDDMLog by remember { mutableStateOf(false) }
     TopAppBar(
@@ -54,18 +67,18 @@ fun MyTopAppBar(route: String, navController: NavController, productViewModel: P
                 Text(
                     text = when (route) {
                         Routes.MainMenu.route -> context.getString(R.string.screen_top_name_mainmenu)
-                        Routes.PizzaMenu.route  -> context.getString(R.string.screen_top_name_pizzamenu)
+                        Routes.PizzaMenu.route -> context.getString(R.string.screen_top_name_pizzamenu)
                         Routes.PastaMenu.route -> context.getString(R.string.screen_top_name_pastamenu)
-                        Routes.MealMenu.route  -> context.getString(R.string.screen_top_name_mealmenu)
-                        Routes.DrinkMenu.route  -> context.getString(R.string.screen_top_name_drinkmenu)
-                        Routes.OrderProduct.route  -> context.getString(R.string.screen_top_name_orderproduct)
-                        Routes.OrderProcess.route  -> context.getString(R.string.screen_top_name_orderprocess)
-                        Routes.Login.route  -> context.getString(R.string.screen_top_name_login)
-                        Routes.CreateUser.route  -> context.getString(R.string.text_createuser)
+                        Routes.MealMenu.route -> context.getString(R.string.screen_top_name_mealmenu)
+                        Routes.DrinkMenu.route -> context.getString(R.string.screen_top_name_drinkmenu)
+                        Routes.OrderProduct.route -> context.getString(R.string.screen_top_name_orderproduct)
+                        Routes.OrderProcess.route -> context.getString(R.string.screen_top_name_orderprocess)
+                        Routes.Login.route -> context.getString(R.string.screen_top_name_login)
+                        Routes.CreateUser.route -> context.getString(R.string.text_createuser)
                         else -> ""
                     },
                     color = Color.White,
-                    fontSize = 22.sp,
+                    fontSize = 16.sp,
                     fontWeight = FontWeight(500),
                     fontFamily = FontCWGSans
                 )
@@ -89,43 +102,76 @@ fun MyTopAppBar(route: String, navController: NavController, productViewModel: P
             }
         },
         actions = {
-                    BadgedBox(
-                        badge = {
-                            Text(
-                                text = if (productViewModel.getQuantityProductTotal() != 0) productViewModel.getQuantityProductTotal().toString() else "",
-                                color = Palette_1_1,
-                                fontSize = 12.sp,
-                                textAlign = TextAlign.Center,
-                                modifier = Modifier
-                                    .size(18.dp)
-                                    .offset((-50).dp, (10).dp)
+            BadgedBox(
+                badge = {
+                    Text(
+                        text = if (productViewModel.getQuantityProductTotal() != 0) productViewModel.getQuantityProductTotal()
+                            .toString() else "",
+                        color = Palette_1_1,
+                        fontSize = 12.sp,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier
+                            .size(18.dp)
+                            .offset((-50).dp, (10).dp)
 
-                            )
-                        }) {
-                        IconButton(
-                            onClick = { expandedDDMIcon = true }
-                        ) {
-                            Icon(
-                                painter = painterResource(id = R.drawable.foodicon),
-                                contentDescription = null,
-                                tint = Color.White,
-                                modifier = Modifier.size(40.dp)
-                            )
+                    )
+                }) {
+                IconButton(
+                    onClick = {
+                        if (productViewModel.selectedProductList.isEmpty() || productViewModel.getQuantityProductTotal() == 0) {
+                            Toast.makeText(
+                                context,
+                                context.getString(R.string.order_empty),
+                                Toast.LENGTH_LONG
+                            ).show()
+                        } else {
+                            navController.navigate(Routes.OrderProduct.route)
                         }
-                        MyDropDownMenuIconFood(expandedDDMIcon, { expandedDDMIcon = it}, productViewModel, navController, route)
-                    }
+                    },
+                    modifier = Modifier
+                        .size(20.dp)
+                        .background(Palette_1_8, RoundedCornerShape(16.dp))
+                ) {
+                    Icon(
+                        painter = painterResource(R.drawable.baseline_shopping_cart_24),
+                        contentDescription = "Shopping Product",
+                        tint = Color.White
+                    )
+                }
 
-                    IconButton(
-                        onClick = { expandedDDMLog = true }
-                    ) {
-                        Icon(
-                            painter = painterResource(if (userViewModel.auth.currentUser == null) R.drawable.baseline_login_24 else R.drawable.baseline_logout_24 ),
-                            contentDescription = null,
-                            tint = Color.White,
-                            modifier = Modifier.size(40.dp)
-                        )
-                    }
-                    MyDropDownMenuLog(expandedDDMLog, { expandedDDMLog= it}, navController, route, dialogViewModel,  userViewModel, context)
+                MyDropDownMenuIconFood(
+                    expandedDDMIcon,
+                    { expandedDDMIcon = it },
+                    productViewModel,
+                    navController,
+                    route
+                )
+            }
+
+            Spacer(modifier = Modifier.width(32.dp))
+
+            IconButton(
+                onClick = { expandedDDMLog = true },
+                modifier = Modifier
+                    .size(20.dp)
+                    .background(Palette_1_8, RoundedCornerShape(16.dp))
+            ) {
+                Icon(
+                    painter = painterResource(R.drawable.baseline_person_24),
+                    contentDescription = "Profile",
+                    tint = Color.White
+                )
+            }
+            MyDropDownMenuLog(
+                expandedDDMLog,
+                { expandedDDMLog = it },
+                navController,
+                route,
+                dialogViewModel,
+                userViewModel,
+                context
+            )
+            Spacer(modifier = Modifier.width(16.dp))
 
 
         }

@@ -1,17 +1,13 @@
 package com.example.pizzeria
 
 import android.annotation.SuppressLint
-import android.content.res.Configuration
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.animation.AnimatedContentTransitionScope
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -20,20 +16,15 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.pizzeria.components.local.PizzaLocal
-import com.example.pizzeria.components.scaffold.MyBottomAppBar
-import com.example.pizzeria.components.scaffold.MyFABtoBack
-import com.example.pizzeria.components.scaffold.MyFABtoBuy
 import com.example.pizzeria.components.scaffold.MyModalDrawerSheet
 import com.example.pizzeria.components.scaffold.MyTopAppBar
 import com.example.pizzeria.models.Routes
@@ -95,7 +86,7 @@ class MainActivity : ComponentActivity() {
 
                         }
                     },
-                    bottomBar = {
+                   /*bottomBar = {
                         if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) {
                             if (currentRoute != Routes.SplashScreen.route && currentRoute != Routes.SplashScreenOrderConfirmed.route) {
                                 MyBottomAppBar(
@@ -110,8 +101,8 @@ class MainActivity : ComponentActivity() {
                         }
 
 
-                    },
-                    floatingActionButton = {
+                    },*/
+                    /*floatingActionButton = {
                         if (configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
                             if (currentRoute != Routes.SplashScreen.route && currentRoute != Routes.SplashScreenOrderConfirmed.route) {
                                 Row(
@@ -146,14 +137,14 @@ class MainActivity : ComponentActivity() {
                                 }
 
                         }
-                    }
+                    }*/
                 ) {
                     Box(
                         modifier = Modifier
                             .fillMaxSize()
                             .padding(
                                 top = it.calculateTopPadding(),
-                                bottom = it.calculateBottomPadding()
+                                //bottom = it.calculateBottomPadding()
                             ),
 
                         ) {
