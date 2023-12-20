@@ -1,13 +1,17 @@
 package com.example.pizzeria.components.scaffold
 
 import android.content.Context
+import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.DrawerState
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -24,6 +28,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
@@ -97,6 +102,52 @@ fun MyTopAppBar(
             }
         },
         actions = {
+            BadgedBox(
+                badge = {
+                    Text(
+                        text = if (productViewModel.getQuantityProductTotal() != 0) productViewModel.getQuantityProductTotal()
+                            .toString() else "",
+                        color = Color.White,
+                        fontSize = 12.sp,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier
+                            .size(18.dp)
+                            .offset((-40).dp, (30).dp)
+                            .background(
+                                if (productViewModel.getQuantityProductTotal() != 0) Palette_1_8 else Color.Transparent,
+                                CircleShape
+                            )
+
+                    )
+                }) {
+                IconButton(
+                    onClick = {
+                        if (productViewModel.selectedProductList.isEmpty() || productViewModel.getQuantityProductTotal() == 0) {
+                            Toast.makeText(
+                                context,
+                                "You have not selected any product",
+                                Toast.LENGTH_LONG
+                            ).show()
+                        } else {
+                            navController.navigate(Routes.OrderProduct.route)
+                        }
+                    },
+                    modifier = Modifier
+                        .size(20.dp)
+                        .background(
+                            Palette_1_8,
+                            RoundedCornerShape(16.dp)
+                        )
+                ) {
+                    Icon(
+                        painter = painterResource(R.drawable.baseline_shopping_cart_24),
+                        contentDescription = "Shopping Product",
+                        tint = Color.White
+                    )
+                }
+
+            }
+            Spacer(modifier = Modifier.width(30.dp))
             IconButton(
                 onClick = { expandedDDMLog = true },
                 modifier = Modifier
