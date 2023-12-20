@@ -89,4 +89,15 @@
     <string name="dialog_button_dismiss">Cancel·lar</string>
     <string name="dialog_button_confirmar">Confirmar</string>
 
+    <!-- Ticket -->
+
+    <string name="ticket_header_product">Producte</string>
+    <string name="ticket_header_quantity">Quantitat</string>
+    <string name="ticket_header_price">Preu</string>
+    <string name="ticket_header_subtotal">Subtotal</string>
+    <string name="ticket_total_price">Preu total</string>
+
+    <string name="ticket_button_process_order">Processar comanda</string>
+
+
 </resources>

@@ -89,4 +89,14 @@
     <string name="dialog_button_dismiss">Cancel</string>
     <string name="dialog_button_confirmar">Confirm</string>
 
+    <!-- Ticket -->
+
+    <string name="ticket_header_product">Product</string>
+    <string name="ticket_header_quantity">Quantity</string>
+    <string name="ticket_header_price">Price</string>
+    <string name="ticket_header_subtotal">Subtotal</string>
+    <string name="ticket_total_price">Total price</string>
+
+    <string name="ticket_button_process_order">Process order</string>
+
 </resources>

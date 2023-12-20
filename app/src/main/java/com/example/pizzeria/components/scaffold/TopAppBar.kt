@@ -113,10 +113,8 @@ fun MyTopAppBar(
                         modifier = Modifier
                             .size(18.dp)
                             .offset((-40).dp, (30).dp)
-                            .background(
-                                if (productViewModel.getQuantityProductTotal() != 0) Palette_1_8 else Color.Transparent,
-                                CircleShape
-                            )
+                            .background(if (productViewModel.getQuantityProductTotal() != 0) Palette_1_8 else Color.Transparent,
+                                CircleShape)
 
                     )
                 }) {
@@ -125,7 +123,7 @@ fun MyTopAppBar(
                         if (productViewModel.selectedProductList.isEmpty() || productViewModel.getQuantityProductTotal() == 0) {
                             Toast.makeText(
                                 context,
-                                "You have not selected any product",
+                                context.getString(R.string.order_empty),
                                 Toast.LENGTH_LONG
                             ).show()
                         } else {
