@@ -9,7 +9,10 @@ import androidx.compose.animation.AnimatedContentTransitionScope
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -102,51 +105,82 @@ class MainActivity : ComponentActivity() {
                         }
                     },
                     floatingActionButton = {
-                        if (currentRoute != Routes.SplashScreen.route && currentRoute != Routes.SplashScreenOrderConfirmed.route){
-                            BadgedBox(
-                                badge = {
-                                    Text(
-                                        text = if (productViewModel.getQuantityProductTotal() != 0) productViewModel.getQuantityProductTotal()
-                                            .toString() else "",
-                                        color = Color.White,
-                                        fontSize = 12.sp,
-                                        textAlign = TextAlign.Center,
-                                        modifier = Modifier
-                                            .size(18.dp)
-                                            .offset((-25).dp, (-30).dp).background(if (productViewModel.getQuantityProductTotal() != 0)Palette_1_11 else Color.Transparent, CircleShape)
+                        if (currentRoute != Routes.SplashScreen.route && currentRoute != Routes.SplashScreenOrderConfirmed.route) {
 
-                                    )
-                                }) {
-                                if (currentRoute != Routes.OrderProduct.route) {
-                                    IconButton(
-                                        onClick = {
-                                            if (productViewModel.selectedProductList.isEmpty() || productViewModel.getQuantityProductTotal() == 0) {
-                                                Toast.makeText(
-                                                    context,
-                                                    context.getString(R.string.order_empty),
-                                                    Toast.LENGTH_LONG
-                                                ).show()
-                                            } else {
-                                                navController.navigate(Routes.OrderProduct.route)
-                                            }
-                                        },
-                                        modifier = Modifier
-                                            .size(20.dp)
-                                            .background(Palette_1_8, RoundedCornerShape(16.dp))
-                                    ) {
-                                        Icon(
-                                            painter = painterResource(R.drawable.baseline_shopping_cart_24),
-                                            contentDescription = "Shopping Product",
-                                            tint = Color.White
-                                        )
+                                when (currentRoute) {
+                                    Routes.PizzaMenu.route, Routes.PastaMenu.route, Routes.MealMenu.route, Routes.DrinkMenu.route -> {
+                                        Column(
+                                            modifier = Modifier.height(100.dp),
+                                        ) {
+
+                                        }
                                     }
-                                } else {
 
-                                }
+                                    Routes.OrderProduct.route -> {
+                                        Column(
+                                            modifier = Modifier.height(100.dp),
+                                        ) {
+                                            IconButton(
+                                                onClick = {
+                                                    if (!productViewModel.selectedProductMap.isEmpty() || productViewModel.getQuantityProductTotal() > 0) {
+                                                        navController.navigate(Routes.OrderProcess.route)
+                                                    } else {
+                                                        Toast.makeText(
+                                                            context,
+                                                            "You have not selected any product",
+                                                            Toast.LENGTH_LONG
+                                                        ).show()
+                                                    }
+                                                },
+                                                modifier = Modifier
+                                                    .size(20.dp)
+                                                    .background(
+                                                        Palette_1_8,
+                                                        RoundedCornerShape(16.dp)
+                                                    )
+                                            ) {
+                                                Icon(
+                                                    painter = painterResource(R.drawable.baseline_attach_money_24),
+                                                    contentDescription = "Order process",
+                                                    tint = Color.White
+                                                )
+                                            }
+                                            Spacer(modifier = Modifier.height(30.dp))
+                                            IconButton(
+                                                onClick = {
+                                                    if (!productViewModel.selectedProductMap.isEmpty() || productViewModel.getQuantityProductTotal() > 0) {
+                                                        dialogViewModel.dialogRemoveOrderPizza.value =
+                                                            true
+                                                    } else {
+                                                        Toast.makeText(
+                                                            context,
+                                                            "You have not selected any product",
+                                                            Toast.LENGTH_LONG
+                                                        ).show()
+                                                    }
+
+                                                },
+                                                modifier = Modifier
+                                                    .size(20.dp)
+                                                    .background(
+                                                        Palette_1_8,
+                                                        RoundedCornerShape(16.dp)
+                                                    )
+                                            ) {
+                                                Icon(
+                                                    painter = painterResource(R.drawable.baseline_sync_24),
+                                                    contentDescription = "Clear Order",
+                                                    tint = Color.White
+                                                )
+                                            }
+                                            Spacer(modifier = Modifier.height(10.dp))
+                                        }
+
+                                    }
 
                             }
-                        }
 
+                        }
                     }
                 ) {
                     Box(
