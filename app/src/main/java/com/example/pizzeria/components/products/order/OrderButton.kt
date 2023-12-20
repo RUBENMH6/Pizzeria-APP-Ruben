@@ -1,5 +1,6 @@
 package com.example.pizzeria.components.products.order
 
+import android.content.Context
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
@@ -9,13 +10,14 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.example.pizzeria.R
 import com.example.pizzeria.models.viewmodels.DialogViewModel
 import com.example.pizzeria.models.viewmodels.UserViewModel
 import com.example.pizzeria.ui.theme.Palette_1_11
 
 //Función para mostrar el botón que corresponde con la acción de realizar un pedido
 @Composable
-fun MyOrderProcessButton(dialogViewModel: DialogViewModel, userViewModel: UserViewModel) {
+fun MyOrderProcessButton(dialogViewModel: DialogViewModel, userViewModel: UserViewModel, context: Context) {
     Button(
         onClick = {
             dialogViewModel.dialogConfirmOrderPizza.value = false
@@ -34,6 +36,6 @@ fun MyOrderProcessButton(dialogViewModel: DialogViewModel, userViewModel: UserVi
         colors = ButtonDefaults.buttonColors(Palette_1_11)
 
     ) {
-        Text("Process order")
+        Text(context.getString(R.string.ticket_button_process_order))
     }
 }

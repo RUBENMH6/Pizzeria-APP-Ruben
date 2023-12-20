@@ -1,5 +1,6 @@
 package com.example.pizzeria.components.products.order
 
+import android.content.Context
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -18,12 +19,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import com.example.pizzeria.R
 import com.example.pizzeria.models.viewmodels.ProductViewModel
 import com.example.pizzeria.ui.theme.Palette_1_11
 import java.text.DecimalFormat
 
 @Composable
-fun MyTicket(viewModel: ProductViewModel) {
+fun MyTicket(viewModel: ProductViewModel, context: Context) {
     val pizzaMap = viewModel.selectedProductMap //Recibimos el mapa con las pizzas y sus respectivas cantidades
     val headerTable = listOf("PRODUCT", "QUANTITY", "PRICE", "SUBTOTAL") //Se hace una lista para poder iterar el Header de la tabla
     val IVA = 0.21
@@ -88,7 +90,7 @@ fun MyTicket(viewModel: ProductViewModel) {
             decimalFormat.minimumFractionDigits = 2
             val totalPriceIVA = decimalFormat.format(viewModel.getTotalPrice() * (1  + IVA))
             Text(
-                text = "TOTAL PRICE: $totalPriceIVA€ (${100*IVA}%)",
+                text = context.getString(R.string.ticket_total_price) + ": $totalPriceIVA€ (${100*IVA}%)",
                 modifier = Modifier.weight(0.25f),
                 textAlign = TextAlign.Right,
                 fontWeight = FontWeight.Bold,

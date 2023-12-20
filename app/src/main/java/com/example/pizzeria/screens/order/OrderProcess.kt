@@ -40,9 +40,9 @@ fun OrderProcess(navController: NavController, productViewModel: ProductViewMode
     ) {
         //Siempre y cuando hayan pizzas en el mapa, aparecerá el Ticket
         if (productViewModel.getQuantityProductTotal() != 0) {
-            MyTicket(productViewModel)
+            MyTicket(productViewModel, context)
             Spacer(modifier = Modifier.height(20.dp))
-            MyOrderProcessButton(dialogViewModel, userViewModel)
+            MyOrderProcessButton(dialogViewModel, userViewModel, context)
         } else {
             Box(
                 modifier = Modifier.fillMaxSize(),

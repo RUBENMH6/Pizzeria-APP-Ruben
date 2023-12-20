@@ -99,5 +99,16 @@
     <string name="dialog_button_dismiss">Cancelar</string>
     <string name="dialog_button_confirmar">Confirmar</string>
 
+    <!-- Ticket -->
+
+    <string name="ticket_header_product">Producto</string>
+    <string name="ticket_header_quantity">Cantidad</string>
+    <string name="ticket_header_price">Precio</string>
+    <string name="ticket_header_subtotal">Subtotal</string>
+    <string name="ticket_total_price">Precio total</string>
+
+    <string name="ticket_button_process_order">Procesar pedido</string>
+
+
 
 </resources>
