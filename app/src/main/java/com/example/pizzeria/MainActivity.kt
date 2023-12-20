@@ -117,28 +117,33 @@ class MainActivity : ComponentActivity() {
 
                                     )
                                 }) {
-                                IconButton(
-                                    onClick = {
-                                        if (productViewModel.selectedProductList.isEmpty() || productViewModel.getQuantityProductTotal() == 0) {
-                                            Toast.makeText(
-                                                context,
-                                                context.getString(R.string.order_empty),
-                                                Toast.LENGTH_LONG
-                                            ).show()
-                                        } else {
-                                            navController.navigate(Routes.OrderProduct.route)
-                                        }
-                                    },
-                                    modifier = Modifier
-                                        .size(20.dp)
-                                        .background(Palette_1_8, RoundedCornerShape(16.dp))
-                                ) {
-                                    Icon(
-                                        painter = painterResource(R.drawable.baseline_shopping_cart_24),
-                                        contentDescription = "Shopping Product",
-                                        tint = Color.White
-                                    )
+                                if (currentRoute != Routes.OrderProduct.route) {
+                                    IconButton(
+                                        onClick = {
+                                            if (productViewModel.selectedProductList.isEmpty() || productViewModel.getQuantityProductTotal() == 0) {
+                                                Toast.makeText(
+                                                    context,
+                                                    context.getString(R.string.order_empty),
+                                                    Toast.LENGTH_LONG
+                                                ).show()
+                                            } else {
+                                                navController.navigate(Routes.OrderProduct.route)
+                                            }
+                                        },
+                                        modifier = Modifier
+                                            .size(20.dp)
+                                            .background(Palette_1_8, RoundedCornerShape(16.dp))
+                                    ) {
+                                        Icon(
+                                            painter = painterResource(R.drawable.baseline_shopping_cart_24),
+                                            contentDescription = "Shopping Product",
+                                            tint = Color.White
+                                        )
+                                    }
+                                } else {
+
                                 }
+
                             }
                         }
 
