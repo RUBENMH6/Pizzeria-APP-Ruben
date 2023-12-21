@@ -65,8 +65,8 @@ fun MyDropDownMenuLog(expanded: Boolean, onExpandedChange: (Boolean) -> Unit, na
                         ),
                         contentDescription = item,
                         tint = when(item) {
-                            context.getString(R.string.log_in) -> if (currentRoute == Routes.Login.route) Palette_1_1 else Palette_1_11
-                            context.getString(R.string.dropdown_log_profile) -> if (currentRoute == Routes.Profile.route) Palette_1_1 else Palette_1_11
+                            context.getString(R.string.log_in) -> if (currentRoute == Routes.Login.route) Color.White else Palette_1_11
+                            context.getString(R.string.dropdown_log_profile) -> if (currentRoute == Routes.Profile.route) Color.White else Palette_1_11
                             else -> Palette_1_11
                         }
                     )
@@ -75,8 +75,8 @@ fun MyDropDownMenuLog(expanded: Boolean, onExpandedChange: (Boolean) -> Unit, na
                     Text(
                         text = item,
                         color = when(item) {
-                            context.getString(R.string.log_in) -> if (currentRoute == Routes.Login.route) Palette_1_1 else Palette_1_11
-                            context.getString(R.string.dropdown_log_profile) -> if (currentRoute == Routes.Profile.route) Palette_1_1 else Palette_1_11
+                            context.getString(R.string.log_in) -> if (currentRoute == Routes.Login.route) Color.White else Palette_1_11
+                            context.getString(R.string.dropdown_log_profile) -> if (currentRoute == Routes.Profile.route) Color.White else Palette_1_11
                             else -> Palette_1_11
                         }
 
@@ -84,7 +84,7 @@ fun MyDropDownMenuLog(expanded: Boolean, onExpandedChange: (Boolean) -> Unit, na
                 },
                 onClick = {
                     when (item) {
-                        context.getString(R.string.log_in) -> navController.navigate(Routes.Login.route)
+                        context.getString(R.string.log_in) -> if (currentRoute != Routes.Login.route) navController.navigate(Routes.Login.route)
                         context.getString(R.string.dropdown_log_profile) ->  {
                             if (userViewModel.authState.value == UserViewModel.AuthState.UNAUTHENTICATED) {
                                 if (currentRoute != Routes.Login.route) {
@@ -93,7 +93,9 @@ fun MyDropDownMenuLog(expanded: Boolean, onExpandedChange: (Boolean) -> Unit, na
                                     Toast.makeText(context, "Please log in first", Toast.LENGTH_LONG).show()
                                 }
                             } else {
-                                navController.navigate(Routes.Profile.route)
+                                if (currentRoute != Routes.Profile.route) {
+                                    navController.navigate(Routes.Profile.route)
+                                }
                             }
                         }
                         else -> {
@@ -107,8 +109,8 @@ fun MyDropDownMenuLog(expanded: Boolean, onExpandedChange: (Boolean) -> Unit, na
                     .height(60.dp)
                     .background(
                         when (item) {
-                            "Log In" -> if (currentRoute != Routes.Login.route) Color.Transparent else Palette_1_8
-                            "Profile" -> if (currentRoute != Routes.Profile.route) Color.Transparent else Palette_1_8
+                            context.getString(R.string.log_in) -> if (currentRoute != Routes.Login.route) Color.Transparent else Palette_1_11
+                            context.getString(R.string.dropdown_log_profile) -> if (currentRoute != Routes.Profile.route) Color.Transparent else Palette_1_11
                             else -> Color.Transparent
                         }
                     ),

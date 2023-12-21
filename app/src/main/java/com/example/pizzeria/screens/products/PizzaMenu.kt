@@ -38,24 +38,29 @@ fun PizzaMenu(
         modifier = Modifier
             .fillMaxSize()
     ) {
+        val list = productViewModel.productList
         if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) {
 
-            LazyColumn(modifier = Modifier.padding()) {
-                items(productViewModel.productList) { product ->
-                    if (product.type == "PIZZA") {
-                        when (product.name) {
-                            "Margarita" -> MyPizzaCard(product, productViewModel, R.drawable.pizza1, configuration)
-                            "Proscuito" -> MyPizzaCard(product, productViewModel, R.drawable.pizza2, configuration)
-                            "Regina" -> MyPizzaCard(product, productViewModel, R.drawable.pizza3, configuration)
-                            "Provinciale" -> MyPizzaCard(product, productViewModel, R.drawable.pizza4, configuration)
-                            "Carbonara" -> MyPizzaCard(product, productViewModel, R.drawable.pizza5, configuration)
-                            "Calzone" -> MyPizzaCard(product, productViewModel, R.drawable.pizza7, configuration)
+            LazyVerticalStaggeredGrid(
+                columns = StaggeredGridCells.Fixed(2),
+                modifier = Modifier.padding(10.dp),
+                state = listState
+            ) {
+                items(list.size) {
+                    if (list[it].type == "PIZZA") {
+                        when (list[it].name) {
+                            "Margarita" -> MyPizzaCard(list[it], productViewModel, R.drawable.pizza1, configuration)
+                            "Proscuito" -> MyPizzaCard(list[it], productViewModel, R.drawable.pizza2, configuration)
+                            "Regina" -> MyPizzaCard(list[it], productViewModel, R.drawable.pizza3, configuration)
+                            "Provinciale" -> MyPizzaCard(list[it], productViewModel, R.drawable.pizza4, configuration)
+                            "Carbonara" -> MyPizzaCard(list[it], productViewModel, R.drawable.pizza5, configuration)
+                            "Calzone" -> MyPizzaCard(list[it], productViewModel, R.drawable.pizza7, configuration)
                         }
                     }
                 }
             }
         } else {
-            val list = productViewModel.productList
+
             LazyVerticalStaggeredGrid(
                 columns = StaggeredGridCells.Fixed(3),
                 modifier = Modifier.padding(10.dp),

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gcm_defaultSenderId" translatable="false">696270280247</string>
+    <string name="google_api_key" translatable="false">AIzaSyAZIF5eVHN4oa5oKY96kcL-eNMiYbuvyjs</string>
+    <string name="google_app_id" translatable="false">1:696270280247:android:8659632d7a800d8b9951b2</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAZIF5eVHN4oa5oKY96kcL-eNMiYbuvyjs</string>
+    <string name="google_storage_bucket" translatable="false">pizzeria-app-f6984.appspot.com</string>
+    <string name="project_id" translatable="false">pizzeria-app-f6984</string>
+</resources>

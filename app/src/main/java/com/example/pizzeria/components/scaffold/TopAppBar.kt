@@ -127,7 +127,9 @@ fun MyTopAppBar(
                                 Toast.LENGTH_LONG
                             ).show()
                         } else {
-                            navController.navigate(Routes.OrderProduct.route)
+                            if (route != Routes.OrderProduct.route) {
+                                navController.navigate(Routes.OrderProduct.route)
+                            }
                         }
                     },
                     modifier = Modifier

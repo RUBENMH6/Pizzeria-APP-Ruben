@@ -1,0 +1,724 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml:2:1-33:12
+MERGED from [com.google.firebase:firebase-storage-ktx:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/42ae340ba1eb4127f71188927c3337a4/transformed/firebase-storage-ktx-20.3.0/AndroidManifest.xml:2:1-18:12
+MERGED from [com.google.firebase:firebase-database-ktx:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/e404f15bfe77bd60a97df03c1aff5388/transformed/firebase-database-ktx-20.3.0/AndroidManifest.xml:2:1-18:12
+MERGED from [androidx.compose.material3:material3:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/58c6bb2fcff96f08322d68bcb446b973/transformed/material3-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-common:2.7.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/c78fa874c59251324fd875cd8afec203/transformed/navigation-common-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-runtime:2.7.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/39adff03fb441f62c3b78b249c566d2f/transformed/navigation-runtime-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-common-ktx:2.7.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3d05cc42dc50e81e36153549f495ac35/transformed/navigation-common-ktx-2.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/fa991fd60f7e7bf74ddae3ee8bdee8a5/transformed/navigation-runtime-ktx-2.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-compose:2.7.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/4d1f71f41b8c939048f4612ebe1b2f7f/transformed/navigation-compose-2.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:17:1-75:12
+MERGED from [com.google.firebase:firebase-firestore:24.9.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/710fb38ca820dce3b2241f36d438fb38/transformed/firebase-firestore-24.9.1/AndroidManifest.xml:2:1-26:12
+MERGED from [com.google.firebase:firebase-storage:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/c544bf4b48f077a502a1717579a56ed8/transformed/firebase-storage-20.3.0/AndroidManifest.xml:15:1-39:12
+MERGED from [com.google.firebase:firebase-appcheck:17.1.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/2bd9f4d86152a86712041a5839ee404a/transformed/firebase-appcheck-17.1.1/AndroidManifest.xml:15:1-34:12
+MERGED from [com.google.firebase:firebase-database:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/86675f8096170df0fc16839ef82c56b3/transformed/firebase-database-20.3.0/AndroidManifest.xml:15:1-38:12
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/98ff6b233661e2a79f0dc85d5eaee6a1/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:2:1-18:12
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/250f8019c24a5d70d0df91ee616218e2/transformed/firebase-auth-interop-20.0.0/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-common:20.4.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/cd7afc0e9e3a35d2a0d428062502de11/transformed/firebase-common-20.4.2/AndroidManifest.xml:15:1-41:12
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/87f204159f7092ec663daf3813701a4d/transformed/firebase-appcheck-interop-17.1.0/AndroidManifest.xml:15:1-23:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/7cf7ad405c1c645921d88fcdf86fff8f/transformed/play-services-auth-api-phone-17.4.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/6f1c8a0992b5bdd20d903bf1190facd9/transformed/recaptcha-18.1.2/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.play:integrity:1.1.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/f6ff68b6e8e4f1450281c7ae464206ef/transformed/integrity-1.1.0/AndroidManifest.xml:2:1-7:12
+MERGED from [io.coil-kt:coil-compose:1.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/aa7e5823dbf6704567aef6117d7012ec/transformed/coil-compose-1.4.0/AndroidManifest.xml:2:1-9:12
+MERGED from [io.coil-kt:coil-compose-base:1.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/41e5e55daede1ade9b1e51b93a895ec0/transformed/coil-compose-base-1.4.0/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/7f6e4ce58a9490f3812ce7ab63d14d88/transformed/foundation-layout-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/f3c5a4c9a11efcbce3fc79153af88148/transformed/foundation-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-core-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/ccfa597b3ad1ad8a59b7aaac89c1f353/transformed/animation-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/f729bf842f29dbc357a4c2acc5fbab2c/transformed/animation-release/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.19.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/1100d4558f2265ecacff89da95d3d69e/transformed/accompanist-drawablepainter-0.19.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/30c82643803362cacc415cdf9c891c9a/transformed/ui-tooling-data-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/afc88a71a593dc187e07746c3976a1f1/transformed/ui-tooling-preview-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-util-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/dab15448285319050ace0523d1d3b2e3/transformed/ui-util-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-unit-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/e9dee97941d26c79d1687fa3d67d27e3/transformed/ui-unit-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-text-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/f7fbe1c59603d5c5e88becef33b49183/transformed/ui-text-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-graphics-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/a51aab586589c0fc9c4909a4ea5c36fa/transformed/ui-graphics-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-geometry-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/87171184a3e79c9767632bfe2ce7b844/transformed/ui-geometry-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-test-manifest:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/f829b16dc4a9fa14027b9f0fe37d12a0/transformed/ui-test-manifest-1.5.0/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.activity:activity:1.7.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/34c6d141b6284e0648b551cea79a73b6/transformed/activity-1.7.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity-ktx:1.7.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/4d4474033c56f3f047f54489fb8bc18c/transformed/activity-ktx-1.7.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity-compose:1.7.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/b3118d388a2fec77808a0f987840bc8e/transformed/activity-compose-1.7.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/23b3167ae468d4240ea8fe3a9a070810/transformed/ui-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/60cd36a982ba3c0bafa0e72bba01b029/transformed/ui-tooling-release/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.compose.material:material:1.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/d5c4de3f334be7f0e62ff6ee5a336890/transformed/material-1.4.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.material:material-ripple:1.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/fb4e283ea3b32b19ef2567c9ed2e1878/transformed/material-ripple-1.4.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.material:material-icons-core:1.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/7d8dfed4207f330adf2db7c86d66a856/transformed/material-icons-core-1.4.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/897ceb4978b7a50e0ff629506ffef71b/transformed/runtime-saveable-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.runtime:runtime-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/e8f6ff4258c9e6bc5780dc2d03a08a66/transformed/runtime-release/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8e00e5d0930bb679195afd1320d170f3/transformed/firebase-database-collection-18.0.1/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/097c1cbeba1726a6e1911ad76174b49d/transformed/play-services-base-18.1.0/AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/deae5d790a0dd1b8ee0cc3290783ce1b/transformed/play-services-tasks-18.0.2/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/aecc2a6330fdce6c75afcab98fdfd17d/transformed/play-services-basement-18.1.0/AndroidManifest.xml:16:1-26:12
+MERGED from [androidx.fragment:fragment:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/0d4b841b9017fee6b7b94d46a55538bd/transformed/fragment-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/4177aabc0a4e131bfbbb252e096bfcbd/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/cae95b0f2eadeefd6f26714680bedb6d/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/621ab99e4341d84980fc08e1b9a34083/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/e95925ac4adcb77e04409e8cae0ef526/transformed/emoji2-1.4.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/c021e89e8d8787159d4ca98cc89b2088/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/448436707926ef46dd6b7c49b916a82f/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/bcd64eff1e1f2d1c1a2de989b4ac2f36/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/19823bd0716e277a2027aecfd4724f87/transformed/lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [io.coil-kt:coil:1.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/89ea71247dd1cf33f58f31d77a133522/transformed/coil-1.4.0/AndroidManifest.xml:2:1-9:12
+MERGED from [io.coil-kt:coil-base:1.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/def0de5d6d5ab7ae68d430b1498a30c8/transformed/coil-base-1.4.0/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/a37ad56214e0f0b253ad7e8cf415ed04/transformed/lifecycle-viewmodel-ktx-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8a0ea1e1862d93916c0a2a1e82179549/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/503b287f7c71edaa4514222441b57ac8/transformed/savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/1c4380b2810e557f1179b9156154b2b0/transformed/lifecycle-viewmodel-compose-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/de7564aaa14f3508ccd002168b3bcd4b/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.browser:browser:1.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/0d3afcc0fdc26014abba5ed9077d8f1e/transformed/browser-1.4.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/a71a7e8ff0589df53ee200a850ac29f6/transformed/autofill-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.3.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/07ced62b384ef6f420be8b783a1018f5/transformed/appcompat-resources-1.3.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/d226c345895c22fc2d4739a57e6133da/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/73613f9e8fb6ea410f8e34d63e8e6073/transformed/coordinatorlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/540fd692ef42749497d0cc0ead392156/transformed/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/f60a33aee25c1cc41ffc8f57e9aed3bc/transformed/slidingpanelayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8703045508740efd1e59f87cfe849b10/transformed/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/b804326dd6ef87b9aefa0d85b4486641/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/16e81528597d5cd00f30a93bf169bfe8/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/543b5fa7316f81ec04f5097b537f79c3/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.core:core-ktx:1.10.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/b3b876e60945efd6d358977301384b37/transformed/core-ktx-1.10.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/eea7fa174135ac83a4d0402c4a7f0e2e/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8805f280ff4b8fec1797c00c049b243e/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.10.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/30aed856985085ad1e62b01feb1981f2/transformed/core-1.10.0/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/ca261b7ac8aa6956471ccc1aa75ee1bf/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/bb10ce4a49c10d98f93c92a4eddb4c65/transformed/lifecycle-runtime-ktx-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8792c80c189716ba6d6a1e3364cb5ca4/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-components:17.1.5] /Users/diegosolsonaostal/.gradle/caches/transforms-3/a75c3bbf9a9ce8c47f4ee60bfe6a653b/transformed/firebase-components-17.1.5/AndroidManifest.xml:15:1-20:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/04ebe26c730d8f60ec979d0c3edfd931/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/4b7bc5cbe0a2874b72611c880b93eedf/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8bf39f74171baffd78e5e1243a986327/transformed/profileinstaller-1.3.0/AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/ce93e09848f9ad34ae82b7abe0fb5274/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/a3d3a27529f82ec92ecddd03e8ead707/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/6e4d338329eeb2af39c45fba60c80e6e/transformed/startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/0d656541105f444403ede21ed6016ccd/transformed/tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] /Users/diegosolsonaostal/.gradle/caches/transforms-3/08636f1af1f5ca2c2e202766ead9ff26/transformed/exifinterface-1.3.3/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8d04dd21b28460a33b118c58b2a66b43/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/5a35c400224260e89836a9f856b50f60/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/1b9a40f5050fcba71d38a30194855cf6/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [io.grpc:grpc-android:1.52.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/dd78ed603c091e5cff8f99102c1d1e1a/transformed/grpc-android-1.52.1/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/c90846f7a9d15693d62293624f85e762/transformed/protolite-well-known-types-18.0.0/AndroidManifest.xml:2:1-11:12
+	package
+		INJECTED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml:5:5-66
+MERGED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-firestore:24.9.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/710fb38ca820dce3b2241f36d438fb38/transformed/firebase-firestore-24.9.1/AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-firestore:24.9.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/710fb38ca820dce3b2241f36d438fb38/transformed/firebase-firestore-24.9.1/AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-storage:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/c544bf4b48f077a502a1717579a56ed8/transformed/firebase-storage-20.3.0/AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-storage:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/c544bf4b48f077a502a1717579a56ed8/transformed/firebase-storage-20.3.0/AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-database:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/86675f8096170df0fc16839ef82c56b3/transformed/firebase-database-20.3.0/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-database:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/86675f8096170df0fc16839ef82c56b3/transformed/firebase-database-20.3.0/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/6f1c8a0992b5bdd20d903bf1190facd9/transformed/recaptcha-18.1.2/AndroidManifest.xml:7:5-67
+MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/6f1c8a0992b5bdd20d903bf1190facd9/transformed/recaptcha-18.1.2/AndroidManifest.xml:7:5-67
+	android:name
+		ADDED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml:5:22-64
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml:6:5-81
+	android:name
+		ADDED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml:6:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml:7:5-78
+	android:name
+		ADDED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml:7:22-76
+application
+ADDED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml:10:5-31:19
+INJECTED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml:10:5-31:19
+MERGED from [com.google.firebase:firebase-storage-ktx:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/42ae340ba1eb4127f71188927c3337a4/transformed/firebase-storage-ktx-20.3.0/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-storage-ktx:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/42ae340ba1eb4127f71188927c3337a4/transformed/firebase-storage-ktx-20.3.0/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-database-ktx:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/e404f15bfe77bd60a97df03c1aff5388/transformed/firebase-database-ktx-20.3.0/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-database-ktx:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/e404f15bfe77bd60a97df03c1aff5388/transformed/firebase-database-ktx-20.3.0/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:28:5-73:19
+MERGED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:28:5-73:19
+MERGED from [com.google.firebase:firebase-firestore:24.9.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/710fb38ca820dce3b2241f36d438fb38/transformed/firebase-firestore-24.9.1/AndroidManifest.xml:13:5-24:19
+MERGED from [com.google.firebase:firebase-firestore:24.9.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/710fb38ca820dce3b2241f36d438fb38/transformed/firebase-firestore-24.9.1/AndroidManifest.xml:13:5-24:19
+MERGED from [com.google.firebase:firebase-storage:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/c544bf4b48f077a502a1717579a56ed8/transformed/firebase-storage-20.3.0/AndroidManifest.xml:26:5-37:19
+MERGED from [com.google.firebase:firebase-storage:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/c544bf4b48f077a502a1717579a56ed8/transformed/firebase-storage-20.3.0/AndroidManifest.xml:26:5-37:19
+MERGED from [com.google.firebase:firebase-appcheck:17.1.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/2bd9f4d86152a86712041a5839ee404a/transformed/firebase-appcheck-17.1.1/AndroidManifest.xml:21:5-32:19
+MERGED from [com.google.firebase:firebase-appcheck:17.1.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/2bd9f4d86152a86712041a5839ee404a/transformed/firebase-appcheck-17.1.1/AndroidManifest.xml:21:5-32:19
+MERGED from [com.google.firebase:firebase-database:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/86675f8096170df0fc16839ef82c56b3/transformed/firebase-database-20.3.0/AndroidManifest.xml:25:5-36:19
+MERGED from [com.google.firebase:firebase-database:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/86675f8096170df0fc16839ef82c56b3/transformed/firebase-database-20.3.0/AndroidManifest.xml:25:5-36:19
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/98ff6b233661e2a79f0dc85d5eaee6a1/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/98ff6b233661e2a79f0dc85d5eaee6a1/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/250f8019c24a5d70d0df91ee616218e2/transformed/firebase-auth-interop-20.0.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/250f8019c24a5d70d0df91ee616218e2/transformed/firebase-auth-interop-20.0.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-common:20.4.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/cd7afc0e9e3a35d2a0d428062502de11/transformed/firebase-common-20.4.2/AndroidManifest.xml:22:5-39:19
+MERGED from [com.google.firebase:firebase-common:20.4.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/cd7afc0e9e3a35d2a0d428062502de11/transformed/firebase-common-20.4.2/AndroidManifest.xml:22:5-39:19
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/87f204159f7092ec663daf3813701a4d/transformed/firebase-appcheck-interop-17.1.0/AndroidManifest.xml:21:5-20
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/87f204159f7092ec663daf3813701a4d/transformed/firebase-appcheck-interop-17.1.0/AndroidManifest.xml:21:5-20
+MERGED from [com.google.android.play:integrity:1.1.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/f6ff68b6e8e4f1450281c7ae464206ef/transformed/integrity-1.1.0/AndroidManifest.xml:5:5-6:19
+MERGED from [com.google.android.play:integrity:1.1.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/f6ff68b6e8e4f1450281c7ae464206ef/transformed/integrity-1.1.0/AndroidManifest.xml:5:5-6:19
+MERGED from [androidx.compose.ui:ui-test-manifest:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/f829b16dc4a9fa14027b9f0fe37d12a0/transformed/ui-test-manifest-1.5.0/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-test-manifest:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/f829b16dc4a9fa14027b9f0fe37d12a0/transformed/ui-test-manifest-1.5.0/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/60cd36a982ba3c0bafa0e72bba01b029/transformed/ui-tooling-release/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/60cd36a982ba3c0bafa0e72bba01b029/transformed/ui-tooling-release/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/097c1cbeba1726a6e1911ad76174b49d/transformed/play-services-base-18.1.0/AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/097c1cbeba1726a6e1911ad76174b49d/transformed/play-services-base-18.1.0/AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/deae5d790a0dd1b8ee0cc3290783ce1b/transformed/play-services-tasks-18.0.2/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/deae5d790a0dd1b8ee0cc3290783ce1b/transformed/play-services-tasks-18.0.2/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/aecc2a6330fdce6c75afcab98fdfd17d/transformed/play-services-basement-18.1.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/aecc2a6330fdce6c75afcab98fdfd17d/transformed/play-services-basement-18.1.0/AndroidManifest.xml:20:5-24:19
+MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/e95925ac4adcb77e04409e8cae0ef526/transformed/emoji2-1.4.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/e95925ac4adcb77e04409e8cae0ef526/transformed/emoji2-1.4.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/c021e89e8d8787159d4ca98cc89b2088/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/c021e89e8d8787159d4ca98cc89b2088/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.10.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/30aed856985085ad1e62b01feb1981f2/transformed/core-1.10.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.10.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/30aed856985085ad1e62b01feb1981f2/transformed/core-1.10.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8bf39f74171baffd78e5e1243a986327/transformed/profileinstaller-1.3.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8bf39f74171baffd78e5e1243a986327/transformed/profileinstaller-1.3.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/ce93e09848f9ad34ae82b7abe0fb5274/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/ce93e09848f9ad34ae82b7abe0fb5274/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/6e4d338329eeb2af39c45fba60c80e6e/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/6e4d338329eeb2af39c45fba60c80e6e/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+	android:extractNativeLibs
+		INJECTED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.10.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/30aed856985085ad1e62b01feb1981f2/transformed/core-1.10.0/AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml:17:9-35
+	android:label
+		ADDED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml:15:9-41
+	android:fullBackupContent
+		ADDED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml:13:9-54
+	android:roundIcon
+		ADDED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml:16:9-54
+	tools:targetApi
+		ADDED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml:19:9-29
+	android:icon
+		ADDED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml:14:9-43
+	android:allowBackup
+		ADDED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml:11:9-35
+	android:theme
+		ADDED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml:18:9-46
+	android:dataExtractionRules
+		ADDED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml:12:9-65
+activity#com.example.pizzeria.MainActivity
+ADDED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml:20:9-30:20
+	android:label
+		ADDED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml:23:13-45
+	android:exported
+		ADDED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml:22:13-36
+	android:theme
+		ADDED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml:24:13-50
+	android:name
+		ADDED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml:21:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml:25:13-29:29
+action#android.intent.action.MAIN
+ADDED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml:26:17-69
+	android:name
+		ADDED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml:26:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml:28:17-77
+	android:name
+		ADDED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml:28:27-74
+uses-sdk
+INJECTED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml
+INJECTED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml
+MERGED from [com.google.firebase:firebase-storage-ktx:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/42ae340ba1eb4127f71188927c3337a4/transformed/firebase-storage-ktx-20.3.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-storage-ktx:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/42ae340ba1eb4127f71188927c3337a4/transformed/firebase-storage-ktx-20.3.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-database-ktx:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/e404f15bfe77bd60a97df03c1aff5388/transformed/firebase-database-ktx-20.3.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-database-ktx:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/e404f15bfe77bd60a97df03c1aff5388/transformed/firebase-database-ktx-20.3.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material3:material3:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/58c6bb2fcff96f08322d68bcb446b973/transformed/material3-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material3:material3:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/58c6bb2fcff96f08322d68bcb446b973/transformed/material3-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common:2.7.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/c78fa874c59251324fd875cd8afec203/transformed/navigation-common-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common:2.7.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/c78fa874c59251324fd875cd8afec203/transformed/navigation-common-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.7.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/39adff03fb441f62c3b78b249c566d2f/transformed/navigation-runtime-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.7.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/39adff03fb441f62c3b78b249c566d2f/transformed/navigation-runtime-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common-ktx:2.7.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3d05cc42dc50e81e36153549f495ac35/transformed/navigation-common-ktx-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-common-ktx:2.7.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3d05cc42dc50e81e36153549f495ac35/transformed/navigation-common-ktx-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/fa991fd60f7e7bf74ddae3ee8bdee8a5/transformed/navigation-runtime-ktx-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/fa991fd60f7e7bf74ddae3ee8bdee8a5/transformed/navigation-runtime-ktx-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-compose:2.7.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/4d1f71f41b8c939048f4612ebe1b2f7f/transformed/navigation-compose-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-compose:2.7.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/4d1f71f41b8c939048f4612ebe1b2f7f/transformed/navigation-compose-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:21:5-23:64
+MERGED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:21:5-23:64
+MERGED from [com.google.firebase:firebase-firestore:24.9.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/710fb38ca820dce3b2241f36d438fb38/transformed/firebase-firestore-24.9.1/AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-firestore:24.9.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/710fb38ca820dce3b2241f36d438fb38/transformed/firebase-firestore-24.9.1/AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-storage:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/c544bf4b48f077a502a1717579a56ed8/transformed/firebase-storage-20.3.0/AndroidManifest.xml:19:5-44
+MERGED from [com.google.firebase:firebase-storage:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/c544bf4b48f077a502a1717579a56ed8/transformed/firebase-storage-20.3.0/AndroidManifest.xml:19:5-44
+MERGED from [com.google.firebase:firebase-appcheck:17.1.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/2bd9f4d86152a86712041a5839ee404a/transformed/firebase-appcheck-17.1.1/AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-appcheck:17.1.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/2bd9f4d86152a86712041a5839ee404a/transformed/firebase-appcheck-17.1.1/AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-database:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/86675f8096170df0fc16839ef82c56b3/transformed/firebase-database-20.3.0/AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-database:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/86675f8096170df0fc16839ef82c56b3/transformed/firebase-database-20.3.0/AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/98ff6b233661e2a79f0dc85d5eaee6a1/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/98ff6b233661e2a79f0dc85d5eaee6a1/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/250f8019c24a5d70d0df91ee616218e2/transformed/firebase-auth-interop-20.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/250f8019c24a5d70d0df91ee616218e2/transformed/firebase-auth-interop-20.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common:20.4.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/cd7afc0e9e3a35d2a0d428062502de11/transformed/firebase-common-20.4.2/AndroidManifest.xml:19:5-44
+MERGED from [com.google.firebase:firebase-common:20.4.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/cd7afc0e9e3a35d2a0d428062502de11/transformed/firebase-common-20.4.2/AndroidManifest.xml:19:5-44
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/87f204159f7092ec663daf3813701a4d/transformed/firebase-appcheck-interop-17.1.0/AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/87f204159f7092ec663daf3813701a4d/transformed/firebase-appcheck-interop-17.1.0/AndroidManifest.xml:18:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/7cf7ad405c1c645921d88fcdf86fff8f/transformed/play-services-auth-api-phone-17.4.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/7cf7ad405c1c645921d88fcdf86fff8f/transformed/play-services-auth-api-phone-17.4.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/6f1c8a0992b5bdd20d903bf1190facd9/transformed/recaptcha-18.1.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/6f1c8a0992b5bdd20d903bf1190facd9/transformed/recaptcha-18.1.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.play:integrity:1.1.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/f6ff68b6e8e4f1450281c7ae464206ef/transformed/integrity-1.1.0/AndroidManifest.xml:4:5-44
+MERGED from [com.google.android.play:integrity:1.1.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/f6ff68b6e8e4f1450281c7ae464206ef/transformed/integrity-1.1.0/AndroidManifest.xml:4:5-44
+MERGED from [io.coil-kt:coil-compose:1.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/aa7e5823dbf6704567aef6117d7012ec/transformed/coil-compose-1.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [io.coil-kt:coil-compose:1.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/aa7e5823dbf6704567aef6117d7012ec/transformed/coil-compose-1.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [io.coil-kt:coil-compose-base:1.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/41e5e55daede1ade9b1e51b93a895ec0/transformed/coil-compose-base-1.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [io.coil-kt:coil-compose-base:1.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/41e5e55daede1ade9b1e51b93a895ec0/transformed/coil-compose-base-1.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/7f6e4ce58a9490f3812ce7ab63d14d88/transformed/foundation-layout-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/7f6e4ce58a9490f3812ce7ab63d14d88/transformed/foundation-layout-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/f3c5a4c9a11efcbce3fc79153af88148/transformed/foundation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/f3c5a4c9a11efcbce3fc79153af88148/transformed/foundation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/ccfa597b3ad1ad8a59b7aaac89c1f353/transformed/animation-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/ccfa597b3ad1ad8a59b7aaac89c1f353/transformed/animation-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/f729bf842f29dbc357a4c2acc5fbab2c/transformed/animation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/f729bf842f29dbc357a4c2acc5fbab2c/transformed/animation-release/AndroidManifest.xml:5:5-44
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.19.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/1100d4558f2265ecacff89da95d3d69e/transformed/accompanist-drawablepainter-0.19.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.19.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/1100d4558f2265ecacff89da95d3d69e/transformed/accompanist-drawablepainter-0.19.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/30c82643803362cacc415cdf9c891c9a/transformed/ui-tooling-data-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/30c82643803362cacc415cdf9c891c9a/transformed/ui-tooling-data-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/afc88a71a593dc187e07746c3976a1f1/transformed/ui-tooling-preview-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/afc88a71a593dc187e07746c3976a1f1/transformed/ui-tooling-preview-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/dab15448285319050ace0523d1d3b2e3/transformed/ui-util-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/dab15448285319050ace0523d1d3b2e3/transformed/ui-util-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/e9dee97941d26c79d1687fa3d67d27e3/transformed/ui-unit-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/e9dee97941d26c79d1687fa3d67d27e3/transformed/ui-unit-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/f7fbe1c59603d5c5e88becef33b49183/transformed/ui-text-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/f7fbe1c59603d5c5e88becef33b49183/transformed/ui-text-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/a51aab586589c0fc9c4909a4ea5c36fa/transformed/ui-graphics-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/a51aab586589c0fc9c4909a4ea5c36fa/transformed/ui-graphics-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/87171184a3e79c9767632bfe2ce7b844/transformed/ui-geometry-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/87171184a3e79c9767632bfe2ce7b844/transformed/ui-geometry-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-test-manifest:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/f829b16dc4a9fa14027b9f0fe37d12a0/transformed/ui-test-manifest-1.5.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-test-manifest:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/f829b16dc4a9fa14027b9f0fe37d12a0/transformed/ui-test-manifest-1.5.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.7.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/34c6d141b6284e0648b551cea79a73b6/transformed/activity-1.7.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.7.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/34c6d141b6284e0648b551cea79a73b6/transformed/activity-1.7.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-ktx:1.7.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/4d4474033c56f3f047f54489fb8bc18c/transformed/activity-ktx-1.7.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-ktx:1.7.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/4d4474033c56f3f047f54489fb8bc18c/transformed/activity-ktx-1.7.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-compose:1.7.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/b3118d388a2fec77808a0f987840bc8e/transformed/activity-compose-1.7.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-compose:1.7.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/b3118d388a2fec77808a0f987840bc8e/transformed/activity-compose-1.7.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/23b3167ae468d4240ea8fe3a9a070810/transformed/ui-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/23b3167ae468d4240ea8fe3a9a070810/transformed/ui-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/60cd36a982ba3c0bafa0e72bba01b029/transformed/ui-tooling-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/60cd36a982ba3c0bafa0e72bba01b029/transformed/ui-tooling-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material:material:1.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/d5c4de3f334be7f0e62ff6ee5a336890/transformed/material-1.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material:material:1.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/d5c4de3f334be7f0e62ff6ee5a336890/transformed/material-1.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material:material-ripple:1.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/fb4e283ea3b32b19ef2567c9ed2e1878/transformed/material-ripple-1.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material:material-ripple:1.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/fb4e283ea3b32b19ef2567c9ed2e1878/transformed/material-ripple-1.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material:material-icons-core:1.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/7d8dfed4207f330adf2db7c86d66a856/transformed/material-icons-core-1.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material:material-icons-core:1.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/7d8dfed4207f330adf2db7c86d66a856/transformed/material-icons-core-1.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/897ceb4978b7a50e0ff629506ffef71b/transformed/runtime-saveable-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/897ceb4978b7a50e0ff629506ffef71b/transformed/runtime-saveable-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/e8f6ff4258c9e6bc5780dc2d03a08a66/transformed/runtime-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/e8f6ff4258c9e6bc5780dc2d03a08a66/transformed/runtime-release/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8e00e5d0930bb679195afd1320d170f3/transformed/firebase-database-collection-18.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8e00e5d0930bb679195afd1320d170f3/transformed/firebase-database-collection-18.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/097c1cbeba1726a6e1911ad76174b49d/transformed/play-services-base-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/097c1cbeba1726a6e1911ad76174b49d/transformed/play-services-base-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/deae5d790a0dd1b8ee0cc3290783ce1b/transformed/play-services-tasks-18.0.2/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/deae5d790a0dd1b8ee0cc3290783ce1b/transformed/play-services-tasks-18.0.2/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/aecc2a6330fdce6c75afcab98fdfd17d/transformed/play-services-basement-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/aecc2a6330fdce6c75afcab98fdfd17d/transformed/play-services-basement-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [androidx.fragment:fragment:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/0d4b841b9017fee6b7b94d46a55538bd/transformed/fragment-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/0d4b841b9017fee6b7b94d46a55538bd/transformed/fragment-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/4177aabc0a4e131bfbbb252e096bfcbd/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/4177aabc0a4e131bfbbb252e096bfcbd/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/cae95b0f2eadeefd6f26714680bedb6d/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/cae95b0f2eadeefd6f26714680bedb6d/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/621ab99e4341d84980fc08e1b9a34083/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/621ab99e4341d84980fc08e1b9a34083/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/e95925ac4adcb77e04409e8cae0ef526/transformed/emoji2-1.4.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/e95925ac4adcb77e04409e8cae0ef526/transformed/emoji2-1.4.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/c021e89e8d8787159d4ca98cc89b2088/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/c021e89e8d8787159d4ca98cc89b2088/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/448436707926ef46dd6b7c49b916a82f/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/448436707926ef46dd6b7c49b916a82f/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/bcd64eff1e1f2d1c1a2de989b4ac2f36/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/bcd64eff1e1f2d1c1a2de989b4ac2f36/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/19823bd0716e277a2027aecfd4724f87/transformed/lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/19823bd0716e277a2027aecfd4724f87/transformed/lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [io.coil-kt:coil:1.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/89ea71247dd1cf33f58f31d77a133522/transformed/coil-1.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [io.coil-kt:coil:1.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/89ea71247dd1cf33f58f31d77a133522/transformed/coil-1.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [io.coil-kt:coil-base:1.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/def0de5d6d5ab7ae68d430b1498a30c8/transformed/coil-base-1.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [io.coil-kt:coil-base:1.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/def0de5d6d5ab7ae68d430b1498a30c8/transformed/coil-base-1.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/a37ad56214e0f0b253ad7e8cf415ed04/transformed/lifecycle-viewmodel-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/a37ad56214e0f0b253ad7e8cf415ed04/transformed/lifecycle-viewmodel-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8a0ea1e1862d93916c0a2a1e82179549/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8a0ea1e1862d93916c0a2a1e82179549/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/503b287f7c71edaa4514222441b57ac8/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/503b287f7c71edaa4514222441b57ac8/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/1c4380b2810e557f1179b9156154b2b0/transformed/lifecycle-viewmodel-compose-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/1c4380b2810e557f1179b9156154b2b0/transformed/lifecycle-viewmodel-compose-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/de7564aaa14f3508ccd002168b3bcd4b/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/de7564aaa14f3508ccd002168b3bcd4b/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.browser:browser:1.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/0d3afcc0fdc26014abba5ed9077d8f1e/transformed/browser-1.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/0d3afcc0fdc26014abba5ed9077d8f1e/transformed/browser-1.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/a71a7e8ff0589df53ee200a850ac29f6/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/a71a7e8ff0589df53ee200a850ac29f6/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.3.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/07ced62b384ef6f420be8b783a1018f5/transformed/appcompat-resources-1.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.3.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/07ced62b384ef6f420be8b783a1018f5/transformed/appcompat-resources-1.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/d226c345895c22fc2d4739a57e6133da/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/d226c345895c22fc2d4739a57e6133da/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/73613f9e8fb6ea410f8e34d63e8e6073/transformed/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/73613f9e8fb6ea410f8e34d63e8e6073/transformed/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/540fd692ef42749497d0cc0ead392156/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/540fd692ef42749497d0cc0ead392156/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/f60a33aee25c1cc41ffc8f57e9aed3bc/transformed/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/f60a33aee25c1cc41ffc8f57e9aed3bc/transformed/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8703045508740efd1e59f87cfe849b10/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8703045508740efd1e59f87cfe849b10/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/b804326dd6ef87b9aefa0d85b4486641/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/b804326dd6ef87b9aefa0d85b4486641/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/16e81528597d5cd00f30a93bf169bfe8/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/16e81528597d5cd00f30a93bf169bfe8/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/543b5fa7316f81ec04f5097b537f79c3/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/543b5fa7316f81ec04f5097b537f79c3/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.core:core-ktx:1.10.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/b3b876e60945efd6d358977301384b37/transformed/core-ktx-1.10.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.10.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/b3b876e60945efd6d358977301384b37/transformed/core-ktx-1.10.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/eea7fa174135ac83a4d0402c4a7f0e2e/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/eea7fa174135ac83a4d0402c4a7f0e2e/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8805f280ff4b8fec1797c00c049b243e/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8805f280ff4b8fec1797c00c049b243e/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.10.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/30aed856985085ad1e62b01feb1981f2/transformed/core-1.10.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.10.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/30aed856985085ad1e62b01feb1981f2/transformed/core-1.10.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/ca261b7ac8aa6956471ccc1aa75ee1bf/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/ca261b7ac8aa6956471ccc1aa75ee1bf/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/bb10ce4a49c10d98f93c92a4eddb4c65/transformed/lifecycle-runtime-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/bb10ce4a49c10d98f93c92a4eddb4c65/transformed/lifecycle-runtime-ktx-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8792c80c189716ba6d6a1e3364cb5ca4/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8792c80c189716ba6d6a1e3364cb5ca4/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-components:17.1.5] /Users/diegosolsonaostal/.gradle/caches/transforms-3/a75c3bbf9a9ce8c47f4ee60bfe6a653b/transformed/firebase-components-17.1.5/AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-components:17.1.5] /Users/diegosolsonaostal/.gradle/caches/transforms-3/a75c3bbf9a9ce8c47f4ee60bfe6a653b/transformed/firebase-components-17.1.5/AndroidManifest.xml:18:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/04ebe26c730d8f60ec979d0c3edfd931/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/04ebe26c730d8f60ec979d0c3edfd931/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/4b7bc5cbe0a2874b72611c880b93eedf/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/4b7bc5cbe0a2874b72611c880b93eedf/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8bf39f74171baffd78e5e1243a986327/transformed/profileinstaller-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8bf39f74171baffd78e5e1243a986327/transformed/profileinstaller-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/ce93e09848f9ad34ae82b7abe0fb5274/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/ce93e09848f9ad34ae82b7abe0fb5274/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/a3d3a27529f82ec92ecddd03e8ead707/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/a3d3a27529f82ec92ecddd03e8ead707/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/6e4d338329eeb2af39c45fba60c80e6e/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/6e4d338329eeb2af39c45fba60c80e6e/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/0d656541105f444403ede21ed6016ccd/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/0d656541105f444403ede21ed6016ccd/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] /Users/diegosolsonaostal/.gradle/caches/transforms-3/08636f1af1f5ca2c2e202766ead9ff26/transformed/exifinterface-1.3.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] /Users/diegosolsonaostal/.gradle/caches/transforms-3/08636f1af1f5ca2c2e202766ead9ff26/transformed/exifinterface-1.3.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8d04dd21b28460a33b118c58b2a66b43/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8d04dd21b28460a33b118c58b2a66b43/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/5a35c400224260e89836a9f856b50f60/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/5a35c400224260e89836a9f856b50f60/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/1b9a40f5050fcba71d38a30194855cf6/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/1b9a40f5050fcba71d38a30194855cf6/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [io.grpc:grpc-android:1.52.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/dd78ed603c091e5cff8f99102c1d1e1a/transformed/grpc-android-1.52.1/AndroidManifest.xml:5:5-7:41
+MERGED from [io.grpc:grpc-android:1.52.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/dd78ed603c091e5cff8f99102c1d1e1a/transformed/grpc-android-1.52.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/c90846f7a9d15693d62293624f85e762/transformed/protolite-well-known-types-18.0.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/c90846f7a9d15693d62293624f85e762/transformed/protolite-well-known-types-18.0.0/AndroidManifest.xml:7:5-9:41
+	tools:overrideLibrary
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:23:9-61
+	android:targetSdkVersion
+		INJECTED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/diegosolsonaostal/AndroidStudioProjects/Pizzeria-APP-Ruben/app/src/main/AndroidManifest.xml
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [com.google.firebase:firebase-storage-ktx:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/42ae340ba1eb4127f71188927c3337a4/transformed/firebase-storage-ktx-20.3.0/AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-database-ktx:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/e404f15bfe77bd60a97df03c1aff5388/transformed/firebase-database-ktx-20.3.0/AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-database-ktx:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/e404f15bfe77bd60a97df03c1aff5388/transformed/firebase-database-ktx-20.3.0/AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:66:9-72:19
+MERGED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:66:9-72:19
+MERGED from [com.google.firebase:firebase-firestore:24.9.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/710fb38ca820dce3b2241f36d438fb38/transformed/firebase-firestore-24.9.1/AndroidManifest.xml:14:9-23:19
+MERGED from [com.google.firebase:firebase-firestore:24.9.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/710fb38ca820dce3b2241f36d438fb38/transformed/firebase-firestore-24.9.1/AndroidManifest.xml:14:9-23:19
+MERGED from [com.google.firebase:firebase-storage:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/c544bf4b48f077a502a1717579a56ed8/transformed/firebase-storage-20.3.0/AndroidManifest.xml:27:9-36:19
+MERGED from [com.google.firebase:firebase-storage:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/c544bf4b48f077a502a1717579a56ed8/transformed/firebase-storage-20.3.0/AndroidManifest.xml:27:9-36:19
+MERGED from [com.google.firebase:firebase-appcheck:17.1.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/2bd9f4d86152a86712041a5839ee404a/transformed/firebase-appcheck-17.1.1/AndroidManifest.xml:22:9-31:19
+MERGED from [com.google.firebase:firebase-appcheck:17.1.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/2bd9f4d86152a86712041a5839ee404a/transformed/firebase-appcheck-17.1.1/AndroidManifest.xml:22:9-31:19
+MERGED from [com.google.firebase:firebase-database:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/86675f8096170df0fc16839ef82c56b3/transformed/firebase-database-20.3.0/AndroidManifest.xml:26:9-35:19
+MERGED from [com.google.firebase:firebase-database:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/86675f8096170df0fc16839ef82c56b3/transformed/firebase-database-20.3.0/AndroidManifest.xml:26:9-35:19
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/98ff6b233661e2a79f0dc85d5eaee6a1/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/98ff6b233661e2a79f0dc85d5eaee6a1/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-common:20.4.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/cd7afc0e9e3a35d2a0d428062502de11/transformed/firebase-common-20.4.2/AndroidManifest.xml:30:9-38:19
+MERGED from [com.google.firebase:firebase-common:20.4.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/cd7afc0e9e3a35d2a0d428062502de11/transformed/firebase-common-20.4.2/AndroidManifest.xml:30:9-38:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-storage-ktx:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/42ae340ba1eb4127f71188927c3337a4/transformed/firebase-storage-ktx-20.3.0/AndroidManifest.xml:11:13-37
+	tools:targetApi
+		ADDED from [com.google.firebase:firebase-common:20.4.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/cd7afc0e9e3a35d2a0d428062502de11/transformed/firebase-common-20.4.2/AndroidManifest.xml:34:13-32
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:20.4.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/cd7afc0e9e3a35d2a0d428062502de11/transformed/firebase-common-20.4.2/AndroidManifest.xml:32:13-43
+	android:name
+		ADDED from [com.google.firebase:firebase-storage-ktx:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/42ae340ba1eb4127f71188927c3337a4/transformed/firebase-storage-ktx-20.3.0/AndroidManifest.xml:10:13-84
+meta-data#com.google.firebase.components:com.google.firebase.storage.ktx.FirebaseStorageLegacyRegistrar
+ADDED from [com.google.firebase:firebase-storage-ktx:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/42ae340ba1eb4127f71188927c3337a4/transformed/firebase-storage-ktx-20.3.0/AndroidManifest.xml:12:13-14:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage-ktx:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/42ae340ba1eb4127f71188927c3337a4/transformed/firebase-storage-ktx-20.3.0/AndroidManifest.xml:14:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage-ktx:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/42ae340ba1eb4127f71188927c3337a4/transformed/firebase-storage-ktx-20.3.0/AndroidManifest.xml:13:17-125
+meta-data#com.google.firebase.components:com.google.firebase.database.ktx.FirebaseDatabaseLegacyRegistrar
+ADDED from [com.google.firebase:firebase-database-ktx:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/e404f15bfe77bd60a97df03c1aff5388/transformed/firebase-database-ktx-20.3.0/AndroidManifest.xml:12:13-14:85
+	android:value
+		ADDED from [com.google.firebase:firebase-database-ktx:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/e404f15bfe77bd60a97df03c1aff5388/transformed/firebase-database-ktx-20.3.0/AndroidManifest.xml:14:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-database-ktx:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/e404f15bfe77bd60a97df03c1aff5388/transformed/firebase-database-ktx-20.3.0/AndroidManifest.xml:13:17-127
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-firestore:24.9.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/710fb38ca820dce3b2241f36d438fb38/transformed/firebase-firestore-24.9.1/AndroidManifest.xml:10:5-79
+MERGED from [com.google.firebase:firebase-firestore:24.9.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/710fb38ca820dce3b2241f36d438fb38/transformed/firebase-firestore-24.9.1/AndroidManifest.xml:10:5-79
+MERGED from [com.google.firebase:firebase-storage:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/c544bf4b48f077a502a1717579a56ed8/transformed/firebase-storage-20.3.0/AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-storage:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/c544bf4b48f077a502a1717579a56ed8/transformed/firebase-storage-20.3.0/AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-database:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/86675f8096170df0fc16839ef82c56b3/transformed/firebase-database-20.3.0/AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-database:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/86675f8096170df0fc16839ef82c56b3/transformed/firebase-database-20.3.0/AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/6f1c8a0992b5bdd20d903bf1190facd9/transformed/recaptcha-18.1.2/AndroidManifest.xml:8:5-79
+MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/6f1c8a0992b5bdd20d903bf1190facd9/transformed/recaptcha-18.1.2/AndroidManifest.xml:8:5-79
+MERGED from [io.grpc:grpc-android:1.52.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/dd78ed603c091e5cff8f99102c1d1e1a/transformed/grpc-android-1.52.1/AndroidManifest.xml:9:5-79
+MERGED from [io.grpc:grpc-android:1.52.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/dd78ed603c091e5cff8f99102c1d1e1a/transformed/grpc-android-1.52.1/AndroidManifest.xml:9:5-79
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:26:22-76
+activity#com.google.firebase.auth.internal.GenericIdpActivity
+ADDED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:29:9-46:20
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:31:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:33:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:32:13-36
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:34:13-72
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:30:13-80
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:genericidp
+ADDED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:35:13-45:29
+action#android.intent.action.VIEW
+ADDED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:36:17-69
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:36:25-66
+category#android.intent.category.DEFAULT
+ADDED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:38:17-76
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:38:27-73
+category#android.intent.category.BROWSABLE
+ADDED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:39:17-78
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:39:27-75
+data
+ADDED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:41:17-44:51
+	android:path
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:43:21-37
+	android:host
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:42:21-49
+	android:scheme
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:44:21-48
+activity#com.google.firebase.auth.internal.RecaptchaActivity
+ADDED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:47:9-64:20
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:49:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:51:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:50:13-36
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:52:13-72
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:48:13-79
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:recaptcha
+ADDED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:53:13-63:29
+meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
+ADDED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:69:13-71:85
+	android:value
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:71:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/3b81ad88ff5ecdfb99905c99f02c38a4/transformed/firebase-auth-22.3.0/AndroidManifest.xml:70:17-109
+meta-data#com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar
+ADDED from [com.google.firebase:firebase-firestore:24.9.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/710fb38ca820dce3b2241f36d438fb38/transformed/firebase-firestore-24.9.1/AndroidManifest.xml:17:13-19:85
+	android:value
+		ADDED from [com.google.firebase:firebase-firestore:24.9.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/710fb38ca820dce3b2241f36d438fb38/transformed/firebase-firestore-24.9.1/AndroidManifest.xml:19:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:24.9.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/710fb38ca820dce3b2241f36d438fb38/transformed/firebase-firestore-24.9.1/AndroidManifest.xml:18:17-122
+meta-data#com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar
+ADDED from [com.google.firebase:firebase-firestore:24.9.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/710fb38ca820dce3b2241f36d438fb38/transformed/firebase-firestore-24.9.1/AndroidManifest.xml:20:13-22:85
+	android:value
+		ADDED from [com.google.firebase:firebase-firestore:24.9.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/710fb38ca820dce3b2241f36d438fb38/transformed/firebase-firestore-24.9.1/AndroidManifest.xml:22:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:24.9.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/710fb38ca820dce3b2241f36d438fb38/transformed/firebase-firestore-24.9.1/AndroidManifest.xml:21:17-111
+meta-data#com.google.firebase.components:com.google.firebase.storage.FirebaseStorageKtxRegistrar
+ADDED from [com.google.firebase:firebase-storage:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/c544bf4b48f077a502a1717579a56ed8/transformed/firebase-storage-20.3.0/AndroidManifest.xml:30:13-32:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/c544bf4b48f077a502a1717579a56ed8/transformed/firebase-storage-20.3.0/AndroidManifest.xml:32:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/c544bf4b48f077a502a1717579a56ed8/transformed/firebase-storage-20.3.0/AndroidManifest.xml:31:17-118
+meta-data#com.google.firebase.components:com.google.firebase.storage.StorageRegistrar
+ADDED from [com.google.firebase:firebase-storage:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/c544bf4b48f077a502a1717579a56ed8/transformed/firebase-storage-20.3.0/AndroidManifest.xml:33:13-35:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/c544bf4b48f077a502a1717579a56ed8/transformed/firebase-storage-20.3.0/AndroidManifest.xml:35:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/c544bf4b48f077a502a1717579a56ed8/transformed/firebase-storage-20.3.0/AndroidManifest.xml:34:17-107
+meta-data#com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckKtxRegistrar
+ADDED from [com.google.firebase:firebase-appcheck:17.1.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/2bd9f4d86152a86712041a5839ee404a/transformed/firebase-appcheck-17.1.1/AndroidManifest.xml:25:13-27:85
+	android:value
+		ADDED from [com.google.firebase:firebase-appcheck:17.1.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/2bd9f4d86152a86712041a5839ee404a/transformed/firebase-appcheck-17.1.1/AndroidManifest.xml:27:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-appcheck:17.1.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/2bd9f4d86152a86712041a5839ee404a/transformed/firebase-appcheck-17.1.1/AndroidManifest.xml:26:17-120
+meta-data#com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckRegistrar
+ADDED from [com.google.firebase:firebase-appcheck:17.1.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/2bd9f4d86152a86712041a5839ee404a/transformed/firebase-appcheck-17.1.1/AndroidManifest.xml:28:13-30:85
+	android:value
+		ADDED from [com.google.firebase:firebase-appcheck:17.1.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/2bd9f4d86152a86712041a5839ee404a/transformed/firebase-appcheck-17.1.1/AndroidManifest.xml:30:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-appcheck:17.1.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/2bd9f4d86152a86712041a5839ee404a/transformed/firebase-appcheck-17.1.1/AndroidManifest.xml:29:17-117
+meta-data#com.google.firebase.components:com.google.firebase.database.FirebaseDatabaseKtxRegistrar
+ADDED from [com.google.firebase:firebase-database:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/86675f8096170df0fc16839ef82c56b3/transformed/firebase-database-20.3.0/AndroidManifest.xml:29:13-31:85
+	android:value
+		ADDED from [com.google.firebase:firebase-database:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/86675f8096170df0fc16839ef82c56b3/transformed/firebase-database-20.3.0/AndroidManifest.xml:31:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-database:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/86675f8096170df0fc16839ef82c56b3/transformed/firebase-database-20.3.0/AndroidManifest.xml:30:17-120
+meta-data#com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar
+ADDED from [com.google.firebase:firebase-database:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/86675f8096170df0fc16839ef82c56b3/transformed/firebase-database-20.3.0/AndroidManifest.xml:32:13-34:85
+	android:value
+		ADDED from [com.google.firebase:firebase-database:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/86675f8096170df0fc16839ef82c56b3/transformed/firebase-database-20.3.0/AndroidManifest.xml:34:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-database:20.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/86675f8096170df0fc16839ef82c56b3/transformed/firebase-database-20.3.0/AndroidManifest.xml:33:17-109
+meta-data#com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar
+ADDED from [com.google.firebase:firebase-common-ktx:20.4.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/98ff6b233661e2a79f0dc85d5eaee6a1/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:12:13-14:85
+	android:value
+		ADDED from [com.google.firebase:firebase-common-ktx:20.4.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/98ff6b233661e2a79f0dc85d5eaee6a1/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:14:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-common-ktx:20.4.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/98ff6b233661e2a79f0dc85d5eaee6a1/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:13:17-116
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:20.4.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/cd7afc0e9e3a35d2a0d428062502de11/transformed/firebase-common-20.4.2/AndroidManifest.xml:23:9-28:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:20.4.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/cd7afc0e9e3a35d2a0d428062502de11/transformed/firebase-common-20.4.2/AndroidManifest.xml:25:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:20.4.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/cd7afc0e9e3a35d2a0d428062502de11/transformed/firebase-common-20.4.2/AndroidManifest.xml:27:13-37
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:20.4.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/cd7afc0e9e3a35d2a0d428062502de11/transformed/firebase-common-20.4.2/AndroidManifest.xml:26:13-43
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:20.4.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/cd7afc0e9e3a35d2a0d428062502de11/transformed/firebase-common-20.4.2/AndroidManifest.xml:28:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:20.4.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/cd7afc0e9e3a35d2a0d428062502de11/transformed/firebase-common-20.4.2/AndroidManifest.xml:24:13-77
+meta-data#com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar
+ADDED from [com.google.firebase:firebase-common:20.4.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/cd7afc0e9e3a35d2a0d428062502de11/transformed/firebase-common-20.4.2/AndroidManifest.xml:35:13-37:85
+	android:value
+		ADDED from [com.google.firebase:firebase-common:20.4.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/cd7afc0e9e3a35d2a0d428062502de11/transformed/firebase-common-20.4.2/AndroidManifest.xml:37:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-common:20.4.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/cd7afc0e9e3a35d2a0d428062502de11/transformed/firebase-common-20.4.2/AndroidManifest.xml:36:17-109
+activity#androidx.activity.ComponentActivity
+ADDED from [androidx.compose.ui:ui-test-manifest:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/f829b16dc4a9fa14027b9f0fe37d12a0/transformed/ui-test-manifest-1.5.0/AndroidManifest.xml:23:9-25:39
+	android:exported
+		ADDED from [androidx.compose.ui:ui-test-manifest:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/f829b16dc4a9fa14027b9f0fe37d12a0/transformed/ui-test-manifest-1.5.0/AndroidManifest.xml:25:13-36
+	android:name
+		ADDED from [androidx.compose.ui:ui-test-manifest:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/f829b16dc4a9fa14027b9f0fe37d12a0/transformed/ui-test-manifest-1.5.0/AndroidManifest.xml:24:13-63
+activity#androidx.compose.ui.tooling.PreviewActivity
+ADDED from [androidx.compose.ui:ui-tooling-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/60cd36a982ba3c0bafa0e72bba01b029/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
+	android:exported
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/60cd36a982ba3c0bafa0e72bba01b029/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
+	android:name
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.5.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/60cd36a982ba3c0bafa0e72bba01b029/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.1.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/097c1cbeba1726a6e1911ad76174b49d/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/097c1cbeba1726a6e1911ad76174b49d/transformed/play-services-base-18.1.0/AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/097c1cbeba1726a6e1911ad76174b49d/transformed/play-services-base-18.1.0/AndroidManifest.xml:21:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/097c1cbeba1726a6e1911ad76174b49d/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:19-85
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.1.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/aecc2a6330fdce6c75afcab98fdfd17d/transformed/play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.1.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/aecc2a6330fdce6c75afcab98fdfd17d/transformed/play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.1.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/aecc2a6330fdce6c75afcab98fdfd17d/transformed/play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/e95925ac4adcb77e04409e8cae0ef526/transformed/emoji2-1.4.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/c021e89e8d8787159d4ca98cc89b2088/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/c021e89e8d8787159d4ca98cc89b2088/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8bf39f74171baffd78e5e1243a986327/transformed/profileinstaller-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8bf39f74171baffd78e5e1243a986327/transformed/profileinstaller-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/6e4d338329eeb2af39c45fba60c80e6e/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/diegosolsonaostal/.gradle/caches/transforms-3/6e4d338329eeb2af39c45fba60c80e6e/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/e95925ac4adcb77e04409e8cae0ef526/transformed/emoji2-1.4.0/AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/e95925ac4adcb77e04409e8cae0ef526/transformed/emoji2-1.4.0/AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/e95925ac4adcb77e04409e8cae0ef526/transformed/emoji2-1.4.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/e95925ac4adcb77e04409e8cae0ef526/transformed/emoji2-1.4.0/AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/e95925ac4adcb77e04409e8cae0ef526/transformed/emoji2-1.4.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/e95925ac4adcb77e04409e8cae0ef526/transformed/emoji2-1.4.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.4.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/e95925ac4adcb77e04409e8cae0ef526/transformed/emoji2-1.4.0/AndroidManifest.xml:30:17-75
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/c021e89e8d8787159d4ca98cc89b2088/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/c021e89e8d8787159d4ca98cc89b2088/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /Users/diegosolsonaostal/.gradle/caches/transforms-3/c021e89e8d8787159d4ca98cc89b2088/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.10.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/30aed856985085ad1e62b01feb1981f2/transformed/core-1.10.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.10.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/30aed856985085ad1e62b01feb1981f2/transformed/core-1.10.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.10.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/30aed856985085ad1e62b01feb1981f2/transformed/core-1.10.0/AndroidManifest.xml:23:9-81
+permission#com.example.pizzeria.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.10.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/30aed856985085ad1e62b01feb1981f2/transformed/core-1.10.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.10.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/30aed856985085ad1e62b01feb1981f2/transformed/core-1.10.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.10.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/30aed856985085ad1e62b01feb1981f2/transformed/core-1.10.0/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.10.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/30aed856985085ad1e62b01feb1981f2/transformed/core-1.10.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.10.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/30aed856985085ad1e62b01feb1981f2/transformed/core-1.10.0/AndroidManifest.xml:26:22-94
+uses-permission#com.example.pizzeria.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.10.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/30aed856985085ad1e62b01feb1981f2/transformed/core-1.10.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.10.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/30aed856985085ad1e62b01feb1981f2/transformed/core-1.10.0/AndroidManifest.xml:26:22-94
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8bf39f74171baffd78e5e1243a986327/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8bf39f74171baffd78e5e1243a986327/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8bf39f74171baffd78e5e1243a986327/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8bf39f74171baffd78e5e1243a986327/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8bf39f74171baffd78e5e1243a986327/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8bf39f74171baffd78e5e1243a986327/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8bf39f74171baffd78e5e1243a986327/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8bf39f74171baffd78e5e1243a986327/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8bf39f74171baffd78e5e1243a986327/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8bf39f74171baffd78e5e1243a986327/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8bf39f74171baffd78e5e1243a986327/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8bf39f74171baffd78e5e1243a986327/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8bf39f74171baffd78e5e1243a986327/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8bf39f74171baffd78e5e1243a986327/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8bf39f74171baffd78e5e1243a986327/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8bf39f74171baffd78e5e1243a986327/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8bf39f74171baffd78e5e1243a986327/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8bf39f74171baffd78e5e1243a986327/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8bf39f74171baffd78e5e1243a986327/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8bf39f74171baffd78e5e1243a986327/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/diegosolsonaostal/.gradle/caches/transforms-3/8bf39f74171baffd78e5e1243a986327/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92

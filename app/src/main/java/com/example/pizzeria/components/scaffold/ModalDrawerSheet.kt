@@ -110,7 +110,9 @@ fun MyModalDrawerSheet(scope: CoroutineScope, drawerState: DrawerState, navContr
                                     }
                                 }
                                 scope.launch { drawerState.apply { drawerState.close() } }
-                                navController.navigate(item.url)
+                                if (currentRoute != item.url) {
+                                    navController.navigate(item.url)
+                                }
                             },
                             colors = NavigationDrawerItemDefaults.colors(
                                 unselectedContainerColor = Color.Transparent,

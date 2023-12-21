@@ -55,7 +55,9 @@ fun MyPizzaCard(productInfo: ProductInfo, viewModel: ProductViewModel, imageId: 
     Card(
         colors = CardDefaults.cardColors(tostadito),
         elevation = CardDefaults.cardElevation(10.dp),
-        modifier = Modifier.padding(5.dp).border(6.dp, tostadito, RoundedCornerShape(12.dp))
+        modifier = Modifier
+            .padding(5.dp)
+            .border(6.dp, tostadito, RoundedCornerShape(12.dp))
     ) {
             Row(
                 modifier = Modifier.fillMaxSize()
@@ -110,132 +112,14 @@ fun MyPizzaCard(productInfo: ProductInfo, viewModel: ProductViewModel, imageId: 
                             ),
                             verticalAlignment = Alignment.CenterVertically
                         ) {
-                            if (viewModel.getQuantityProduct(productInfo) != null) {
-                                IconButton(
-                                    onClick = {
-                                        if (viewModel.selectedProductMap[productInfo]!! > 1) {
-                                            viewModel.decrementCounterProduct(productInfo)
-                                        } else {
-                                            viewModel.decrementCounterProduct(productInfo)
-                                            viewModel.removeProductToList(productInfo)
-                                            viewModel.removeProductToMap(productInfo)
-                                        }
-                                    },
-                                    modifier = Modifier.background(
-                                        if (viewModel.selectedProductMap[productInfo] != null) {
-                                            if (viewModel.selectedProductMap[productInfo]!! > 0) {
-                                                Palette_1_11
-                                            } else {
-                                                Color.Transparent
-                                            }
-                                        } else {
-                                            Color.Transparent
-                                        }
-                                    )
-                                ) {
-                                    Icon(
-                                        imageVector = ImageVector.vectorResource(R.drawable.baseline_remove_24),
-                                        contentDescription = "Remove",
-                                        tint = Color.White,
-                                        modifier = Modifier
-                                            .width(30.dp)
-                                    )
-                                }
-                                if (viewModel.getQuantityProduct(productInfo) != null) {
-                                    if (viewModel.getQuantityProduct(productInfo)!! > 0) {
-                                        Text(
-                                            text = "${viewModel.selectedProductMap[productInfo]}",
-                                            color = Color.White,
-                                            fontWeight = FontWeight.Bold,
-                                        )
-                                    } else {
-                                        Text(
-                                            text = "",
-                                            color = Color.White,
-                                            fontWeight = FontWeight.Bold,
-                                        )
-                                    }
-                                } else {
-                                    Text(
-                                        text = "",
-                                        color = Color.White,
-                                        fontWeight = FontWeight.Bold,
-                                    )
-                                }
-                                IconButton(
-                                    onClick = {
-                                        if (!viewModel.selectedProductMap.contains(productInfo)) {
-                                            viewModel.addProductToOrder(productInfo)
-                                            viewModel.addProductInMap(productInfo)
-                                        }
-                                        viewModel.incrementCounterProduct(productInfo)
-                                    },
-                                    modifier = Modifier.background(
-                                        if (viewModel.selectedProductMap[productInfo] != null) {
-                                            if (viewModel.selectedProductMap[productInfo]!! > 0) {
-                                                Palette_1_11
-                                            } else {
-                                                Color.Transparent
-                                            }
-                                        } else {
-                                            Color.Transparent
-                                        }
-                                    )
-                                ) {
-                                    Icon(
-                                        imageVector = ImageVector.vectorResource(R.drawable.baseline_add_24),
-                                        contentDescription = null,
-                                        tint = if (viewModel.selectedProductMap[productInfo] != null) {
-                                            if (viewModel.selectedProductMap[productInfo]!! > 0) {
-                                                Color.White
-                                            } else {
-                                                Palette_1_11
-                                            }
-                                        } else {
-                                            Palette_1_11
-                                        }
-                                    )
-                                }
-                            } else {
-                                IconButton(
-                                    onClick = {
-                                        if (!viewModel.selectedProductMap.contains(productInfo)) {
-                                            viewModel.addProductToOrder(productInfo)
-                                            viewModel.addProductInMap(productInfo)
-                                        }
-                                        viewModel.incrementCounterProduct(productInfo)
-                                    },
-                                    modifier = Modifier.background(
-                                        if (viewModel.getQuantityProduct(productInfo) != null) {
 
-                                            Palette_1_11
-
-                                        } else {
-                                            Color.Transparent
-                                        }
-                                    )
-                                ) {
-                                    Icon(
-                                        imageVector = ImageVector.vectorResource(R.drawable.baseline_add_24),
-                                        contentDescription = "Add",
-                                        tint = if (viewModel.selectedProductMap[productInfo] != null) {
-                                            if (viewModel.selectedProductMap[productInfo]!! > 0) {
-                                                Color.White
-                                            } else {
-                                                Palette_1_11
-                                            }
-                                        } else {
-                                            Palette_1_11
-                                        }
-                                    )
-                                }
-                            }
                         }
                     }
                     Row(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .height(6.dp).border(1.dp, Palette_1_11)
+                            .height(6.dp)
+                            .border(1.dp, Palette_1_11)
                     ) {
                         Column(
                             modifier = Modifier
@@ -274,14 +158,146 @@ fun MyPizzaCard(productInfo: ProductInfo, viewModel: ProductViewModel, imageId: 
                     Row(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(12.dp),
-                        horizontalArrangement = Arrangement.End
                     ) {
-                        Text(
-                            text = "${productInfo.price} €",
-                            fontWeight = FontWeight.Bold,
-                            color = Palette_1_11
-                        )
+                        Column(
+                            modifier = Modifier.fillMaxWidth().weight(0.4f),
+                            verticalArrangement = Arrangement.Center,
+                            horizontalAlignment = Alignment.Start
+                        ){
+                            Text(
+                                text = "${productInfo.price} €",
+                                fontWeight = FontWeight.Bold,
+                                color = Palette_1_11
+                            )
+                        }
+                        Column(modifier = Modifier.fillMaxWidth().weight(0.6f)) {
+                            Row(
+                                modifier = Modifier.fillMaxWidth().background(Palette_1_11)
+                            ) {
+                                if (viewModel.getQuantityProduct(productInfo) != null) {
+                                    IconButton(
+                                        onClick = {
+                                            if (viewModel.selectedProductMap[productInfo]!! > 1) {
+                                                viewModel.decrementCounterProduct(productInfo)
+                                            } else {
+                                                viewModel.decrementCounterProduct(productInfo)
+                                                viewModel.removeProductToList(productInfo)
+                                                viewModel.removeProductToMap(productInfo)
+                                            }
+                                        },
+                                        modifier = Modifier.background(
+                                            if (viewModel.selectedProductMap[productInfo] != null) {
+                                                if (viewModel.selectedProductMap[productInfo]!! > 0) {
+                                                    Palette_1_11
+                                                } else {
+                                                    Color.Transparent
+                                                }
+                                            } else {
+                                                Color.Transparent
+                                            }
+                                        )
+                                    ) {
+                                        Icon(
+                                            imageVector = ImageVector.vectorResource(R.drawable.baseline_remove_24),
+                                            contentDescription = "Remove",
+                                            tint = Color.White,
+                                            modifier = Modifier
+                                                .width(30.dp)
+                                        )
+                                    }
+                                    if (viewModel.getQuantityProduct(productInfo) != null) {
+                                        if (viewModel.getQuantityProduct(productInfo)!! > 0) {
+                                            Text(
+                                                text = "${viewModel.selectedProductMap[productInfo]}",
+                                                color = Color.White,
+                                                fontWeight = FontWeight.Bold,
+                                            )
+                                        } else {
+                                            Text(
+                                                text = "",
+                                                color = Color.White,
+                                                fontWeight = FontWeight.Bold,
+                                            )
+                                        }
+                                    } else {
+                                        Text(
+                                            text = "",
+                                            color = Color.White,
+                                            fontWeight = FontWeight.Bold,
+                                        )
+                                    }
+                                    IconButton(
+                                        onClick = {
+                                            if (!viewModel.selectedProductMap.contains(productInfo)) {
+                                                viewModel.addProductToOrder(productInfo)
+                                                viewModel.addProductInMap(productInfo)
+                                            }
+                                            viewModel.incrementCounterProduct(productInfo)
+                                        },
+                                        modifier = Modifier.background(
+                                            if (viewModel.selectedProductMap[productInfo] != null) {
+                                                if (viewModel.selectedProductMap[productInfo]!! > 0) {
+                                                    Palette_1_11
+                                                } else {
+                                                    Color.Transparent
+                                                }
+                                            } else {
+                                                Color.Transparent
+                                            }
+                                        )
+                                    ) {
+                                        Icon(
+                                            imageVector = ImageVector.vectorResource(R.drawable.baseline_add_24),
+                                            contentDescription = null,
+                                            tint = if (viewModel.selectedProductMap[productInfo] != null) {
+                                                if (viewModel.selectedProductMap[productInfo]!! > 0) {
+                                                    Color.White
+                                                } else {
+                                                    Palette_1_11
+                                                }
+                                            } else {
+                                                Palette_1_11
+                                            }
+                                        )
+                                    }
+                                } else {
+                                    IconButton(
+                                        onClick = {
+                                            if (!viewModel.selectedProductMap.contains(productInfo)) {
+                                                viewModel.addProductToOrder(productInfo)
+                                                viewModel.addProductInMap(productInfo)
+                                            }
+                                            viewModel.incrementCounterProduct(productInfo)
+                                        },
+                                        modifier = Modifier.background(
+                                            if (viewModel.getQuantityProduct(productInfo) != null) {
+
+                                                Palette_1_11
+
+                                            } else {
+                                                Color.Transparent
+                                            }
+                                        )
+                                    ) {
+                                        Icon(
+                                            imageVector = ImageVector.vectorResource(R.drawable.baseline_add_24),
+                                            contentDescription = "Add",
+                                            tint = if (viewModel.selectedProductMap[productInfo] != null) {
+                                                if (viewModel.selectedProductMap[productInfo]!! > 0) {
+                                                    Color.White
+                                                } else {
+                                                    Palette_1_11
+                                                }
+                                            } else {
+                                                Palette_1_11
+                                            }
+                                        )
+                                    }
+                                }
+                            }
+
+
+                        }
                     }
                 }
             }

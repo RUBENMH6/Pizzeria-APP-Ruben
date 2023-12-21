@@ -1,0 +1,237 @@
+Index: .idea/shelf/Uncommitted_changes_before_Checkout_at_20_12_23__23_05__Changes_.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_12_23__23_05__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_12_23__23_05__Changes_.xml
+new file mode 100644
+--- /dev/null	(date 1703109948696)
++++ b/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_12_23__23_05__Changes_.xml	(date 1703109948696)
+@@ -0,0 +1,4 @@
++<changelist name="Uncommitted_changes_before_Checkout_at_20_12_23,_23_05_[Changes]" date="1703109926520" recycled="true" deleted="true">
++  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_12_23,_23_05_[Changes]/shelved.patch" />
++  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 20/12/23, 23:05 [Changes]" />
++</changelist>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+new file mode 100644
+--- /dev/null	(date 1703110299228)
++++ b/.idea/workspace.xml	(date 1703110299228)
+@@ -0,0 +1,126 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="AutoImportSettings">
++    <option name="autoReloadType" value="NONE" />
++  </component>
++  <component name="ChangeListManager">
++    <list default="true" id="f0c96928-100c-48bf-875c-fd9e35a396b3" name="Changes" comment="" />
++    <option name="SHOW_DIALOG" value="false" />
++    <option name="HIGHLIGHT_CONFLICTS" value="true" />
++    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++    <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="ClangdSettings">
++    <option name="formatViaClangd" value="false" />
++  </component>
++  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[EPHUT20B10008613]" />
++  <component name="ExternalProjectsData">
++    <projectState path="$PROJECT_DIR$">
++      <ProjectState />
++    </projectState>
++  </component>
++  <component name="Git.Settings">
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="master" />
++      </map>
++    </option>
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++    <option name="UPDATE_TYPE" value="REBASE" />
++  </component>
++  <component name="ProjectId" id="2ZpCr4IkbJbCkPYPTlSVFjHMx79" />
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
++  <component name="ProjectViewState">
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showLibraryContents" value="true" />
++  </component>
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "RunOnceActivity.cidr.known.project.marker": "true",
++    "cf.first.check.clang-format": "false",
++    "cidr.known.project.marker": "true"
++  }
++}]]></component>
++  <component name="RunManager">
++    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
++      <module name="Pizzeria.app.main" />
++      <option name="DEPLOY" value="true" />
++      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
++      <option name="DEPLOY_AS_INSTANT" value="false" />
++      <option name="ARTIFACT_NAME" value="" />
++      <option name="PM_INSTALL_OPTIONS" value="" />
++      <option name="ALL_USERS" value="false" />
++      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
++      <option name="CLEAR_APP_STORAGE" value="false" />
++      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
++      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
++      <option name="MODE" value="default_activity" />
++      <option name="CLEAR_LOGCAT" value="false" />
++      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
++      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
++      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
++      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
++      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
++      <option name="DEBUGGER_TYPE" value="Auto" />
++      <Auto>
++        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
++        <option name="SHOW_STATIC_VARS" value="true" />
++        <option name="WORKING_DIR" value="" />
++        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
++        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
++        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
++        <option name="DEBUG_SANDBOX_SDK" value="false" />
++      </Auto>
++      <Hybrid>
++        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
++        <option name="SHOW_STATIC_VARS" value="true" />
++        <option name="WORKING_DIR" value="" />
++        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
++        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
++        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
++        <option name="DEBUG_SANDBOX_SDK" value="false" />
++      </Hybrid>
++      <Java>
++        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
++        <option name="DEBUG_SANDBOX_SDK" value="false" />
++      </Java>
++      <Native>
++        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
++        <option name="SHOW_STATIC_VARS" value="true" />
++        <option name="WORKING_DIR" value="" />
++        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
++        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
++        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
++        <option name="DEBUG_SANDBOX_SDK" value="false" />
++      </Native>
++      <Profilers>
++        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
++        <option name="STARTUP_PROFILING_ENABLED" value="false" />
++        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
++        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
++        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
++        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
++      </Profilers>
++      <option name="DEEP_LINK" value="" />
++      <option name="ACTIVITY_CLASS" value="" />
++      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
++      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
++      <method v="2">
++        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
++      </method>
++    </configuration>
++  </component>
++  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
++  <component name="TaskManager">
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="f0c96928-100c-48bf-875c-fd9e35a396b3" name="Changes" comment="" />
++      <created>1703109829887</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1703109829887</updated>
++    </task>
++    <servers />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Checkout_at_20_12_23,_23_05_[Changes]/shelved.patch
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_12_23,_23_05_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_12_23,_23_05_[Changes]/shelved.patch
+new file mode 100644
+--- /dev/null	(date 1703109926372)
++++ b/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_12_23,_23_05_[Changes]/shelved.patch	(date 1703109926372)
+@@ -0,0 +1,27 @@
++Index: .idea/gradle.xml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"GradleMigrationSettings\" migrationVersion=\"1\" />\n  <component name=\"GradleSettings\">\n    <option name=\"linkedExternalProjectsSettings\">\n      <GradleProjectSettings>\n        <option name=\"testRunner\" value=\"GRADLE\" />\n        <option name=\"distributionType\" value=\"DEFAULT_WRAPPED\" />\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\n        <option name=\"gradleJvm\" value=\"jbr-17\" />\n        <option name=\"modules\">\n          <set>\n            <option value=\"$PROJECT_DIR$\" />\n            <option value=\"$PROJECT_DIR$/app\" />\n          </set>\n        </option>\n      </GradleProjectSettings>\n    </option>\n  </component>\n</project>
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/.idea/gradle.xml b/.idea/gradle.xml
++--- a/.idea/gradle.xml	(revision 38b8035b2dc8b55da98b5eac35e34b075d87f2a1)
+++++ b/.idea/gradle.xml	(date 1703109899774)
++@@ -4,8 +4,6 @@
++   <component name="GradleSettings">
++     <option name="linkedExternalProjectsSettings">
++       <GradleProjectSettings>
++-        <option name="testRunner" value="GRADLE" />
++-        <option name="distributionType" value="DEFAULT_WRAPPED" />
++         <option name="externalProjectPath" value="$PROJECT_DIR$" />
++         <option name="gradleJvm" value="jbr-17" />
++         <option name="modules">
++@@ -14,6 +12,7 @@
++             <option value="$PROJECT_DIR$/app" />
++           </set>
++         </option>
+++        <option name="resolveExternalAnnotations" value="false" />
++       </GradleProjectSettings>
++     </option>
++   </component>
+Index: .gradle/buildOutputCleanup/cache.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/.gradle/buildOutputCleanup/cache.properties b/.gradle/buildOutputCleanup/cache.properties
+new file mode 100644
+--- /dev/null	(date 1703109837286)
++++ b/.gradle/buildOutputCleanup/cache.properties	(date 1703109837286)
+@@ -0,0 +1,2 @@
++#Wed Dec 20 23:03:57 CET 2023
++gradle.version=8.0
+Index: .gradle/config.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/.gradle/config.properties b/.gradle/config.properties
+new file mode 100644
+--- /dev/null	(date 1703109900487)
++++ b/.gradle/config.properties	(date 1703109900487)
+@@ -0,0 +1,2 @@
++#Wed Dec 20 23:05:00 CET 2023
++java.home=/Applications/Android Studio.app/Contents/jbr/Contents/Home
+Index: local.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/local.properties b/local.properties
+new file mode 100644
+--- /dev/null	(date 1703109830562)
++++ b/local.properties	(date 1703109830562)
+@@ -0,0 +1,8 @@
++## This file must *NOT* be checked into Version Control Systems,
++# as it contains information specific to your local configuration.
++#
++# Location of the SDK. This is only used by Gradle.
++# For customization when using a Version Control System, please read the
++# header note.
++#Wed Dec 20 23:03:50 CET 2023
++sdk.dir=/Users/diegosolsonaostal/Library/Android/Sdk
+diff --git a/.gradle/8.0/gc.properties b/.gradle/8.0/gc.properties
+new file mode 100644
+diff --git a/.gradle/8.0/dependencies-accessors/gc.properties b/.gradle/8.0/dependencies-accessors/gc.properties
+new file mode 100644
+diff --git a/.gradle/vcs-1/gc.properties b/.gradle/vcs-1/gc.properties
+new file mode 100644
