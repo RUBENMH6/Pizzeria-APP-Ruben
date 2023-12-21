@@ -12,13 +12,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Divider
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -27,17 +24,17 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.pizzeria.R
+import com.example.pizzeria.components.products.RowPriceAndCounter
 import com.example.pizzeria.models.data.ProductInfo
 import com.example.pizzeria.models.viewmodels.ProductViewModel
 import com.example.pizzeria.ui.theme.FontCWGSans
@@ -47,7 +44,7 @@ import com.example.pizzeria.ui.theme.tostadito
 
 
 @Composable
-fun MyPizzaCard(productInfo: ProductInfo, viewModel: ProductViewModel, imageId: Int, configuration: Configuration) {
+fun MyPizzaCard(productInfo: ProductInfo, productViewModel: ProductViewModel, imageId: Int, configuration: Configuration) {
     var ingredients by remember { mutableStateOf("") }
     ingredients = getIngredientsFromPizza(productInfo)
 
@@ -56,29 +53,31 @@ fun MyPizzaCard(productInfo: ProductInfo, viewModel: ProductViewModel, imageId: 
         colors = CardDefaults.cardColors(tostadito),
         elevation = CardDefaults.cardElevation(10.dp),
         modifier = Modifier
-            .padding(5.dp)
-            .border(6.dp, tostadito, RoundedCornerShape(12.dp))
+            .padding(8.dp)
     ) {
             Row(
                 modifier = Modifier.fillMaxSize()
             ) {
                 Column(
-                    modifier = Modifier
-                        .fillMaxHeight()
+                    modifier = Modifier.fillMaxHeight()
                 ) {
-                    Image(
-                        painter = painterResource(imageId),
-                        contentDescription = productInfo.name,
-                        contentScale = ContentScale.Crop,
-                        modifier = Modifier
-                            .height(160.dp)
-                            .fillMaxSize()
-                    )
                     Row(
-                        modifier = Modifier.fillMaxWidth(),
+                        modifier = Modifier.fillMaxWidth().background(tostadito),
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.Center
                     ) {
+                        Image(
+                            painter = painterResource(imageId),
+                            contentDescription = productInfo.name,
+                            contentScale = ContentScale.Crop,
+                            modifier = Modifier
+                                .height(160.dp)
+                                .clip(RoundedCornerShape(12.dp))
+                                .fillMaxSize()
+                                .border(6.dp, tostadito, RoundedCornerShape(12.dp))
+                        )
+                    }
+                    Row() {
                         Column(
                             modifier = Modifier
                                 .weight(0.6f)
@@ -100,8 +99,8 @@ fun MyPizzaCard(productInfo: ProductInfo, viewModel: ProductViewModel, imageId: 
                         }
                         Row(
                             modifier = Modifier.background(
-                                if (viewModel.getQuantityProduct(productInfo) != null) {
-                                    if (viewModel.getQuantityProduct(productInfo)!! > 0) {
+                                if (productViewModel.getQuantityProduct(productInfo) != null) {
+                                    if (productViewModel.getQuantityProduct(productInfo)!! > 0) {
                                         Palette_1_11
                                     } else {
                                         Color.Transparent
@@ -155,150 +154,7 @@ fun MyPizzaCard(productInfo: ProductInfo, viewModel: ProductViewModel, imageId: 
                         )
                     }
                     Divider(color = Palette_1_11)
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                    ) {
-                        Column(
-                            modifier = Modifier.fillMaxWidth().weight(0.4f),
-                            verticalArrangement = Arrangement.Center,
-                            horizontalAlignment = Alignment.Start
-                        ){
-                            Text(
-                                text = "${productInfo.price} €",
-                                fontWeight = FontWeight.Bold,
-                                color = Palette_1_11
-                            )
-                        }
-                        Column(modifier = Modifier.fillMaxWidth().weight(0.6f)) {
-                            Row(
-                                modifier = Modifier.fillMaxWidth().background(Palette_1_11)
-                            ) {
-                                if (viewModel.getQuantityProduct(productInfo) != null) {
-                                    IconButton(
-                                        onClick = {
-                                            if (viewModel.selectedProductMap[productInfo]!! > 1) {
-                                                viewModel.decrementCounterProduct(productInfo)
-                                            } else {
-                                                viewModel.decrementCounterProduct(productInfo)
-                                                viewModel.removeProductToList(productInfo)
-                                                viewModel.removeProductToMap(productInfo)
-                                            }
-                                        },
-                                        modifier = Modifier.background(
-                                            if (viewModel.selectedProductMap[productInfo] != null) {
-                                                if (viewModel.selectedProductMap[productInfo]!! > 0) {
-                                                    Palette_1_11
-                                                } else {
-                                                    Color.Transparent
-                                                }
-                                            } else {
-                                                Color.Transparent
-                                            }
-                                        )
-                                    ) {
-                                        Icon(
-                                            imageVector = ImageVector.vectorResource(R.drawable.baseline_remove_24),
-                                            contentDescription = "Remove",
-                                            tint = Color.White,
-                                            modifier = Modifier
-                                                .width(30.dp)
-                                        )
-                                    }
-                                    if (viewModel.getQuantityProduct(productInfo) != null) {
-                                        if (viewModel.getQuantityProduct(productInfo)!! > 0) {
-                                            Text(
-                                                text = "${viewModel.selectedProductMap[productInfo]}",
-                                                color = Color.White,
-                                                fontWeight = FontWeight.Bold,
-                                            )
-                                        } else {
-                                            Text(
-                                                text = "",
-                                                color = Color.White,
-                                                fontWeight = FontWeight.Bold,
-                                            )
-                                        }
-                                    } else {
-                                        Text(
-                                            text = "",
-                                            color = Color.White,
-                                            fontWeight = FontWeight.Bold,
-                                        )
-                                    }
-                                    IconButton(
-                                        onClick = {
-                                            if (!viewModel.selectedProductMap.contains(productInfo)) {
-                                                viewModel.addProductToOrder(productInfo)
-                                                viewModel.addProductInMap(productInfo)
-                                            }
-                                            viewModel.incrementCounterProduct(productInfo)
-                                        },
-                                        modifier = Modifier.background(
-                                            if (viewModel.selectedProductMap[productInfo] != null) {
-                                                if (viewModel.selectedProductMap[productInfo]!! > 0) {
-                                                    Palette_1_11
-                                                } else {
-                                                    Color.Transparent
-                                                }
-                                            } else {
-                                                Color.Transparent
-                                            }
-                                        )
-                                    ) {
-                                        Icon(
-                                            imageVector = ImageVector.vectorResource(R.drawable.baseline_add_24),
-                                            contentDescription = null,
-                                            tint = if (viewModel.selectedProductMap[productInfo] != null) {
-                                                if (viewModel.selectedProductMap[productInfo]!! > 0) {
-                                                    Color.White
-                                                } else {
-                                                    Palette_1_11
-                                                }
-                                            } else {
-                                                Palette_1_11
-                                            }
-                                        )
-                                    }
-                                } else {
-                                    IconButton(
-                                        onClick = {
-                                            if (!viewModel.selectedProductMap.contains(productInfo)) {
-                                                viewModel.addProductToOrder(productInfo)
-                                                viewModel.addProductInMap(productInfo)
-                                            }
-                                            viewModel.incrementCounterProduct(productInfo)
-                                        },
-                                        modifier = Modifier.background(
-                                            if (viewModel.getQuantityProduct(productInfo) != null) {
-
-                                                Palette_1_11
-
-                                            } else {
-                                                Color.Transparent
-                                            }
-                                        )
-                                    ) {
-                                        Icon(
-                                            imageVector = ImageVector.vectorResource(R.drawable.baseline_add_24),
-                                            contentDescription = "Add",
-                                            tint = if (viewModel.selectedProductMap[productInfo] != null) {
-                                                if (viewModel.selectedProductMap[productInfo]!! > 0) {
-                                                    Color.White
-                                                } else {
-                                                    Palette_1_11
-                                                }
-                                            } else {
-                                                Palette_1_11
-                                            }
-                                        )
-                                    }
-                                }
-                            }
-
-
-                        }
-                    }
+                    RowPriceAndCounter(productViewModel, productInfo)
                 }
             }
     }
