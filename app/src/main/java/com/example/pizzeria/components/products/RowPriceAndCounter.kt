@@ -33,7 +33,7 @@ fun RowPriceAndCounter(productViewModel: ProductViewModel, productInfo: ProductI
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .weight(0.5f)
+                .weight(0.6f)
                 .padding(start = 10.dp, top = 10.dp),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.Start
@@ -47,7 +47,7 @@ fun RowPriceAndCounter(productViewModel: ProductViewModel, productInfo: ProductI
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .weight(0.6f)
+                .weight(0.4f)
         ) {
             Row(
                 modifier = Modifier

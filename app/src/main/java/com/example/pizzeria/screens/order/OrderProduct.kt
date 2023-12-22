@@ -184,7 +184,7 @@ fun OrderPizza(navController: NavController, productViewModel: ProductViewModel,
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    text = "There is no pizza in the order",
+                    text = context.getString(R.string.order_empty),
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color.White

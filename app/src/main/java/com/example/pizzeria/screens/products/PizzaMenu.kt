@@ -42,7 +42,7 @@ fun PizzaMenu(
         if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) {
 
             LazyVerticalStaggeredGrid(
-                columns = StaggeredGridCells.Fixed(2),
+                columns = StaggeredGridCells.Fixed(1),
                 modifier = Modifier.padding(10.dp),
                 state = listState
             ) {
