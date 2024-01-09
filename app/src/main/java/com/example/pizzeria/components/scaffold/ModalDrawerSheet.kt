@@ -49,7 +49,7 @@ fun MyModalDrawerSheet(scope: CoroutineScope, drawerState: DrawerState, navContr
         drawerTonalElevation = 2.dp,
         modifier = Modifier
             //Ajustar el ModalDrawer para cada tipo de orientación
-            .fillMaxWidth(if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) 0.5f else 0.25f)
+            .fillMaxWidth(if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) 0.7f else 0.25f)
             .padding(end = if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) 0.dp else 70.dp),
     ) {
         Column(
@@ -116,7 +116,7 @@ fun MyModalDrawerSheet(scope: CoroutineScope, drawerState: DrawerState, navContr
                                 unselectedContainerColor = Color.Transparent,
                                 selectedTextColor = Color.White,
                                 selectedIconColor = Color.White,
-                                selectedContainerColor = Palette_1_7
+                                selectedContainerColor = Palette_1_11
                             )
 
                         )

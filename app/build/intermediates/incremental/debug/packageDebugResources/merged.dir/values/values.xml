@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="advertencia_log_in">Por favor, inicia sesión</string>
+    <string name="app_name">Rubén Pizza</string>
+    <string name="button_mainmenu_drink">Bebidas</string>
+    <string name="button_mainmenu_location">Dónde estamos</string>
+    <string name="button_mainmenu_meal">Carnes</string>
+    <string name="button_mainmenu_pasta">Pastas</string>
+    <string name="button_mainmenu_pizza">Pizzas</string>
+    <string name="create_user_error">No se ha podido crear el usuario. Revise la conexión.</string>
+    <string name="dialog_body_delete">¿Estás seguro  de que quieres borrar el pedido? No se podrá recuperar.</string>
+    <string name="dialog_body_login_order">Necesitas iniciar sesión para realizar un pedido</string>
+    <string name="dialog_body_login_profile">Necesitas iniciar sesión para acceder al perfil</string>
+    <string name="dialog_body_ordering">¿Estás seguro de que quieres confirmar el pedido?</string>
+    <string name="dialog_button_confirmar">Confirmar</string>
+    <string name="dialog_button_dismiss">Cancelar</string>
+    <string name="dialog_title_delete">¡Cuidado, estás borrando el pedido!</string>
+    <string name="dialog_title_login">¡Por favor, inicia sesión!</string>
+    <string name="dialog_title_ordering">¡Atención, estás apunto de confirmar el pedido!</string>
+    <string name="display_name_error">No se ha podido asignar ese nombre. Intente otro nombre, por favor.</string>
+    <string name="dropdown_log_profile">Perfil</string>
+    <string name="gcm_defaultSenderId" translatable="false">696270280247</string>
+    <string name="google_api_key" translatable="false">AIzaSyAZIF5eVHN4oa5oKY96kcL-eNMiYbuvyjs</string>
+    <string name="google_app_id" translatable="false">1:696270280247:android:8659632d7a800d8b9951b2</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAZIF5eVHN4oa5oKY96kcL-eNMiYbuvyjs</string>
+    <string name="google_storage_bucket" translatable="false">pizzeria-app-f6984.appspot.com</string>
+    <string name="label_email">Correo</string>
+    <string name="label_name">Nombre</string>
+    <string name="label_password">Contraseña</string>
+    <string name="log_in">Iniciar sesión</string>
+    <string name="log_out">Cerrar sesión</string>
+    <string name="modal_button_drinkmenu">Bebidas</string>
+    <string name="modal_button_mainmenu">Menú</string>
+    <string name="modal_button_mealmenu">Carnes</string>
+    <string name="modal_button_pastamenu">Pastas</string>
+    <string name="modal_button_pizzamenu">Pizzas</string>
+    <string name="order_empty">No has seleccionado ningún producto</string>
+    <string name="order_successfully">El pedido se ha procesado correctamente </string>
+    <string name="project_id" translatable="false">pizzeria-app-f6984</string>
+    <string name="question_create_account">¿Ya tienes una cuenta?</string>
+    <string name="question_login">¿No tienes una cuenta?</string>
+    <string name="screen_top_name_drinkmenu">Bebidas</string>
+    <string name="screen_top_name_login">Identificate</string>
+    <string name="screen_top_name_mainmenu">Menú principal</string>
+    <string name="screen_top_name_mealmenu">Nuestras carnes</string>
+    <string name="screen_top_name_orderprocess">Procesando</string>
+    <string name="screen_top_name_orderproduct">Tu pedido</string>
+    <string name="screen_top_name_pastamenu">Nuestras pastas</string>
+    <string name="screen_top_name_pizzamenu">Nuestras pizzas</string>
+    <string name="splash_created_by">Creado por Rubén</string>
+    <string name="splash_getting_ready">Preparando todo</string>
+    <string name="splash_initial">Cargando paquetes</string>
+    <string name="splash_loading_products">Cargando los productos</string>
+    <string name="splash_loading_usuarios">Cargando los usuarios</string>
+    <string name="splash_ordering">Procesando pedido…</string>
+    <string name="text_createuser">Registrarse</string>
+    <string name="ticket_button_process_order">Procesar pedido</string>
+    <string name="ticket_header_price">Precio</string>
+    <string name="ticket_header_product">Producto</string>
+    <string name="ticket_header_quantity">Cantidad</string>
+    <string name="ticket_header_subtotal">Subtotal</string>
+    <string name="ticket_total_price">Precio total</string>
+    <string name="user_create_successfully">Usuario creado correctamente</string>
+    <string name="welcome_message">Bienvenido</string>
+    <style name="Theme.Pizzeria" parent="android:Theme.Material.Light.NoActionBar"/>
+</resources>

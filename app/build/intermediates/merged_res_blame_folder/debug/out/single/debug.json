@@ -1,0 +1,262 @@
+[
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.pizzeria.app-main-61:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_baseline_share_24.xml.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/baseline_share_24.xml"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_pizza8.jpg.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/pizza8.jpg"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_pizza4.jpg.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/pizza4.jpg"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_pizza15.jpg.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/pizza15.jpg"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_cocacola.jpeg.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/cocacola.jpeg"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/font_travelelegantbold.ttf.flat",
+        "source": "com.example.pizzeria.app-main-61:/font/travelelegantbold.ttf"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_pizza1.jpg.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/pizza1.jpg"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.pizzeria.app-main-61:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_baseline_sync_24.xml.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/baseline_sync_24.xml"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_pizza12.jpg.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/pizza12.jpg"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_foodbankicon.png.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/foodbankicon.png"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/font_travelelegantlight.ttf.flat",
+        "source": "com.example.pizzeria.app-main-61:/font/travelelegantlight.ttf"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_pizza5.jpg.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/pizza5.jpg"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_pizza16.jpg.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/pizza16.jpg"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.pizzeria.app-main-61:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_pizza9.jpg.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/pizza9.jpg"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_perfil.png.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/perfil.png"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_baseline_shopping_cart_24.xml.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/baseline_shopping_cart_24.xml"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_baseline_login_24.xml.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/baseline_login_24.xml"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_baseline_logout_24.xml.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/baseline_logout_24.xml"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_pizzalogo.png.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/pizzalogo.png"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_pastaicon.xml.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/pastaicon.xml"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_pizza2.jpg.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/pizza2.jpg"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/font_travelelegantregular.ttf.flat",
+        "source": "com.example.pizzeria.app-main-61:/font/travelelegantregular.ttf"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/xml_backup_rules.xml.flat",
+        "source": "com.example.pizzeria.app-main-61:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_caballeros.jpg.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/caballeros.jpg"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_pastaiconbtnappbar.png.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/pastaiconbtnappbar.png"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_pizza13.jpg.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/pizza13.jpg"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_baseline_more_vert_24.xml.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/baseline_more_vert_24.xml"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_pizza21.jpg.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/pizza21.jpg"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_foodicon.png.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/foodicon.png"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_baseline_local_pizza_24.xml.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/baseline_local_pizza_24.xml"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.pizzeria.app-main-61:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_pizza10.jpg.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/pizza10.jpg"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.pizzeria.app-main-61:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_mealicon.png.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/mealicon.png"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_drinkicon.png.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/drinkicon.png"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.pizzeria.app-main-61:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_baseline_add_24.xml.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/baseline_add_24.xml"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_pizza17.jpg.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/pizza17.jpg"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_reparto.png.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/reparto.png"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_baseline_remove_24.xml.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/baseline_remove_24.xml"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.pizzeria.app-main-61:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.pizzeria.app-main-61:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_pizza14.jpg.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/pizza14.jpg"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_pizza20.jpg.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/pizza20.jpg"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_pizzaheader.jpg.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/pizzaheader.jpg"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_pizza3.jpg.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/pizza3.jpg"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_baseline_local_drink_24.xml.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/baseline_local_drink_24.xml"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_baseline_menu_24.xml.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/baseline_menu_24.xml"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.pizzeria.app-main-61:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_baseline_add_shopping_cart_24.xml.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/baseline_add_shopping_cart_24.xml"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.pizzeria.app-main-61:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_pizzaicon.png.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/pizzaicon.png"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_baseline_attach_money_24.xml.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/baseline_attach_money_24.xml"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.pizzeria.app-main-61:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.pizzeria.app-main-61:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_pizza11.jpg.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/pizza11.jpg"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.pizzeria.app-main-61:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_pizza7.jpg.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/pizza7.jpg"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/font_cwgsans.ttf.flat",
+        "source": "com.example.pizzeria.app-main-61:/font/cwgsans.ttf"
+    },
+    {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_baseline_person_24.xml.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/baseline_person_24.xml"
+    }
+]
