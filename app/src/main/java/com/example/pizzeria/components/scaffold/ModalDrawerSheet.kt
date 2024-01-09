@@ -60,84 +60,52 @@ fun MyModalDrawerSheet(scope: CoroutineScope, drawerState: DrawerState, navContr
             verticalArrangement = Arrangement.Center
         ) {
             if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) {
-                Column(
-                    modifier = Modifier.weight(0.25f),
-                    verticalArrangement = Arrangement.Center
+                Row(
+                    modifier = Modifier.weight(0.3f),
+                    verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Spacer(modifier = Modifier.height(20.dp))
-                    Image(
-                        painter = painterResource(R.drawable.pizzalogo),
-                        contentDescription = "Logo"
-                    )
+                    Column {
+                        Spacer(modifier = Modifier.height(50.dp))
+                        Image(
+                            painter = painterResource(R.drawable.pizzalogo),
+                            contentDescription = "Logo",
+                            modifier = Modifier.size(200.dp)
+                        )
+                    }
+                    
                 }
             }
-            Column(
-                modifier = Modifier.weight(if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) 0.85f else 1f),
-                verticalArrangement = Arrangement.Center
+            Row(
+                modifier = Modifier.weight(if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) 0.7f else 1f),
+                verticalAlignment = Alignment.CenterVertically
             ) {
-                items.forEach { item ->
-                    if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) {
-                        NavigationDrawerItem(
-                            label = {
-                                Text(
-                                    text =
-                                    if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) {
-                                        if (item.name == "Login") {
-                                            if (userViewModel.auth.currentUser == null) context.getString(R.string.log_in) else context.getString(R.string.log_out)
-                                        } else {
-                                            item.name
-                                        }
-                                    } else "",
-                                    fontFamily = FontCWGSans,
-                                    color = if (item.url == currentRoute) Color.White else Palette_1_11
-
-                                )
-                            },
-                            icon = {
-                                Icon(
-                                    painter = painterResource(item.icon),
-                                    contentDescription = item.name,
-                                    modifier = Modifier.size(30.dp),
-                                    tint = if (item.url == currentRoute) Color.White else Palette_1_11
-                                )
-                                Spacer(modifier = Modifier.width(10.dp))
-                            },
-                            selected = item.url == currentRoute,
-                            onClick = {
-                                if (item.name == "Login") {
-                                    if (userViewModel.auth.currentUser != null) {
-                                        userViewModel.auth.signOut()
-                                    }
-                                }
-                                scope.launch { drawerState.apply { drawerState.close() } }
-                                navController.navigate(item.url)
-                            },
-                            colors = NavigationDrawerItemDefaults.colors(
-                                unselectedContainerColor = Color.Transparent,
-                                selectedTextColor = Color.White,
-                                selectedIconColor = Color.White,
-                                selectedContainerColor = Palette_1_11
-                            )
-
-                        )
-                    } else {
-                        if (item.name != "Menu") {
+                Column {
+                    items.forEach { item ->
+                        if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) {
                             NavigationDrawerItem(
                                 label = {
-                                    Text(text = "")
+                                    Text(
+                                        text =
+                                        if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) {
+                                            if (item.name == "Login") {
+                                                if (userViewModel.auth.currentUser == null) context.getString(R.string.log_in) else context.getString(R.string.log_out)
+                                            } else {
+                                                item.name
+                                            }
+                                        } else "",
+                                        fontFamily = FontCWGSans,
+                                        color = if (item.url == currentRoute) Color.White else Palette_1_11
+
+                                    )
                                 },
                                 icon = {
-                                    Row(
-                                        modifier = Modifier.fillMaxWidth(),
-                                        horizontalArrangement = Arrangement.Center
-                                    ) {
-                                        Icon(
-                                            painter = painterResource(item.icon),
-                                            contentDescription = item.name,
-                                            modifier = Modifier.size(30.dp),
-                                            tint = scaffold
-                                        )
-                                    }
+                                    Icon(
+                                        painter = painterResource(item.icon),
+                                        contentDescription = item.name,
+                                        modifier = Modifier.size(30.dp),
+                                        tint = if (item.url == currentRoute) Color.White else Palette_1_11
+                                    )
+                                    Spacer(modifier = Modifier.width(10.dp))
                                 },
                                 selected = item.url == currentRoute,
                                 onClick = {
@@ -153,12 +121,51 @@ fun MyModalDrawerSheet(scope: CoroutineScope, drawerState: DrawerState, navContr
                                     unselectedContainerColor = Color.Transparent,
                                     selectedTextColor = Color.White,
                                     selectedIconColor = Color.White,
-                                    selectedContainerColor = Palette_1_7
+                                    selectedContainerColor = Palette_1_11
                                 )
+
                             )
+                        } else {
+                            if (item.name != "Menu") {
+                                NavigationDrawerItem(
+                                    label = {
+                                        Text(text = "")
+                                    },
+                                    icon = {
+                                        Row(
+                                            modifier = Modifier.fillMaxWidth(),
+                                            horizontalArrangement = Arrangement.Center
+                                        ) {
+                                            Icon(
+                                                painter = painterResource(item.icon),
+                                                contentDescription = item.name,
+                                                modifier = Modifier.size(30.dp),
+                                                tint = scaffold
+                                            )
+                                        }
+                                    },
+                                    selected = item.url == currentRoute,
+                                    onClick = {
+                                        if (item.name == "Login") {
+                                            if (userViewModel.auth.currentUser != null) {
+                                                userViewModel.auth.signOut()
+                                            }
+                                        }
+                                        scope.launch { drawerState.apply { drawerState.close() } }
+                                        navController.navigate(item.url)
+                                    },
+                                    colors = NavigationDrawerItemDefaults.colors(
+                                        unselectedContainerColor = Color.Transparent,
+                                        selectedTextColor = Color.White,
+                                        selectedIconColor = Color.White,
+                                        selectedContainerColor = Palette_1_7
+                                    )
+                                )
+                            }
                         }
                     }
                 }
+
             }
 
         }
