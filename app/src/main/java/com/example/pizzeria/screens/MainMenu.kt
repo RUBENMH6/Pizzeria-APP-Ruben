@@ -2,15 +2,12 @@ package com.example.pizzeria.screens
 
 import android.content.Context
 import android.content.res.Configuration
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -22,8 +19,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
@@ -48,37 +43,10 @@ fun MainMenu(navController: NavController, dialogViewModel: DialogViewModel, con
         modifier = Modifier
             .fillMaxSize()
             .verticalScroll(rememberScrollState())
-            .background(tostadito)
+            .background(tostadito),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
         ) {
-            if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) {
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .weight(0.4f),
-                    horizontalArrangement = Arrangement.Center,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Image(
-                        painter = painterResource(R.drawable.pizzalogo),
-                        contentDescription = "Logo",
-                        modifier = Modifier.size(200.dp),
-                        contentScale = ContentScale.Crop
-                    )
-                }
-            }
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .weight(if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) 0.6f else 1f),
-            horizontalArrangement = Arrangement.Center,
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth(),
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.Center
-            ) {
                 listButtons.forEach {
                     Row {
                         Button(
@@ -104,8 +72,8 @@ fun MainMenu(navController: NavController, dialogViewModel: DialogViewModel, con
                         }
                     }
                 }
-            }
-        }
+
+
     }
     if (dialogViewModel.dialogLoginToAccessProfile.value) {
         Box(
