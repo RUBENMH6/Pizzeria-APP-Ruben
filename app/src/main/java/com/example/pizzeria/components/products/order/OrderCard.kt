@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -53,19 +54,23 @@ fun MyCardPedido(productInfo: ProductInfo, onTotalPriceChange: (Double) -> Unit,
     Card(
         colors = CardDefaults.cardColors(tostadito),
         elevation = CardDefaults.cardElevation(6.dp),
-        modifier = Modifier.padding(5.dp)
+        modifier = Modifier.padding(5.dp).fillMaxWidth()
     ) {
         Row(
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier.fillMaxSize()
         ) {
-            Image(
-                painter = painterResource(imageId),
-                contentDescription = productInfo.name,
-                contentScale = ContentScale.Crop,
-                modifier = Modifier
-                    .weight(0.4f)
-                    .size(200.dp)
-            )
+            Column(modifier = Modifier
+                .weight(0.4f)
+                .fillMaxHeight()
+            ) {
+                Image(
+                    painter = painterResource(imageId),
+                    contentDescription = productInfo.name,
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier.height(202.dp)
+                )
+            }
+
             Column(
                 modifier = Modifier
                     .weight(0.6f)
@@ -143,7 +148,8 @@ fun MyCardPedido(productInfo: ProductInfo, onTotalPriceChange: (Double) -> Unit,
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(6.dp).border(1.dp, Palette_1_11)
+                        .height(6.dp)
+                        .border(1.dp, Palette_1_11)
                 ) {
                     Column(
                         modifier = Modifier
