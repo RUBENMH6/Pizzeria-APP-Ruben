@@ -194,7 +194,7 @@ fun OrderPizza(navController: NavController, productViewModel: ProductViewModel,
     } else {
         Box(
             modifier = Modifier
-                .fillMaxSize()
+                .fillMaxSize( )
                 .padding(start = 10.dp, end = 10.dp,  bottom = 30.dp),
             contentAlignment = Alignment.BottomCenter
         ) {
