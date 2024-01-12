@@ -1,7 +1,6 @@
 package com.example.pizzeria.splash
 
 import android.content.Context
-import androidx.compose.animation.core.FastOutLinearInEasing
 import androidx.compose.animation.core.LinearOutSlowInEasing
 import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.infiniteRepeatable
@@ -46,37 +45,38 @@ import kotlinx.coroutines.delay
 @Composable
 fun SplashScreen(navController: NavController, userViewModel: UserViewModel, productViewModel: ProductViewModel, context: Context) {
     var splashText by remember { mutableStateOf(context.getString(R.string.splash_initial))}
-    LaunchedEffect(true) {
+    LaunchedEffect(true){
         userViewModel.auth.signOut()
-        delay(1500)
+        delay(1000)
         getProductsFromFirestore { productViewModel.productList = it }
         splashText = context.getString(R.string.splash_loading_products)
-        delay(1500)
+        delay(1000)
         getUserFromFirestore { userViewModel.userList = it }
         splashText = context.getString(R.string.splash_loading_usuarios)
-        delay(1500)
+        delay(1000)
         splashText = context.getString(R.string.splash_getting_ready)
         navController.navigate(Routes.MainMenu.route)
-
     }
     AnimatedSplash(splashText, context)
     
 }
 
 @Composable
-fun AnimatedSplash(splashText: String, context: Context) {
+fun AnimatedSplash(splashText: String, context: Context, ) {
     val rotationState by rememberInfiniteTransition().animateFloat(
         initialValue = 0f,
         targetValue = 360f,
         animationSpec = infiniteRepeatable(
             animation = keyframes {
-                durationMillis = 2000
+                durationMillis = 1750
                 0f at 0 with LinearOutSlowInEasing
-                360f at 1500 with FastOutLinearInEasing
-                360f at 2000
-                                  },
-        ), label = ""
+                360f at 1000 with LinearOutSlowInEasing
+                360f at 1750
+            },
+        ),
+        label = ""
     )
+
 
     Column(
         modifier = Modifier.fillMaxSize().background(tostadito),
