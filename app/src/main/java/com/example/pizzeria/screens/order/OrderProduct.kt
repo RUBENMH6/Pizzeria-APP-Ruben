@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -21,6 +20,7 @@ import androidx.compose.foundation.lazy.staggeredgrid.rememberLazyStaggeredGridS
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.ShapeDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -41,7 +41,7 @@ import com.example.pizzeria.dialogs.LoginNeededToAccessProfileDialog
 import com.example.pizzeria.dialogs.RemoveOrderPizzaDialog
 import com.example.pizzeria.models.viewmodels.DialogViewModel
 import com.example.pizzeria.models.viewmodels.ProductViewModel
-import com.example.pizzeria.ui.theme.Palette_1_11
+import com.example.pizzeria.ui.theme.Palette_1_10
 import com.example.pizzeria.ui.theme.Palette_1_8
 import java.text.DecimalFormat
 
@@ -195,44 +195,37 @@ fun OrderPizza(navController: NavController, productViewModel: ProductViewModel,
         Box(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(10.dp),
+                .padding(start = 10.dp, end = 10.dp,  bottom = 30.dp),
             contentAlignment = Alignment.BottomCenter
         ) {
-
-                Card(
-                    elevation = CardDefaults.cardElevation(6.dp),
-                    colors = CardDefaults.cardColors(Palette_1_11),
-                    modifier = Modifier.fillMaxWidth(if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE) 0.75f else 0.5f),
-
-
+            Card(
+                elevation = CardDefaults.cardElevation(8.dp),
+                colors = CardDefaults.cardColors(Palette_1_10),
+                modifier = Modifier
+                    .fillMaxWidth(0.50f)
+                    .height(32.dp),
+                shape = ShapeDefaults.Small,
+            ) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxSize(),
+                    horizontalArrangement = Arrangement.Center,
+                    verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.Center
-                    ) {
-                        Spacer(
-                            modifier = Modifier
-                                .height(40.dp)
-                                .weight(0.1f)
-                        )
-                        val decimalFormat = DecimalFormat("#.##")
-                        decimalFormat.minimumFractionDigits = 2
-                        Text(
-                            text =
-                            if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE)
-                                "Total Price: ${decimalFormat.format(productViewModel.getTotalPrice() * 1.21)}€ (IVA)"
-                            else
-                                "Total Price: ${decimalFormat.format(productViewModel.getTotalPrice() * 1.21)}€ (IVA)",
-                            color = Color.White,
-                            textAlign = TextAlign.Center
-                        )
-                        Spacer(
-                            modifier = Modifier
-                                .height(40.dp)
-                                .weight(0.1f)
-                        )
-                    }
+                    val decimalFormat = DecimalFormat("#.##")
+                    decimalFormat.minimumFractionDigits = 2
+                    Text(
+                        text =
+                        if (configuration.orientation != Configuration.ORIENTATION_LANDSCAPE)
+                            "${decimalFormat.format(productViewModel.getTotalPrice() * 1.21)}€ (IVA)"
+                        else
+                            "${decimalFormat.format(productViewModel.getTotalPrice() * 1.21)}€ (IVA)",
+                        color = Color.White,
+                        textAlign = TextAlign.Center
+                    )
                 }
+            }
+
 
         }
         if (dialogViewModel.dialogLoginToAccessProfile.value) {
