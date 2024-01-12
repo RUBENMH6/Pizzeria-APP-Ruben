@@ -3,7 +3,6 @@ package com.example.pizzeria.splash
 import android.content.Context
 import androidx.compose.animation.core.FastOutLinearInEasing
 import androidx.compose.animation.core.LinearOutSlowInEasing
-import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.infiniteRepeatable
 import androidx.compose.animation.core.keyframes
@@ -68,14 +67,14 @@ fun SplashScreen(navController: NavController, userViewModel: UserViewModel, pro
 fun AnimatedSplash(splashText: String, context: Context) {
     val rotationState by rememberInfiniteTransition().animateFloat(
         initialValue = 0f,
-        targetValue = 45f,
+        targetValue = 360f,
         animationSpec = infiniteRepeatable(
             animation = keyframes {
-                durationMillis = 1500
+                durationMillis = 2000
                 0f at 0 with LinearOutSlowInEasing
-                180f at 750 with FastOutLinearInEasing
-                360f at 1500 with LinearOutSlowInEasing},
-            repeatMode = RepeatMode.Restart
+                360f at 1500 with FastOutLinearInEasing
+                360f at 2000
+                                  },
         ), label = ""
     )
 
