@@ -58,6 +58,7 @@
     <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"Comparteix l\'enllaç"</string>
     <string msgid="6827826412747255547" name="in_progress">"En curs"</string>
     <string msgid="7933458017204019916" name="indeterminate">"Marcat parcialment"</string>
+    <string name="label_confirm_password">Confirmar contrasenya</string>
     <string name="label_email">Correu electrònic</string>
     <string name="label_name">Nom</string>
     <string name="label_password">Contrasenya</string>
@@ -74,6 +75,7 @@
     <string msgid="8655164131929253426" name="on">"Activat"</string>
     <string name="order_empty">No has seleccionat ningún producte</string>
     <string name="order_successfully">La comanda s\'ha processat correctament</string>
+    <string name="password_dont_match">Les contrasenyes no coincideixen</string>
     <string name="question_create_account">Ja tens un compte?</string>
     <string name="question_login">No tens un compte?</string>
     <string msgid="5941395253238309765" name="range_end">"Fi de l\'interval"</string>

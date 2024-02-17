@@ -43,13 +43,10 @@ import com.example.pizzeria.models.Routes
 import com.example.pizzeria.models.viewmodels.DialogViewModel
 import com.example.pizzeria.models.viewmodels.LocalViewModel
 import com.example.pizzeria.models.viewmodels.ProductViewModel
-import com.example.pizzeria.models.viewmodels.UserViewModel
 import com.example.pizzeria.screens.MainMenu
-import com.example.pizzeria.screens.log.CreateUser
-import com.example.pizzeria.ui.views.login.Login
 import com.example.pizzeria.screens.log.Profile
-import com.example.pizzeria.screens.order.OrderPizza
 import com.example.pizzeria.screens.order.OrderProcess
+import com.example.pizzeria.screens.order.OrderProduct
 import com.example.pizzeria.screens.products.DrinkMenu
 import com.example.pizzeria.screens.products.MealMenu
 import com.example.pizzeria.screens.products.PastaMenu
@@ -57,6 +54,9 @@ import com.example.pizzeria.screens.products.PizzaMenu
 import com.example.pizzeria.splash.SplashOrderConfirmed
 import com.example.pizzeria.splash.SplashScreen
 import com.example.pizzeria.ui.theme.*
+import com.example.pizzeria.ui.views.auth.LoginView
+import com.example.pizzeria.ui.views.auth.RegisterView
+import com.example.pizzeria.ui.views.auth.UserViewModel
 
 class MainActivity : ComponentActivity() {
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -201,7 +201,7 @@ class MainActivity : ComponentActivity() {
 
                             NavHost(
                                 navController = navController,
-                                startDestination = Routes.SplashScreen.route
+                                startDestination = Routes.Login.route
                             ) {
                                 composable(
                                     route = Routes.SplashScreen.route,
@@ -241,10 +241,10 @@ class MainActivity : ComponentActivity() {
                                         )
                                     }
                                 ) {
-                                    Login(
-                                        context,
+                                    LoginView(
                                         navController,
                                         userViewModel,
+                                        context,
                                         dialogViewModel
                                     )
                                 }
@@ -263,11 +263,9 @@ class MainActivity : ComponentActivity() {
                                         )
                                     }
                                 ) {
-                                    CreateUser(
-                                        context,
+                                    RegisterView(
                                         navController,
-                                        userViewModel,
-                                        dialogViewModel
+                                        context
                                     )
                                 }
                                 composable(
@@ -392,7 +390,7 @@ class MainActivity : ComponentActivity() {
                                         )
                                     }
                                 ) {
-                                    OrderPizza(navController, productViewModel, dialogViewModel, configuration, context)
+                                    OrderProduct(navController, productViewModel, dialogViewModel, configuration, context)
                                 }
                                 composable(
                                     route = Routes.OrderProcess.route,

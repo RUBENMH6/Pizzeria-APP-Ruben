@@ -200,6 +200,10 @@
         "source": "com.example.pizzeria.app-main-61:/drawable/pizzaheader.jpg"
     },
     {
+        "merged": "com.example.pizzeria.app-merged_res-59:/drawable_sanluisicono.png.flat",
+        "source": "com.example.pizzeria.app-main-61:/drawable/sanluisicono.png"
+    },
+    {
         "merged": "com.example.pizzeria.app-merged_res-59:/drawable_pizza3.jpg.flat",
         "source": "com.example.pizzeria.app-main-61:/drawable/pizza3.jpg"
     },

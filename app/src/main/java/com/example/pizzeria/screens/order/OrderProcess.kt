@@ -27,7 +27,7 @@ import com.example.pizzeria.dialogs.LoginNeededOrderPizzaDialog
 import com.example.pizzeria.dialogs.LoginNeededToAccessProfileDialog
 import com.example.pizzeria.models.viewmodels.DialogViewModel
 import com.example.pizzeria.models.viewmodels.ProductViewModel
-import com.example.pizzeria.models.viewmodels.UserViewModel
+import com.example.pizzeria.ui.views.auth.UserViewModel
 import com.example.pizzeria.ui.theme.Palette_1_8
 import com.example.pizzeria.ui.theme.tostadito
 

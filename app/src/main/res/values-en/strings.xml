@@ -47,6 +47,7 @@
     <string name="welcome_message">Welcome</string>
     <string name="order_successfully">The order has been processed successfully</string>
     <string name="order_empty">You haven\'t selected any product</string>
+    <string name="password_dont_match">Passwords do not match</string>
 
 
     <!-- Text Fields -->
@@ -54,6 +55,7 @@
     <string name="label_name">Name</string>
     <string name="label_email">Email</string>
     <string name="label_password">Password</string>
+    <string name="label_confirm_password">Confirm password</string>
 
     <!-- Splash -->
 

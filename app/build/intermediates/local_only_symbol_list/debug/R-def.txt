@@ -54,6 +54,7 @@ drawable pizzaheader
 drawable pizzaicon
 drawable pizzalogo
 drawable reparto
+drawable sanluisicono
 font cwgsans
 font travelelegantbold
 font travelelegantlight
@@ -84,6 +85,7 @@ string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
+string label_confirm_password
 string label_email
 string label_name
 string label_password
@@ -96,6 +98,7 @@ string modal_button_pastamenu
 string modal_button_pizzamenu
 string order_empty
 string order_successfully
+string password_dont_match
 string project_id
 string question_create_account
 string question_login

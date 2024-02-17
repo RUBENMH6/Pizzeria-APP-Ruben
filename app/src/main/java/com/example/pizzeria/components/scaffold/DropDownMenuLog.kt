@@ -21,14 +21,14 @@ import androidx.navigation.NavController
 import com.example.pizzeria.R
 import com.example.pizzeria.models.Routes
 import com.example.pizzeria.models.viewmodels.DialogViewModel
-import com.example.pizzeria.models.viewmodels.UserViewModel
+import com.example.pizzeria.ui.views.auth.UserViewModel
 import com.example.pizzeria.ui.theme.Palette_1_1
 import com.example.pizzeria.ui.theme.Palette_1_11
 import com.example.pizzeria.ui.theme.Palette_1_8
 import com.example.pizzeria.ui.theme.tostadito
 
 @Composable
-fun MyDropDownMenuLog(expanded: Boolean, onExpandedChange: (Boolean) -> Unit, navController: NavController, currentRoute: String, dialogViewModel: DialogViewModel,  userViewModel: UserViewModel, context: Context) {
+fun MyDropDownMenuLog(expanded: Boolean, onExpandedChange: (Boolean) -> Unit, navController: NavController, currentRoute: String, dialogViewModel: DialogViewModel, userViewModel: UserViewModel, context: Context) {
 
     var items = emptyList<String>()
 

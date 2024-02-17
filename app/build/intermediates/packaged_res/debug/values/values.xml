@@ -31,6 +31,7 @@
     <string name="google_app_id" translatable="false">1:696270280247:android:8659632d7a800d8b9951b2</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAZIF5eVHN4oa5oKY96kcL-eNMiYbuvyjs</string>
     <string name="google_storage_bucket" translatable="false">pizzeria-app-f6984.appspot.com</string>
+    <string name="label_confirm_password">Confirmar contraseña</string>
     <string name="label_email">Correo</string>
     <string name="label_name">Nombre</string>
     <string name="label_password">Contraseña</string>
@@ -43,6 +44,7 @@
     <string name="modal_button_pizzamenu">Pizzas</string>
     <string name="order_empty">No has seleccionado ningún producto</string>
     <string name="order_successfully">El pedido se ha procesado correctamente </string>
+    <string name="password_dont_match">Las contraseñas no coinciden</string>
     <string name="project_id" translatable="false">pizzeria-app-f6984</string>
     <string name="question_create_account">¿Ya tienes una cuenta?</string>
     <string name="question_login">¿No tienes una cuenta?</string>

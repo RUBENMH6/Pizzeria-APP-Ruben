@@ -46,7 +46,7 @@ import com.example.pizzeria.ui.theme.Palette_1_8
 import java.text.DecimalFormat
 
 @Composable
-fun OrderPizza(navController: NavController, productViewModel: ProductViewModel, dialogViewModel: DialogViewModel, configuration: Configuration, context: Context) {
+fun OrderProduct(navController: NavController, productViewModel: ProductViewModel, dialogViewModel: DialogViewModel, configuration: Configuration, context: Context) {
     var totalPrice by remember { mutableDoubleStateOf(0.0) }
     totalPrice = getInitialPrice(productViewModel)
     val listState = rememberLazyStaggeredGridState()

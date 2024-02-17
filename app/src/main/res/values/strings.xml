@@ -56,12 +56,15 @@
     <string name="welcome_message">Bienvenido</string>
     <string name="order_successfully">El pedido se ha procesado correctamente </string>
     <string name="order_empty">No has seleccionado ningún producto</string>
+    <string name="password_dont_match">Las contraseñas no coinciden</string>
+
 
     <!-- Campos de texto -->
 
     <string name="label_name">Nombre</string>
     <string name="label_email">Correo</string>
     <string name="label_password">Contraseña</string>
+    <string name="label_confirm_password">Confirmar contraseña</string>
 
     <!-- Splash -->
 

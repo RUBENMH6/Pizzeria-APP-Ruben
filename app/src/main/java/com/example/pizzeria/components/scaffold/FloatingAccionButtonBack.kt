@@ -9,7 +9,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.navigation.NavController
 import com.example.pizzeria.models.Routes
 import com.example.pizzeria.models.viewmodels.ProductViewModel
-import com.example.pizzeria.models.viewmodels.UserViewModel
+import com.example.pizzeria.ui.views.auth.UserViewModel
 import com.example.pizzeria.ui.theme.Palette_1_11
 
 @Composable

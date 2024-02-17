@@ -19,6 +19,7 @@
     <string name="dialog_title_ordering">Atenció, estàs a punt de confirmar la comanda!</string>
     <string name="display_name_error">No s\'ha pogut assignar aquest nom. Proveu un altre nom, si us plau.</string>
     <string name="dropdown_log_profile">Perfil</string>
+    <string name="label_confirm_password">Confirmar contrasenya</string>
     <string name="label_email">Correu electrònic</string>
     <string name="label_name">Nom</string>
     <string name="label_password">Contrasenya</string>
@@ -31,6 +32,7 @@
     <string name="modal_button_pizzamenu">Pizzes</string>
     <string name="order_empty">No has seleccionat ningún producte</string>
     <string name="order_successfully">La comanda s\'ha processat correctament</string>
+    <string name="password_dont_match">Les contrasenyes no coincideixen</string>
     <string name="question_create_account">Ja tens un compte?</string>
     <string name="question_login">No tens un compte?</string>
     <string name="screen_top_name_drinkmenu">Begudes</string>

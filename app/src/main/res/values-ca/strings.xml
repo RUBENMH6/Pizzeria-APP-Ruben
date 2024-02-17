@@ -47,6 +47,7 @@
     <string name="welcome_message">Benvingut</string>
     <string name="order_successfully">La comanda s\'ha processat correctament</string>
     <string name="order_empty">No has seleccionat ningún producte</string>
+    <string name="password_dont_match">Les contrasenyes no coincideixen</string>
 
 
     <!-- Camps de text -->
@@ -54,6 +55,7 @@
     <string name="label_name">Nom</string>
     <string name="label_email">Correu electrònic</string>
     <string name="label_password">Contrasenya</string>
+    <string name="label_confirm_password">Confirmar contrasenya</string>
 
     <!-- Splash -->
 

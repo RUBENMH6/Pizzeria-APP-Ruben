@@ -31,7 +31,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.pizzeria.R
 import com.example.pizzeria.models.data.getNavDrawInfo
-import com.example.pizzeria.models.viewmodels.UserViewModel
+import com.example.pizzeria.ui.views.auth.UserViewModel
 import com.example.pizzeria.ui.theme.FontCWGSans
 import com.example.pizzeria.ui.theme.Palette_1_11
 import com.example.pizzeria.ui.theme.Palette_1_7
