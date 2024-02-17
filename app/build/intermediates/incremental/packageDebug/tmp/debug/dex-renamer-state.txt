@@ -1,4 +1,4 @@
-#Fri Jan 12 17:07:27 CET 2024
+#Sat Feb 17 18:21:42 CET 2024
 base.0=/Users/diegosolsonaostal/Downloads/Pizzeria-APP-Ruben/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
 base.1=/Users/diegosolsonaostal/Downloads/Pizzeria-APP-Ruben/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
 base.10=/Users/diegosolsonaostal/Downloads/Pizzeria-APP-Ruben/app/build/intermediates/dex/debug/mergeProjectDexDebug/6/classes.dex
