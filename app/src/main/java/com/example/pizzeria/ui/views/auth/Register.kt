@@ -30,10 +30,6 @@ import com.example.pizzeria.R
 import com.example.pizzeria.models.Routes
 import com.example.pizzeria.ui.theme.Palette_1_11
 import com.example.pizzeria.ui.theme.Palette_1_3
-import com.example.pizzeria.ui.views.components.EmailField
-import com.example.pizzeria.ui.views.components.PasswordField
-import com.example.pizzeria.ui.views.components.RegisterSubmitForm
-import com.example.pizzeria.ui.views.components.UsernameField
 
 @Composable
 fun RegisterView(navController: NavController, context: Context) {

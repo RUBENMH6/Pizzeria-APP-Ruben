@@ -126,6 +126,7 @@ class UserViewModel : ViewModel() {
                     }
             }
         } catch (ex: IllegalArgumentException) {
+            //Fallo al introducir los datos
             Toast.makeText(context, "${ex.message}", Toast.LENGTH_LONG).show()
         }
 

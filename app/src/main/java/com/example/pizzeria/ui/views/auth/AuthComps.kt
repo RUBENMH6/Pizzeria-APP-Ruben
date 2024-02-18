@@ -1,4 +1,4 @@
-package com.example.pizzeria.ui.views.components
+package com.example.pizzeria.ui.views.auth
 
 import android.content.Context
 import android.widget.Toast
@@ -29,7 +29,6 @@ import com.example.pizzeria.models.viewmodels.DialogViewModel
 import com.example.pizzeria.ui.theme.Palette_1_1
 import com.example.pizzeria.ui.theme.Palette_1_11
 import com.example.pizzeria.ui.theme.Palette_1_9
-import com.example.pizzeria.ui.views.auth.UserViewModel
 
 @OptIn(ExperimentalComposeUiApi::class, ExperimentalMaterial3Api::class)
 @Composable

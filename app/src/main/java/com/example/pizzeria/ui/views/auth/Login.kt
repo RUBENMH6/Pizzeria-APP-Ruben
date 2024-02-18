@@ -34,10 +34,6 @@ import com.example.pizzeria.models.Routes
 import com.example.pizzeria.models.viewmodels.DialogViewModel
 import com.example.pizzeria.ui.theme.Palette_1_11
 import com.example.pizzeria.ui.theme.Palette_1_3
-import com.example.pizzeria.ui.views.components.EmailField
-import com.example.pizzeria.ui.views.components.LoginSubmitForm
-import com.example.pizzeria.ui.views.components.PasswordField
-import com.example.pizzeria.ui.views.components.PasswordForgot
 
 @Composable
 fun LoginView(navController: NavController, userViewModel: UserViewModel, context: Context, dialogViewModel: DialogViewModel) {
@@ -93,7 +89,7 @@ fun LoginForm(userViewModel: UserViewModel, navController: NavController, contex
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         EmailField(email, {email = it}, 16)
-        PasswordField(password,{password = it} , stringResource(id = R.string.label_password) ) 
+        PasswordField(password,{password = it} , stringResource(id = R.string.label_password) )
         LoginSubmitForm(email, password, stringResource(id = R.string.log_in), userViewModel, navController, context, dialogViewModel )
         PasswordForgot()
     }

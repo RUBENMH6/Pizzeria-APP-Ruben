@@ -1,4 +1,4 @@
-package com.example.pizzeria.screens
+package com.example.pizzeria.ui.views.main
 
 import android.content.Context
 import android.content.res.Configuration
@@ -38,7 +38,7 @@ import com.example.pizzeria.ui.theme.Palette_1_11
 import com.example.pizzeria.ui.theme.tostadito
 
 @Composable
-fun MainMenu(navController: NavController, dialogViewModel: DialogViewModel, configuration: Configuration, context: Context) {
+fun Menu(navController: NavController, dialogViewModel: DialogViewModel, configuration: Configuration, context: Context) {
     val listButtons = listOf(
         Routes.PizzaMenu.route,
         Routes.PastaMenu.route,

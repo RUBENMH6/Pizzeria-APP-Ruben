@@ -43,7 +43,7 @@ import com.example.pizzeria.models.Routes
 import com.example.pizzeria.models.viewmodels.DialogViewModel
 import com.example.pizzeria.models.viewmodels.LocalViewModel
 import com.example.pizzeria.models.viewmodels.ProductViewModel
-import com.example.pizzeria.screens.MainMenu
+import com.example.pizzeria.ui.views.main.Menu
 import com.example.pizzeria.screens.log.Profile
 import com.example.pizzeria.screens.order.OrderProcess
 import com.example.pizzeria.screens.order.OrderProduct
@@ -300,7 +300,7 @@ class MainActivity : ComponentActivity() {
                                         )
                                     }
                                 ) {
-                                    MainMenu(
+                                    Menu(
                                         navController,
                                         dialogViewModel,
                                         configuration,
